@@ -1,8 +1,8 @@
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/
-@base-font-size:    16px;
-@base-line-height:  24px;
+@base-font-size:    16;
+@base-line-height:  24;
 @base-font-family:  sans-serif;
 @base-ui-color:     #ccc;
 
@@ -15,6 +15,7 @@
 @desk-wide-start:   1200px;
 @palm-end:          @lap-start - 1px;
 @lap-end:           @desk-start - 1px;
+@responsive:        true;
 
 
 
@@ -52,7 +53,7 @@
 @base-spacing-unit: @base-line-height;
 @half-spacing-unit: @base-spacing-unit / 2;
 @line-height-ratio: @base-line-height / @base-font-size;
-
+@global-border-box: false;
 
 
 /*------------------------------------*\
@@ -61,6 +62,7 @@
 /**
  * Which objects and abstractions would you like to use?
  */
+@use-grids:         true;
 @use-nav:           true;
 @use-options:       true;
 @use-pagination:    true;
