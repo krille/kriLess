@@ -1,60 +1,131 @@
 .set-buttons() when (@use-buttons = false) {}
 .set-buttons() when (@use-buttons = true) {
 
-/**
- * Base button styles.
- *
- * 1. Allow us to better style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 3. Stop buttons wrapping and looking broken.
- * 4. Make buttons inherit font styles.
- * 5. Force all elements using beautons to appear clickable.
- * 6. Normalise box model styles.
- * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
- *    there is 1em of space above and below that text. We therefore apply 1em
- *    of space to the left and right, as padding, to keep consistent spacing.
- * 8. Basic cosmetics for default buttons. Change or override at will.
- * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
- */
-.btn{
-    display:inline-block;           /* [1] */
-    vertical-align:middle;          /* [2] */
-    white-space:nowrap;             /* [3] */
-    font-family:inherit;            /* [4] */
-    font-size:100%;                 /* [4] */
-    cursor:pointer;                 /* [5] */
-    border:none;                    /* [6] */
-    margin:0;                       /* [6] */
-    padding-top:   0;               /* [6] */
-    padding-bottom:0;               /* [6] */
-    line-height:3;                  /* [7] */
-    padding-right:1em;              /* [7] */
-    padding-left: 1em;              /* [7] */
-    border-radius:@brand-round*1px; /* [8] */
+.btn {
+    display: inline-block;
+    *display: inline; /*IE 6/7*/
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    padding: 0.5em 1.5em 0.5em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: @brand-round;
+    -webkit-font-smoothing: antialiased;
+    /* Transitions */
+    -webkit-transition: 0.1s linear -webkit-box-shadow;
+    -moz-transition: 0.1s linear -moz-box-shadow;
+    -ms-transition: 0.1s linear box-shadow;
+    -o-transition: 0.1s linear box-shadow;
+    transition: 0.1s linear box-shadow;
 }
 
-.btn{
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner{
+    padding: 0;
+    border: 0;
+}
 
-    &,
-    &:hover{
-        text-decoration:none;   /* [9] */
-    }
+.btn:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.05)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.05));
+    background-image: -ms-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
+}
 
-    &:active,
-    &:focus{
-        outline:none;
-    }
+.btn--active,
+.btn:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+.btn[disabled],
+.btn--disabled,
+.btn--disabled:hover,
+.btn--disabled:active {
+    border: none;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    filter: alpha(opacity=40);
+    -khtml-opacity: 0.40;
+    -moz-opacity: 0.40;
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn--hidden {
+    display: none;
 }
 
 
-
-.btn--full{
-    width:100%;
-    padding-right:0;            /* [1] */
-    padding-left: 0;            /* [1] */
-    text-align:center;
+.btn--primary,
+.btn--selected,
+a.btn--primary,
+a.btn--selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
 }
 
-} // use-beautons=true mixin
+/* Additional button types */
+.btn--success {
+    color: #fff;
+    background: rgb(76, 201, 71); /* this is a green */
+}
+
+.btn--error {
+    color: #fff;
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.btn--warning {
+    color: #fff;
+    background: orange;
+}
+
+.btn--secondary {
+    color: #fff;
+    background: rgb(95, 198, 218); /* this is a light blue */
+}
+
+.btn--xsmall {
+    font-size: 70%;
+}
+
+.btn--small {
+    font-size: 85%;
+}
+
+.btn--large {
+    font-size: 110%;
+}
+
+.btn--xlarge {
+    font-size: 125%;
+}
+
+.btn:-moz-focusring {
+    outline-color: rgba(0, 0, 0, 0.85);
+}
+
+} // use-buttons=true mixin
 
 .set-buttons();

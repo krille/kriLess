@@ -33,31 +33,21 @@
  * Demo: jsfiddle.net/inuitcss/6TKuS
  *
  */
-.sprite,
-.icon{
+.sprite, .s {
+
     display:inline-block;
     line-height:1;
     position:relative;
     vertical-align:middle;
     zoom:1;
-    /**
-     * So using `.icon` on certain elements doesn’t make a visual difference.
-     */
-    font-style:normal;
-    font-weight:normal;
-    /**
-     * So icons added using `.icon` sit in the centre of the element.
-     */
-    text-align:center;
-}
-.sprite{
-    /**
-     * The typical size of most icons. Override in your theme stylesheet.
-     */
+
     width: 16px;
     height:16px;
 
     top:-1px;
+
+    background-image:url(/img/sprite.png);
+    background-repeat: no-repeat;
 
     /*
      * H5BP method image replacement:
@@ -74,29 +64,12 @@
     }
 }
 
-/**
- * Set up icon font
- */
-.icon{
-    font-size:16px;
-    /**
-     * Place the icon in a box the exact same dimensions as the icon itself.
-     */
-    width:1em;
-    height:1em;
-
-    &:before{
-        content:attr(data-icon);
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+    .sprite, .s {
+        background-image:url(/img/sprite-2x.png);
+        background-size: 32px 32px;
     }
 }
-
-/**
- * Icon size modifiers.
- */
-.icon--large   { font-size:32px; }
-.icon--huge    { font-size:64px; }
-.icon--natural { font-size:inherit; }
-
 
 } // use-sprite=true mixin
 
