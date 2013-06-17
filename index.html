@@ -50,66 +50,69 @@
 		<a class="btn btn--active" href="#">An Active Button</a>
 	</p>
 
-
-	<div class="island">
+	<fieldset>
 		<h2>Forms</h2>
 		<ul class="form-fields">
 			<li>
-				<label>Label <small class=additional>No spaces</small></label>
-				<input />
+				<label>Label</label>
+				<input type="text" placeholder="Placeholder" />
 			</li>
 			<li>
 				<label>Label</label>
 				<select>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
+					<option value="1">Option1</option>
+					<option value="2">Option2</option>
+					<option value="3">Option3</option>
 				</select>
 			</li>
 			<li>
-				<label>Label</label>
-				<input />
+				<ul class="check-list">
+					<li>
+						<label><input type="checkbox" /> asdf</label>
+					</li>
+					<li>
+						<label><input type="checkbox" /> asdf</label>
+					</li>
+				</ul>
 			</li>
 			<li>
-				<span class=label>Select an option below:</span>
 				<ul class="multi-list  four-cols">
 					<li>
-						<input /> <label>Label <small class=additional>No spaces</small></label>
+						<label>Label</label>
+						<input type="text" />
 					</li>
 					<li>
-						<input /> <label>Label</label>
+						<label>Label</label>
+						<input type="text" disabled value="Disabled" />
 					</li>
 					<li>
-						<input /> <label>Label</label>
+						<label>Label</label>
+						<input type="text" readonly value="Readonly" />
 					</li>
 					<li>
-						<input /> <label>Label</label>
+						<label>Label</label>
+						<input type="text" />
 					</li>
 				</ul>
 			</li>
 			<li>
-				<ul class=check-list>
+				<ul class="check-list multi-list  four-cols">
 					<li>
-						<input type="checkbox" /> <label>Checkbox 1</label>
+						<label><input type="checkbox" /> asdf</label>
 					</li>
 					<li>
-						<input type="checkbox" /> <label>Checkbox 2</label>
+						<label><input type="checkbox" disabled /> asdf</label>
+					</li>
+					<li>
+						<label><input type="checkbox" /> asdf</label>
+					</li>
+					<li>
+						<label><input type="checkbox" /> asdf</label>
 					</li>
 				</ul>
 			</li>
-			<li class="spoken-form">
-				Hello, my <label for="spoken-name">name</label> is
-				<input type="text" class="text-input" id="spoken-name">. My home
-				<label for="country">country</label> is
-				<select id="country">
-					<option>UK</option>
-					<option>US</option>
-					<option>Other</option>
-				</select>
-			</li>
 		</ul>
-	</div>
+	</fieldset>
 
 	<h2>Sprite</h2>
 	<p>Retina Sprite: <i class="s"></i></p>
