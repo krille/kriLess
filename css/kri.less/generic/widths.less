@@ -8,10 +8,7 @@
  */
 
 
-.grid-setup(@prefix: 'null') {
-	// no access to outer scope
-	@p: @prefix;
-	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+.grid-setup(@the-prefix: default-) {
 
 	/**
 	 * Whole
@@ -143,7 +140,7 @@
  * access to these classes. You can define at which breakpoint you’d like an
  * element to be a certain size, e.g.:
  *
- * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ * `<div class="g  w-one-quarter  lap-one-half  palm-one-whole"> ... </div>`
  *
  * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
  * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
