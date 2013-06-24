@@ -1,3 +1,5 @@
+.set-forms() when (@use-forms = false) {}
+.set-forms() when (@use-forms = true) {
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
@@ -182,3 +184,7 @@ label,
     .check-list .label{
         display:inline-block;
     }
+
+} // use-forms=true mixin
+
+.set-forms();
