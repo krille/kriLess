@@ -37,6 +37,13 @@
     content:"\002F" "\00A0";
 }
 
+.breadcrumb--path,
+.breadcrumb {
+  > .breadcrumb__root + li:before {
+      content: "";
+  }
+}
+
 
 /**
  * Assign a delimiter on the fly through a data attribute, e.g.:

@@ -70,6 +70,33 @@
         .font-size(@base-font-size);
     }
 
+/**
+ * Slim grid with half base-spacing-unit between columns
+ */
+.grid--slim {
+
+  margin-left: @half-spacing-unit * -1px;
+
+  > .grid__item {
+    padding-left:@half-spacing-unit * 1px;
+  }
+
+}
+
+
+/**
+ * Compact grid with no margin between columns
+ */
+.grid--compact {
+
+  margin-left: 0;
+
+  > .grid__item {
+    padding-left: 0;
+  }
+
+}
+
 } // use-grids=true mixin
 
 .set-grids();

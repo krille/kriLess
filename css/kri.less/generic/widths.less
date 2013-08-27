@@ -11,6 +11,21 @@
 .grid-setup(@the-prefix: default-) {
 
 	/**
+	 * Show/Hide
+	 */
+	.@{the-prefix}hidden {
+	  display: none !important;
+	}
+
+	.@{the-prefix}visible {
+		display: block !important;
+
+		&.grid__item {
+			display: inline-block !important;
+		}
+	}
+
+	/**
 	 * Whole
 	 */
 	.@{the-prefix}one-whole {

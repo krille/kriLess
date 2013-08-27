@@ -18,10 +18,34 @@
  * Demo: jsfiddle.net/inuitcss/cf4Qs
  *
  */
-.media{
-    display:block;
-    /* @extend .cf; */
+
+.media {
+    > :first-child {
+        margin-bottom: @base-spacing-unit + 0px;
+    }
+ }
+
+.media__body,
+.media__body > :last-child{
+    margin-bottom:0;
 }
+
+.media__img img,
+.media__img--rev img{
+    vertical-align: top;
+}
+
+ @media only screen and (min-width: @desk-start) {
+
+    .media{
+        display:block;
+        /* @extend .cf; */
+
+        > :first-child {
+            margin-bottom: 0;
+        }
+    }
+
     .media__img{
         float:left;
         margin-right:@base-spacing-unit*1px;
@@ -34,18 +58,9 @@
         margin-left:@base-spacing-unit*1px;
     }
 
-        .media__img img,
-        .media__img--rev img{
-            display:block;
-        }
-
     .media__body{
         overflow:hidden;
     }
-        .media__body,
-        .media__body > :last-child{
-            margin-bottom:0;
-        }
 
 
     /**
@@ -57,6 +72,7 @@
     .islet .media__img--rev{
         margin-left:@half-spacing-unit*1px;
     }
+ }
 
 } // use-media=true mixin
 
