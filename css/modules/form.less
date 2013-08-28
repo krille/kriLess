@@ -1,5 +1,5 @@
-.set-forms() when (@use-forms = false) {}
-.set-forms() when (@use-forms = true) {
+.set-forms-module() when (@use-forms = false) {}
+.set-forms-module() when (@use-forms = true) {
 /* FORM */
 
 input[type="text"],
@@ -98,4 +98,4 @@ textarea[readonly] {
 
 } // use-forms=true mixin
 
-.set-forms();
+.set-forms-module();
