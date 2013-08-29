@@ -8,7 +8,10 @@
  */
 
 
-.grid-setup(@the-prefix: default-) {
+.grid-setup(@prefix: 'null') {
+	// no access to outer scope
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
 	/**
 	 * Show/Hide
@@ -169,27 +172,26 @@
 }
 
 .responsive-widths() when (@responsive = true) {
-
-	@media only screen and (max-width: @palm-end) { /* palm */
+	@media only screen and (max-width:~"@{palm-end}") { /* palm */
 		.grid-setup(palm-);
 	} // @media palm
 
-	@media only screen and (min-width: @lap-start) and (max-width: @lap-end) { /* lap */
+	@media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
 		.grid-setup(lap-);
 	} // @media lap
 
-	@media only screen and (min-width: @lap-start) { /* lap-and-up */
+	@media only screen and (min-width:~"@{lap-start}") { /* lap-and-up */
 		.grid-setup(lap-and-up-);
 	} // @media lap-and-up
 
-	@media only screen and (max-width: @lap-end) { /* portable */
+	@media only screen and (max-width:~"@{lap-end}") { /* portable */
 		.grid-setup(portable-);
 	} // @media portable
 
-	@media only screen and (min-width: @desk-start) { /* desk */
+
+	@media only screen and (min-width:~"@{desk-start}") { /* desk */
 		.grid-setup(desk-);
 	} // @media desk
-
 } //responsive=true mixin
 
 .responsive-widths();

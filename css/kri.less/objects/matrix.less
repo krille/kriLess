@@ -21,11 +21,9 @@
  *
  */
 .matrix{
-    // @extend .block-list;
-    // LESS - See mixin.less
-    .block-lists();
+    &:extend(.block-list all);
     border-left-width:1px;
-    /* @extend .cf; */
+    &:extend(.cf all);
 
     > li{
         float:left;
@@ -34,9 +32,7 @@
     }
 }
         .matrix__link{
-            // @extend .block-list__link;
-            // LESS - See mixin.less
-            .block-list-links();
+            &:extend(.block-list__link all);
         }
 
 
@@ -57,7 +53,7 @@
 .multi-list{
     list-style:none;
     margin-left:0;
-    /* @extend .cf; */
+    &:extend(.cf all);
 }
     .multi-list > li{
         float:left;
