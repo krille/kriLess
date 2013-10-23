@@ -39,7 +39,8 @@
 /**
  * Grid wrapper
  */
-.grid{
+.grid,
+.grid--compact {
     /**
      * Negative margin to negate the padding on the first grid child.
      */
@@ -54,7 +55,8 @@
     /**
      * Very infrequently occuring grid wrappers as children of grid wrappers.
      */
-    .grid > .grid{
+    .grid > .grid,
+    .grid--compact > .grid {
         margin-left:0;
     }
 
@@ -62,7 +64,7 @@
     /**
      * Grid
      */
-    .grid__item{
+    .grid__item {
         display:inline-block;
         width:100%;
         padding-left:@base-spacing-unit*1px;
