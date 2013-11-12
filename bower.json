@@ -1,10 +1,10 @@
 {
   "name": "kriLess",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "ignore": [
-    "fonts/*",
-    "img/*",
-    "js/*",
+    "fonts/",
+    "img/",
+    "js/",
     "index.html",
     "web.config"
   ]
