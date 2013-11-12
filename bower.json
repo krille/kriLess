@@ -1,5 +1,11 @@
 {
   "name": "kriLess",
-  "version": "1.0.0",
-  "main": "css/kri.less/"
+  "version": "1.0.1",
+  "ignore": [
+    "fonts/*",
+    "img/*",
+    "js/*",
+    "index.html",
+    "web.config"
+  ]
 }
