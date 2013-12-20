@@ -21,19 +21,20 @@
  *
  */
 .matrix{
-    &:extend(.block-list all);
-    border-left-width:1px;
-    &:extend(.cf all);
+  &:extend(.block-list all);
+  border-left-width:1px;
+  &:extend(.cf all);
 
-    > li{
-        float:left;
-        border-right-width: 1px;
-        .do-selective-border-box(@global-border-box);
-    }
+  > li{
+    float:left;
+    border-right-width: 1px;
+    .do-selective-border-box(@global-border-box);
+  }
 }
-        .matrix__link{
-            &:extend(.block-list__link all);
-        }
+
+.matrix__link{
+  &:extend(.block-list__link all);
+}
 
 
 /**

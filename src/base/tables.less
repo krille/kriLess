@@ -61,8 +61,8 @@ table{
 th,
 td{
     vertical-align: top;
-    padding:@base-spacing-unit / 4px;
-    @media screen and (min-width:480px){
+    padding:@half-spacing-unit*0.5px;
+    @media screen and (min-width:@lap-start){
         padding:@half-spacing-unit*1px;
     }
     text-align:left;
@@ -72,7 +72,7 @@ td{
 /**
  * Cell alignments
  */
-.numerical{
+.numerical {
     text-align:right;
 }
 

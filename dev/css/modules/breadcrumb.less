@@ -45,21 +45,6 @@
 }
 
 
-/**
- * Assign a delimiter on the fly through a data attribute, e.g.:
- *
-   <ol class="nav  breadcrumb">
-       <li><a href=#>Home</a></li>
-       <li data-breadcrumb=|><a href=#>About</a></li>
-       <li data-breadcrumb=|><a href=#>The Board</a></li>
-       <li data-breadcrumb=| class=current><a href=#>Directors</a></li>
-   </ol>
- *
- */
-.breadcrumb > li + li[data-breadcrumb]:before{
-    content:attr(data-breadcrumb) "\00A0";
-}
-
 
 /**
  * Denote the root of the tree.
