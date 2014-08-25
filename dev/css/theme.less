@@ -1,0 +1,64 @@
+/// <reference path="project.less" />
+
+/*------------------------------------*\
+	$TYPOGRAPHY
+\*------------------------------------*/
+html {
+	color: @html-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: @brand-color;
+}
+
+a {
+	color: @link-color;
+	text-decoration: none;
+
+	&:hover {
+		color: @link-color-hover;
+	}
+}
+
+address {
+	font-style: normal;
+}
+
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+
+	p {
+		margin-bottom: 0;
+
+		&:before {
+			content: open-quote;
+		}
+
+		&:after {
+			content: close-quote;
+		}
+	}
+}
+
+code {
+	padding: 2px 4px;
+	background-color: #f9f2f4;
+	border-radius: 4px;
+	color: #c7254e;
+	font-size: 90%;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+strong {
+	font-weight: 700;
+}
+
+
+
+/*------------------------------------*\
+	$LAYOUT
+\*------------------------------------*/

@@ -1,87 +1,23 @@
-/**
- * Framework
- */
-@import "../../src/kri.less";
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+@framework-path: "../../src/";
 
-
-/**
- * Override defaults here.
- */
-/*
-@base-font-size:    16;
-@base-line-height:  24;
-@base-font-family:  sans-serif;
-@base-ui-color:     #ebebeb;
-*/
-
-/**
- * Responsive
- */
-/*
-@lap-start:         600px;
-@desk-start:        850px;
-@palm-end:          599px; // @lap-start - 1px
-@lap-end:           849px; // @desk-start - 1px
-@responsive:        true;
-*/
-
-/**
- * Font sizes
- */
-/*
-@giga-size:         96;
-@mega-size:         48;
-@kilo-size:         36;
-
-@h1-size:           28; // .alpha
-@h2-size:           24; // .beta
-@h3-size:           22; // .gamma
-@h4-size:           18; // .delta
-@h5-size:           16; // .epsilon
-@h6-size:           14; // .zeta
-
-@milli-size:        12;
-@micro-size:        10;
-*/
-
-/**
- * Brand
- */
-/*
-@brand-color:       #7b4091;
-@brand-face:        sans-serif;
-@brand-round:       4px;
-*/
-
-/**
- * Framework features
- */
-/*
-@global-border-box: false;
-@use-forms:         true;
-@use-grids:         true;
-@use-nav:           true;
-@use-pagination:    true;
-@use-breadcrumb:    true;
-@use-media:         true;
-@use-island:        true;
-@use-block-list:    true;
-@use-matrix:        true;
-@use-split:         true;
-@use-sprite:        true;
-@use-buttons:       true;
-@use-icon-font:     true;
-@use-transitions:   true;
-*/
+@import "@{framework-path}kri.less";
+@import "vars";
 
 
 
+/*------------------------------------*\
+    $THEME
+\*------------------------------------*/
+@import "theme";
 
-/**
- * Import project specific modules here
- * Add: /// <reference path="../kri.less" />
- * in each module to get autocomplete in Visual Studio
- */
+
+
+/*------------------------------------*\
+    $PROJECT SPECIFIC MODULES
+\*------------------------------------*/
 @import "modules/island";
 @import "modules/breadcrumb";
 @import "modules/pagination";
@@ -93,9 +29,9 @@
 
 
 
-/**
- * Style trumps; helper and brand classes
- */
-@import "../../src/generic/widths";
-@import "../../src/base/headings";
-@import "../../src/base/smallprint";
+/*------------------------------------*\
+    $STYLE TRUMPS; HELPER CLASSES
+\*------------------------------------*/
+@import "@{framework-path}generic/widths";
+@import "@{framework-path}base/headings";
+@import "@{framework-path}base/smallprint";

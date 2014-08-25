@@ -1,39 +1,6 @@
 .set-grids() when (@use-grids = false) {}
 .set-grids() when (@use-grids = true) {
 
-/*------------------------------------*\
-    $GRIDS
-\*------------------------------------*/
-/**
- * Fluid and nestable grid system, e.g.:
- *
-   <div class="grid">
-
-       <div class="grid__item  one-third">
-           <p>One third grid</p>
-       </div><!--
-
-    --><div class="grid__item  two-thirds">
-           <p>Two thirds grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-half">
-           <p>One half grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div>
-
-   </div>
- *
- * Demo: jsfiddle.net/inuitcss/CLYUC
- *
- */
 
 
 /**
@@ -46,7 +13,7 @@
   /**
    * Negative margin to negate the padding on the first grid child.
    */
-  margin-left:@base-spacing-unit*-1px;
+  margin-left:-@base-spacing-unit;
   list-style:none;
   margin-bottom:0;
   font-size: 0;
@@ -60,9 +27,9 @@
 .grid__item {
   display:inline-block;
   width:100%;
-  padding-left:@base-spacing-unit*1px;
+  padding-left:@base-spacing-unit;
   vertical-align:top;
-  .do-selective-border-box(@global-border-box);
+  box-sizing: border-box;
   .font-size(@base-font-size);
 }
 
@@ -72,10 +39,10 @@
  */
 .grid--slim {
 
-  margin-left: @half-spacing-unit * -1px;
+  margin-left: -@base-spacing-unit--small;
 
   > .grid__item {
-    padding-left: @half-spacing-unit * 1px;
+    padding-left: @base-spacing-unit--small;
   }
 
 }
@@ -86,10 +53,10 @@
  */
 .grid--thick {
 
-  margin-left: @base-spacing-unit * -2px;
+  margin-left: -@base-spacing-unit--large;
 
   > .grid__item {
-    padding-left: @base-spacing-unit * 2px;
+    padding-left: @base-spacing-unit--large;
   }
 
 }

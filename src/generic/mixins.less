@@ -1,44 +1,67 @@
 /*------------------------------------*\
-    $MIXINS
+    FONT-SIZE
 \*------------------------------------*/
-/**
- * Create a fully formed type style (sizing and vertical rhythm) by passing in a
- * single value, e.g.:
- *
-   `@include font-size(10px);`
- *
- * Thanks to @redclov3r for the `line-height` Sass:
- * twitter.com/redclov3r/status/250301539321798657
- */
-.font-size(@font-size){
-    font-size:@font-size*1px;
-    font-size:(@font-size/@base-font-size)*1rem;
+/*
+.foo {
+  .font-size(12px);
 }
 
-.font-size(@font-size, true){
-    font-size:@font-size*1px;
-    font-size:(@font-size/@base-font-size)*1rem;
-    line-height:ceil(@font-size/@base-line-height)*(@base-line-height/@font-size);
+This will yield:
+
+.foo {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
 }
 
 
+.foo {
+  .font-size(12px, 1.5);
+}
 
-/**
- * Create vendor-prefixed CSS in one go, e.g.
- *
-   `.box-sizing(border-box);`
- *
- */
-.box-sizing(@value){
-    -webkit-box-sizing:@value;
-       -moz-box-sizing:@value;
-        -ms-box-sizing:@value;
-         -o-box-sizing:@value;
-            box-sizing:@value;
+This will yield:
+
+.foo {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+
+.foo {
+  .font-size(12px, none);
+}
+
+This will yield:
+
+.foo {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+*/
+
+.font-size(@font-size) {
+  font-size: @font-size;
+  font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
+  line-height: ceil(unit(@font-size) / unit(@base-line-height)) * (unit(@base-line-height) / unit(@font-size));  
+}
+
+.font-size(@font-size, @line-height) when (isnumber(@line-height)) {
+  font-size: @font-size;
+  font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
+  line-height: @line-height;  
+}
+
+.font-size(@font-size, @line-height) when (@line-height = none) {
+  font-size: @font-size;
+  font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
 }
 
 
 
+/*------------------------------------*\
+    TRUNC
+\*------------------------------------*/
 /**
  * Force overly long spans of text to truncate, e.g.:
  *
@@ -55,12 +78,9 @@
 
 
 
-/**
- * CSS image replacement
- *
- * Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
- *
- */
+/*------------------------------------*\
+    HIDE TEXT
+\*------------------------------------*/
 .hide-text() {
   font: 0/0 a;
   color: transparent;
@@ -71,10 +91,9 @@
 
 
 
-/**
- * Placeholdertext
- *
- */
+/*------------------------------------*\
+    PLACEHOLDER TEXT COLOR
+\*------------------------------------*/
 .placeholder(@color: @base-ui-color) {
   &::-webkit-input-placeholder {
     color: @color;
@@ -94,149 +113,10 @@
 
 
 
-/**
- * User-select
- *
- */
-.user-select(@select) {
-  -webkit-user-select: @select;
-     -moz-user-select: @select;
-      -ms-user-select: @select;
-       -o-user-select: @select;
-          user-select: @select;
-}
-
-
-
-/**
- * Opacity
- *
- */
-.opacity(@opacity) {
-  opacity: @opacity / 100;
-  filter: ~"alpha(opacity=@{opacity})";
-}
-
-
-
-/**
- * IE7 Inline-block
- *
- */
+/*------------------------------------*\
+    IE7 INLINE BLOCK
+\*------------------------------------*/
 .ie7-inline-block() {
   *display: inline;
   *zoom: 1;
 }
-
-
-
-/**
- * Create global or selective box sizing rules based on the value passed
- *
- */
-.do-global-border-box(@conditional) when (@conditional = true) {
-    /**
-     * Let’s make the box model all nice, shall we...?
-     */
-    *,
-    *:before,
-    *:after{
-       .box-sizing(border-box);
-    }
-}
-.do-global-border-box(@conditional) when (@conditional = false) {
-}
-.do-selective-border-box(@conditional) when (@conditional = false) {
-   .box-sizing(border-box);
-}
-.do-selective-border-box(@conditional) when (@conditional = true) {
-}
-
-
-.set-transitions() when (@use-transitions = false) {}
-.set-transitions() when (@use-transitions = true) {
-
-// Transitions
-.transition(@transition) {
-  -webkit-transition: @transition;
-     -moz-transition: @transition;
-       -o-transition: @transition;
-          transition: @transition;
-}
-.transition-delay(@transition-delay) {
-  -webkit-transition-delay: @transition-delay;
-     -moz-transition-delay: @transition-delay;
-       -o-transition-delay: @transition-delay;
-          transition-delay: @transition-delay;
-}
-.transition-duration(@transition-duration) {
-  -webkit-transition-duration: @transition-duration;
-     -moz-transition-duration: @transition-duration;
-       -o-transition-duration: @transition-duration;
-          transition-duration: @transition-duration;
-}
-
-// Transformations
-.rotate(@degrees) {
-  -webkit-transform: rotate(@degrees);
-     -moz-transform: rotate(@degrees);
-      -ms-transform: rotate(@degrees);
-       -o-transform: rotate(@degrees);
-          transform: rotate(@degrees);
-}
-.scale(@ratio) {
-  -webkit-transform: scale(@ratio);
-     -moz-transform: scale(@ratio);
-      -ms-transform: scale(@ratio);
-       -o-transform: scale(@ratio);
-          transform: scale(@ratio);
-}
-.translate(@x, @y) {
-  -webkit-transform: translate(@x, @y);
-     -moz-transform: translate(@x, @y);
-      -ms-transform: translate(@x, @y);
-       -o-transform: translate(@x, @y);
-          transform: translate(@x, @y);
-}
-.skew(@x, @y) {
-  -webkit-transform: skew(@x, @y);
-     -moz-transform: skew(@x, @y);
-      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
-       -o-transform: skew(@x, @y);
-          transform: skew(@x, @y);
-  -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
-}
-.translate3d(@x, @y, @z) {
-  -webkit-transform: translate3d(@x, @y, @z);
-     -moz-transform: translate3d(@x, @y, @z);
-       -o-transform: translate3d(@x, @y, @z);
-          transform: translate3d(@x, @y, @z);
-}
-.translateZ(@x) {
-  -webkit-transform: translateZ(@x);
-     -moz-transform: translateZ(@x);
-       -o-transform: translateZ(@x);
-          transform: translateZ(@x);
-}
-
-// Backface visibility
-// Prevent browsers from flickering when using CSS 3D transforms.
-// Default value is `visible`, but can be changed to `hidden
-// See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
-.backface-visibility(@visibility){
-    -webkit-backface-visibility: @visibility;
-       -moz-backface-visibility: @visibility;
-            backface-visibility: @visibility;
-}
-
-// Background clipping
-// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
-.background-clip(@clip) {
-  -webkit-background-clip: @clip;
-     -moz-background-clip: @clip;
-          background-clip: @clip;
-}
-
-} // use-transitions=true mixin
-
-.set-transitions();

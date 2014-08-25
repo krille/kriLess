@@ -2,8 +2,12 @@
 
 .set-forms-module() when (@use-forms = false) {}
 .set-forms-module() when (@use-forms = true) {
-/* FORM */
 
+
+
+/*------------------------------------*\
+    $FORM
+\*------------------------------------*/
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -20,17 +24,10 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
-    padding: 0.51em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
     font-size: 0.8em;
-    box-shadow: inset 0 1px 3px #ddd;
-    border-radius: @brand-round;
-    .box-sizing(border-box);
-    -webkit-transition: 0.1s linear border;
-    -moz-transition: 0.1s linear border;
-    -ms-transition: 0.1s linear border;
-    -o-transition: 0.1s linear border;
+    box-sizing: border-box;
     transition: 0.1s linear border;
     -webkit-font-smoothing: antialiased;
 }
@@ -87,16 +84,7 @@ textarea[readonly] {
     color: #cad2d3;
 }
 
-@media only screen and (min-width: @lap-start) {
 
-}
-
-
-
-@media only screen and (min-width: @desk-start) {
-
-
-}
 
 } // use-forms=true mixin
 

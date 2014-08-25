@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $BASE
+    $OVERRIDE DEFAULTS HERE
 \*------------------------------------*/
 @base-font-size:    16px;
 @base-line-height:  24px;
@@ -46,11 +46,16 @@
 
 
 /*------------------------------------*\
-    $FRAMEWORK
+    $COLORS
 \*------------------------------------*/
-@base-spacing-unit: @base-line-height;
-@base-spacing-unit--small: round(@base-spacing-unit / 2);
-@base-spacing-unit--large: round(@base-spacing-unit * 2);
+@html-color:        #0f0f0f;
+@base-ui-color:     #d6d6d6;
+@link-color:        @brand-color;
+@link-color-hover:  darken(@link-color, 10%);
+
+@color-grey:        #979797;
+@color-dark-grey:   #3b3b3b;
+@color-light-grey:  #f9f9f9;
 
 
 
