@@ -75,6 +75,23 @@
 
 
 /*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+@box-padding:         @base-spacing-unit;
+@box-padding--tiny:   round(@box-padding / 4);
+@box-padding--small:  round(@box-padding / 2);
+@box-padding--large:  round(@box-padding * 2);
+@box-padding--huge:   round(@box-padding * 4);
+
+@enable-box--flush:   false;
+@enable-box--tiny:    false;
+@enable-box--small:   false;
+@enable-box--large:   false;
+@enable-box--huge:    false;
+
+
+
+/*------------------------------------*\
     #TABLES
 \*------------------------------------*/
 @table-padding--compact:  round(@base-spacing-unit / 4);
@@ -96,19 +113,19 @@
 
 
 /*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS
+    $ENABLE OTHER OBJECTS
 \*------------------------------------*/
-@use-forms:         true;
-@use-grids:         true;
-@use-nav:           true;
-@use-tabs:          true;
-@use-pagination:    true;
-@use-breadcrumb:    true;
-@use-media:         true;
-@use-island:        true;
-@use-block-list:    true;
-@use-matrix:        true;
-@use-split:         true;
-@use-sprite:        true;
-@use-buttons:       true;
-@use-icon-font:     true;
+@use-forms:         false;
+@use-grids:         false;
+@use-nav:           false;
+@use-tabs:          false;
+@use-box:           false;
+@use-pagination:    false;
+@use-breadcrumb:    false;
+@use-media:         false;
+@use-island:        false;
+@use-block-list:    false;
+@use-matrix:        false;
+@use-split:         false;
+@use-buttons:       false;
+@use-icon-font:     false;

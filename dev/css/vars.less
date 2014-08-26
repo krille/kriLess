@@ -62,9 +62,6 @@
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
-@btn-padding:         round(@base-spacing-unit / 2);
-@btn-padding--small:  round(@btn-padding / 2);
-@btn-padding--large:  round(@btn-padding * 2);
 @btn-background:      #4a8ec2;
 @btn-color:           #fff;
 @btn-border-width:    1px;
@@ -80,12 +77,19 @@
 
 
 /*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+@enable-box--flush:   true;
+@enable-box--tiny:    true;
+@enable-box--small:   true;
+@enable-box--large:   true;
+@enable-box--huge:    true;
+
+
+
+/*------------------------------------*\
     #TABLES
 \*------------------------------------*/
-@table-padding--compact:  round(@base-spacing-unit / 4);
-@table-padding--cosy:     round(@base-spacing-unit / 2);
-@table-padding--comfy:    @base-spacing-unit;
-
 @table-border-width:      1px;
 @table-border-style:      solid;
 @table-border-color:      #ccc;
@@ -101,12 +105,13 @@
 
 
 /*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS
+    $ENABLE OTHER OBJECTS
 \*------------------------------------*/
 @use-forms:         true;
 @use-grids:         true;
 @use-nav:           true;
 @use-tabs:          true;
+@use-box:           true;
 @use-pagination:    true;
 @use-breadcrumb:    true;
 @use-media:         true;
@@ -114,6 +119,5 @@
 @use-block-list:    true;
 @use-matrix:        true;
 @use-split:         true;
-@use-sprite:        true;
 @use-buttons:       true;
 @use-icon-font:     true;

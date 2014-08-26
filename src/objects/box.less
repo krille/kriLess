@@ -1,0 +1,116 @@
+.set-box() when (@use-box = false) {}
+.set-box() when (@use-box = true) {
+
+/*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+
+/**
+ * The box object simply boxes off content.
+ */
+
+/**
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.box {
+    &:extend(.cf all);
+    display: block; /* [1] */
+    padding: @box-padding;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+
+
+
+
+/**
+ * Flush (i.e. no padding) box.
+ */
+.box--flush() when (@enable-box--flush = true) {
+
+  .box--flush {
+      padding: 0;
+  }
+
+}
+
+.box--flush();
+
+
+
+
+
+/**
+ * Tiny box.
+ */
+.box--tiny() when (@enable-box--tiny = true) {
+
+  .box--tiny {
+      padding: @box-padding--tiny;
+  }
+
+}
+
+.box--tiny();
+
+
+
+
+
+/**
+ * Small box.
+ */
+.box--small() when (@enable-box--small = true) {
+
+  .box--small {
+      padding: @box-padding--small;
+  }
+
+}
+
+.box--small();
+
+
+
+
+
+/**
+ * Large box.
+ */
+.box--large() when (@enable-box--large = true) {
+
+  .box--large {
+      padding: @box-padding--large;
+  }
+
+}
+
+.box--large();
+
+
+
+
+/**
+ * Huge box.
+ */
+.box--huge() when (@enable-box--huge = true) {
+
+  .box--huge {
+      padding: @box-padding--huge;
+  }
+
+}
+
+.box--huge();
+
+
+
+
+
+} // use-box=true mixin
+
+.set-box();
