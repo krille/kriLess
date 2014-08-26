@@ -1,5 +1,8 @@
 .set-icon-font() when (@use-icon-font = false) {}
 .set-icon-font() when (@use-icon-font = true) {
+
+
+
 @charset "UTF-8";
 
  @font-face {
@@ -12,16 +15,8 @@
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'icon-font';
-    src: url('../fonts/icon-font.svg?27806465#icon-font') format('svg');
-  }
-}
-*/
+
+
 
 [class^="icon-"],
 [class*=" icon-"] {
@@ -32,6 +27,8 @@
   -webkit-font-smoothing: antialiased;
   margin-right: .2em;
 }
+
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   text-decoration: inherit;
@@ -39,6 +36,10 @@
   speak: none;
 }
 
+
+
 } // use-icon-font=true mixin
+
+
 
 .set-icon-font();
