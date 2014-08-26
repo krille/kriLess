@@ -16,6 +16,7 @@
  *    grow larger as we add borders.
  */
 .btn {
+
     display: inline-block; /* [1] */
     vertical-align: middle; /* [2] */
     font: inherit; /* [3] */
@@ -49,80 +50,76 @@
 
 
 
-.btn--small {
 
-    .btn--small() when (@enable-btn--small = true) {
 
-        /**
-         * Small buttons.
-         */
+/**
+ * Small buttons.
+ */
+.btn--small() when (@enable-btn--small = true) {
 
+    .btn--small {
         padding: @btn-padding--small - @btn-border-width  round(@btn-padding--small) - @btn-border-width; /* [7] */
-
     }
-
-    .btn--small();
 
 }
 
+.btn--small();
 
 
-.btn--large {
 
-    .btn--large() when (@enable-btn--large = true) {
 
-        /**
-         * Large buttons.
-         */
 
+/**
+ * Large buttons.
+ */
+.btn--large() when (@enable-btn--large = true) {
+
+    .btn--large {
         padding: @btn-padding--large - @btn-border-width  round(@btn-padding--large * 2) - @btn-border-width; /* [7] */
-
     }
-
-    .btn--large();
 
 }
 
+.btn--large();
 
 
-.btn--full {
 
-    .btn--full() when (@enable-btn--full = true) {
 
-        /**
-         * Full-width buttons.
-         */
 
+/**
+ * Full-width buttons.
+ */
+.btn--full() when (@enable-btn--full = true) {
+
+    .btn--full {
         width: 100%;
         padding-left: 0;
         padding-right: 0;
-
     }
-
-    .btn--full();
 
 }
 
+.btn--full();
 
 
-.btn--pill {
 
-    .btn--pill() when (@enable-btn--pill = true) {
 
-        /**
-         * Round-ended buttons.
-         *
-         * 1. Overly-large value to ensure the radius rounds the whole end of the
-         *    button.
-         */
 
+/**
+ * Round-ended buttons.
+ *
+ * 1. Overly-large value to ensure the radius rounds the whole end of the
+ *    button.
+ */
+.btn--pill() when (@enable-btn--pill = true) {
+
+    .btn--pill {
         border-radius: 100px; /* [1] */
-
     }
 
-    .btn--pill();
-
 }
+
+.btn--pill();
 
 
 
