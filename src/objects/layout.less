@@ -1,0 +1,294 @@
+.set-layout() when (@use-layout = false) {}
+.set-layout() when (@use-layout = true) {
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * The inuitcss layout system uses `box-sizing: border-box;` and
+ * `display: inline-block;` to create an extremely powerful, flexible
+ * alternative to the traditional grid system. Combine the layout items with
+ * the widths found in `trumps.widths`.
+ */
+
+/**
+ * Begin a layout group.
+ */
+.layout {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+    margin-left: -@layout-gutter;
+    font-size: 0;
+}
+
+    /**
+     * 1. Cause columns to stack side-by-side.
+     * 2. Space columns apart.
+     * 3. Align columns to the tops of each other.
+     * 4. Full-width unless told to behave otherwise.
+     * 5. Required to combine fluid widths and fixed gutters.
+     */
+    .layout__item {
+        display: inline-block; /* [1] */
+        padding-left: @layout-gutter; /* [2] */
+        vertical-align: top; /* [3] */
+        width: 100%; /* [4] */
+        box-sizing: border-box; /* [5] */
+        .font-size(@base-font-size);
+    }
+
+
+
+
+
+/**
+ * Layouts with tiny gutters.
+ */
+.layout--tiny() when (@enable-layout--tiny = true) {
+
+
+    .layout--tiny {
+        margin-left: -(@layout-gutter--tiny);
+
+        > .layout__item {
+            padding-left: @layout-gutter--tiny;
+        }
+
+    }
+
+}
+
+.layout--tiny();
+
+
+
+
+
+/**
+ * Layouts with small gutters.
+ */
+.layout--small() when (@enable-layout--small = true) {
+
+
+    .layout--small {
+        margin-left: -(@layout-gutter--small);
+
+        > .layout__item {
+            padding-left: @layout-gutter--small;
+        }
+
+    }
+
+}
+
+.layout--small();
+
+
+
+
+
+/**
+ * Layouts with large gutters.
+ */
+.layout--large() when (@enable-layout--large = true) {
+
+
+    .layout--large {
+        margin-left: -(@layout-gutter--large);
+
+        > .layout__item {
+            padding-left: @layout-gutter--large;
+        }
+
+    }
+
+}
+
+.layout--large();
+
+
+
+
+
+/**
+ * Layouts with huge gutters.
+ */
+.layout--huge() when (@enable-layout--huge = true) {
+
+
+    .layout--huge {
+        margin-left: -(@layout-gutter--huge);
+
+        > .layout__item {
+            padding-left: @layout-gutter--huge;
+        }
+
+    }
+
+}
+
+.layout--huge();
+
+
+
+
+
+/**
+ * Layouts with no gutters.
+ */
+.layout--flush() when (@enable-layout--flush = true) {
+
+
+    .layout--flush {
+        margin-left: 0;
+
+        > .layout__item {
+            padding-left: 0;
+        }
+
+    }
+
+}
+
+.layout--flush();
+
+
+
+
+
+/**
+ * Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
+ * markup will display in order 4, 3, 2, 1 on your page.
+ */
+.layout--rev() when (@enable-layout--rev = true) {
+
+    .layout--rev {
+        direction: rtl;
+        text-align: left;
+
+        > .layout__item {
+            direction: ltr;
+            text-align: left;
+        }
+
+    }
+
+}
+
+.layout--rev();
+
+
+
+
+/**
+ * Align layout items to the vertical centers of each other.
+ */
+.layout--middle() when (@enable-layout--middle = true) {
+
+    .layout--middle {
+
+        > .layout__item {
+            vertical-align: middle;
+        }
+
+    }
+
+}
+
+.layout--middle();
+
+
+
+
+
+/**
+ * Align layout items to the vertical bottoms of each other.
+ */
+.layout--bottom() when (@enable-layout--bottom = true) {
+
+    .layout--bottom {
+
+        > .layout__item {
+            vertical-align: bottom;
+        }
+
+    }
+
+}
+
+.layout--bottom();
+
+
+
+
+
+/**
+ * Make the layout items fill up from the right hand side.
+ */
+.layout--right() when (@enable-layout--right = true) {
+
+    .layout--right {
+        text-align: right;
+
+        > .layout__item {
+            text-align: left;
+        }
+
+    }
+
+}
+
+.layout--right();
+
+
+
+
+
+/**
+ * Make the layout items fill up from the center outward.
+ */
+.layout--center() when (@enable-layout--center = true) {
+
+    .layout--center {
+        text-align: center;
+
+        > .layout__item {
+            text-align: left;
+        }
+
+    }
+
+}
+
+.layout--center();
+
+
+
+
+
+/**
+ * Cause layout items to take up a non-explicit amount of width.
+ */
+.layout--auto() when (@enable-layout--auto = true) {
+
+    .layout--auto {
+
+        > .layout__item {
+            width: auto;
+        }
+
+    }
+
+}
+
+.layout--auto();
+
+
+
+
+
+} // use-layout=true mixin
+
+.set-layout();

@@ -135,10 +135,34 @@
 
 
 /*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@layout-gutter:           @base-spacing-unit;
+@layout-gutter--tiny:     round(@layout-gutter / 4);
+@layout-gutter--small:    round(@layout-gutter / 2);
+@layout-gutter--large:    round(@layout-gutter * 2);
+@layout-gutter--huge:     round(@layout-gutter * 4);
+
+@enable-layout--tiny:     false;
+@enable-layout--small:    false;
+@enable-layout--large:    false;
+@enable-layout--huge:     false;
+@enable-layout--flush:    false;
+@enable-layout--rev:      false;
+@enable-layout--middle:   false;
+@enable-layout--bottom:   false;
+@enable-layout--right:    false;
+@enable-layout--center:   false;
+@enable-layout--auto:     false;
+
+
+
+/*------------------------------------*\
     $ENABLE OTHER OBJECTS
 \*------------------------------------*/
 @use-forms:         false;
 @use-grids:         false;
+@use-layout:        false;
 @use-nav:           false;
 @use-list-bare:     false;
 @use-tabs:          false;
