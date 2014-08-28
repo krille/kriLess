@@ -135,6 +135,26 @@
 
 
 /*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+@media-gutter:                @base-spacing-unit;
+@media-gutter--tiny:          round(@media-gutter / 4);
+@media-gutter--small:         round(@media-gutter / 2);
+@media-gutter--large:         round(@media-gutter * 2);
+@media-gutter--huge:          round(@media-gutter * 4);
+
+@enable-media--tiny:          false;
+@enable-media--small:         false;
+@enable-media--large:         false;
+@enable-media--huge:          false;
+@enable-media--rev:           false;
+@enable-media--flush:         false;
+@enable-media--responsive:    false;
+@media-collapse-at:           720px;
+
+
+
+/*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
 @layout-gutter:           @base-spacing-unit;
