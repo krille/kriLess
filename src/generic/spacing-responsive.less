@@ -1,0 +1,292 @@
+/*------------------------------------*\
+    #SPACING-RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+
+.responsive-spacing() when (@responsive-spacing = false) {
+}
+
+.responsive-spacing() when (@responsive-spacing = true) {
+
+    @media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
+        
+        .enable-responsive-margins() when (@enable-responsive-margins = true) {
+            .enable-margins(lap-);
+        }
+
+        .enable-responsive-margins--tiny() when (@enable-responsive-margins--tiny = true) {
+            .enable-margins--tiny(lap-);
+        }
+
+        .enable-responsive-margins--small() when (@enable-responsive-margins--small = true) {
+            .enable-margins--small(lap-);
+        }
+
+        .enable-responsive-margins--large() when (@enable-responsive-margins--large = true) {
+            .enable-margins--large(lap-);
+        }
+
+        .enable-responsive-margins--huge() when (@enable-responsive-margins--huge = true) {
+            .enable-margins--huge(lap-);
+        }
+
+        .enable-responsive-margins--none() when (@enable-responsive-margins--none = true) {
+            .enable-margins--none(lap-);
+        }
+
+        .enable-responsive-margins--negative() when (@enable-responsive-margins--negative = true) {
+            .enable-margins--negative(lap-);
+        }
+
+        .enable-responsive-margins--negative-tiny() when (@enable-responsive-margins--negative-tiny = true) {
+            .enable-margins--negative-tiny(lap-);
+        }
+
+        .enable-responsive-margins--negative-small() when (@enable-responsive-margins--negative-small = true) {
+            .enable-margins--negative-small(lap-);
+        }
+
+        .enable-responsive-margins--negative-large() when (@enable-responsive-margins--negative-large = true) {
+            .enable-margins--negative-large(lap-);
+        }
+
+        .enable-responsive-margins--negative-huge() when (@enable-responsive-margins--negative-huge = true) {
+            .enable-margins--negative-huge(lap-);
+        }
+
+        .enable-responsive-paddings() when (@enable-responsive-paddings = true) {
+            .enable-paddings(lap-);
+        }
+
+        .enable-responsive-paddings--tiny() when (@enable-responsive-paddings--tiny = true) {
+            .enable-paddings--tiny(lap-);
+        }
+
+        .enable-responsive-paddings--small() when (@enable-responsive-paddings--small = true) {
+            .enable-paddings--small(lap-);
+        }
+
+        .enable-responsive-paddings--large() when (@enable-responsive-paddings--large = true) {
+            .enable-paddings--large(lap-);
+        }
+
+        .enable-responsive-paddings--huge() when (@enable-responsive-paddings--huge = true) {
+            .enable-paddings--huge(lap-);
+        }
+
+        .enable-responsive-paddings--none() when (@enable-responsive-paddings--none = true) {
+            .enable-paddings--none(lap-);
+        }
+
+        .enable-responsive-margins();
+        .enable-responsive-margins--tiny();
+        .enable-responsive-margins--small();
+        .enable-responsive-margins--large();
+        .enable-responsive-margins--huge();
+        .enable-responsive-margins--none();
+        .enable-responsive-margins--negative();
+        .enable-responsive-margins--negative-tiny();
+        .enable-responsive-margins--negative-small();
+        .enable-responsive-margins--negative-large();
+        .enable-responsive-margins--negative-huge();
+
+        .enable-responsive-paddings();
+        .enable-responsive-paddings--tiny();
+        .enable-responsive-paddings--small();
+        .enable-responsive-paddings--large();
+        .enable-responsive-paddings--huge();
+        .enable-responsive-paddings--none();
+
+    }
+
+    @media only screen and (min-width:~"@{lap-start}") { /* lap-and-up */
+
+        .enable-responsive-margins() when (@enable-responsive-margins = true) {
+            .enable-margins(lap-and-up-);
+        }
+
+        .enable-responsive-margins--tiny() when (@enable-responsive-margins--tiny = true) {
+            .enable-margins--tiny(lap-and-up-);
+        }
+
+        .enable-responsive-margins--small() when (@enable-responsive-margins--small = true) {
+            .enable-margins--small(lap-and-up-);
+        }
+
+        .enable-responsive-margins--large() when (@enable-responsive-margins--large = true) {
+            .enable-margins--large(lap-and-up-);
+        }
+
+        .enable-responsive-margins--huge() when (@enable-responsive-margins--huge = true) {
+            .enable-margins--huge(lap-and-up-);
+        }
+
+        .enable-responsive-margins--none() when (@enable-responsive-margins--none = true) {
+            .enable-margins--none(lap-and-up-);
+        }
+
+        .enable-responsive-margins--negative() when (@enable-responsive-margins--negative = true) {
+            .enable-margins--negative(lap-and-up-);
+        }
+
+        .enable-responsive-margins--negative-tiny() when (@enable-responsive-margins--negative-tiny = true) {
+            .enable-margins--negative-tiny(lap-and-up-);
+        }
+
+        .enable-responsive-margins--negative-small() when (@enable-responsive-margins--negative-small = true) {
+            .enable-margins--negative-small(lap-and-up-);
+        }
+
+        .enable-responsive-margins--negative-large() when (@enable-responsive-margins--negative-large = true) {
+            .enable-margins--negative-large(lap-and-up-);
+        }
+
+        .enable-responsive-margins--negative-huge() when (@enable-responsive-margins--negative-huge = true) {
+            .enable-margins--negative-huge(lap-and-up-);
+        }
+
+        .enable-responsive-paddings() when (@enable-responsive-paddings = true) {
+            .enable-paddings(lap-and-up-);
+        }
+
+        .enable-responsive-paddings--tiny() when (@enable-responsive-paddings--tiny = true) {
+            .enable-paddings--tiny(lap-and-up-);
+        }
+
+        .enable-responsive-paddings--small() when (@enable-responsive-paddings--small = true) {
+            .enable-paddings--small(lap-and-up-);
+        }
+
+        .enable-responsive-paddings--large() when (@enable-responsive-paddings--large = true) {
+            .enable-paddings--large(lap-and-up-);
+        }
+
+        .enable-responsive-paddings--huge() when (@enable-responsive-paddings--huge = true) {
+            .enable-paddings--huge(lap-and-up-);
+        }
+
+        .enable-responsive-paddings--none() when (@enable-responsive-paddings--none = true) {
+            .enable-paddings--none(lap-and-up-);
+        }
+
+        .enable-responsive-margins();
+        .enable-responsive-margins--tiny();
+        .enable-responsive-margins--small();
+        .enable-responsive-margins--large();
+        .enable-responsive-margins--huge();
+        .enable-responsive-margins--none();
+        .enable-responsive-margins--negative();
+        .enable-responsive-margins--negative-tiny();
+        .enable-responsive-margins--negative-small();
+        .enable-responsive-margins--negative-large();
+        .enable-responsive-margins--negative-huge();
+
+        .enable-responsive-paddings();
+        .enable-responsive-paddings--tiny();
+        .enable-responsive-paddings--small();
+        .enable-responsive-paddings--large();
+        .enable-responsive-paddings--huge();
+        .enable-responsive-paddings--none();
+
+    }
+
+    @media only screen and (min-width:~"@{desk-start}") { /* desk */
+
+        .enable-responsive-margins() when (@enable-responsive-margins = true) {
+            .enable-margins(desk-);
+        }
+
+        .enable-responsive-margins--tiny() when (@enable-responsive-margins--tiny = true) {
+            .enable-margins--tiny(desk-);
+        }
+
+        .enable-responsive-margins--small() when (@enable-responsive-margins--small = true) {
+            .enable-margins--small(desk-);
+        }
+
+        .enable-responsive-margins--large() when (@enable-responsive-margins--large = true) {
+            .enable-margins--large(desk-);
+        }
+
+        .enable-responsive-margins--huge() when (@enable-responsive-margins--huge = true) {
+            .enable-margins--huge(desk-);
+        }
+
+        .enable-responsive-margins--none() when (@enable-responsive-margins--none = true) {
+            .enable-margins--none(desk-);
+        }
+
+        .enable-responsive-margins--negative() when (@enable-responsive-margins--negative = true) {
+            .enable-margins--negative(desk-);
+        }
+
+        .enable-responsive-margins--negative-tiny() when (@enable-responsive-margins--negative-tiny = true) {
+            .enable-margins--negative-tiny(desk-);
+        }
+
+        .enable-responsive-margins--negative-small() when (@enable-responsive-margins--negative-small = true) {
+            .enable-margins--negative-small(desk-);
+        }
+
+        .enable-responsive-margins--negative-large() when (@enable-responsive-margins--negative-large = true) {
+            .enable-margins--negative-large(desk-);
+        }
+
+        .enable-responsive-margins--negative-huge() when (@enable-responsive-margins--negative-huge = true) {
+            .enable-margins--negative-huge(desk-);
+        }
+
+        .enable-responsive-paddings() when (@enable-responsive-paddings = true) {
+            .enable-paddings(desk-);
+        }
+
+        .enable-responsive-paddings--tiny() when (@enable-responsive-paddings--tiny = true) {
+            .enable-paddings--tiny(desk-);
+        }
+
+        .enable-responsive-paddings--small() when (@enable-responsive-paddings--small = true) {
+            .enable-paddings--small(desk-);
+        }
+
+        .enable-responsive-paddings--large() when (@enable-responsive-paddings--large = true) {
+            .enable-paddings--large(desk-);
+        }
+
+        .enable-responsive-paddings--huge() when (@enable-responsive-paddings--huge = true) {
+            .enable-paddings--huge(desk-);
+        }
+
+        .enable-responsive-paddings--none() when (@enable-responsive-paddings--none = true) {
+            .enable-paddings--none(desk-);
+        }
+
+        .enable-responsive-margins();
+        .enable-responsive-margins--tiny();
+        .enable-responsive-margins--small();
+        .enable-responsive-margins--large();
+        .enable-responsive-margins--huge();
+        .enable-responsive-margins--none();
+        .enable-responsive-margins--negative();
+        .enable-responsive-margins--negative-tiny();
+        .enable-responsive-margins--negative-small();
+        .enable-responsive-margins--negative-large();
+        .enable-responsive-margins--negative-huge();
+
+        .enable-responsive-paddings();
+        .enable-responsive-paddings--tiny();
+        .enable-responsive-paddings--small();
+        .enable-responsive-paddings--large();
+        .enable-responsive-paddings--huge();
+        .enable-responsive-paddings--none();
+
+    }
+
+}
+
+.responsive-spacing();

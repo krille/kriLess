@@ -70,10 +70,10 @@ This will yield:
  * Where `@truncation-boundary` is a united measurement.
  */
 .truncate(@truncation-boundary){
-    max-width:@truncation-boundary;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    max-width: @truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -87,6 +87,26 @@ This will yield:
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+
+
+
+/*------------------------------------*\
+    HIDE ELEMENT
+\*------------------------------------*/
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+ */
+.hide-element() {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
 }
 
 
@@ -109,14 +129,4 @@ This will yield:
   &:-ms-input-placeholder {
     color: @color !important;
   }
-}
-
-
-
-/*------------------------------------*\
-    IE7 INLINE BLOCK
-\*------------------------------------*/
-.ie7-inline-block() {
-  *display: inline;
-  *zoom: 1;
 }
