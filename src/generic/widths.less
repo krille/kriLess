@@ -1,189 +1,213 @@
 /*------------------------------------*\
-    $WIDTHS
+    #WIDTHS
 \*------------------------------------*/
+
 /**
- * Sizes in human readable format. These are used in conjunction with other
- * objects and abstractions found in inuit.css, most commonly the grid system
- * and faux flexbox.
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes can take a fraction-like format (e.g. `.2/3`) or a spoken-
+ * word format (e.g. `two-thirds`). Toggle formats by overriding the
+ * `$inuit-use-fractions` variable defined below.
  */
 
+.setup-widths(@prefix: 'null') when (@use-width-fractions = true) {
 
-.grid-setup(@prefix: 'null') {
 	// no access to outer scope
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	/**
-	 * Show/Hide
-	 */
-	.@{the-prefix}hidden {
-	  display: none !important;
-	}
+    /**
+     * Whole.
+     */
+    [class~="@{the-prefix}1/1"]       { width: 100% !important; }
+    
+    /**
+     * Halves.
+     */
+    [class~="@{the-prefix}1/2"],
+    [class~="@{the-prefix}2/4"],
+    [class~="@{the-prefix}3/6"],
+    [class~="@{the-prefix}4/8"],
+    [class~="@{the-prefix}5/10"],
+    [class~="@{the-prefix}6/12"]      { width: 50% !important; }
+    
+    /**
+     * Thirds.
+     */
+    [class~="@{the-prefix}1/3"],
+    [class~="@{the-prefix}2/6"],
+    [class~="@{the-prefix}3/9"],
+    [class~="@{the-prefix}4/12"]      { width: 33.3333333% !important; }
+    [class~="@{the-prefix}2/3"],
+    [class~="@{the-prefix}4/6"],
+    [class~="@{the-prefix}6/9"],
+    [class~="@{the-prefix}8/12"]      { width: 66.6666666% !important; }
+    
+    /**
+     * Quarters.
+     */
+    [class~="@{the-prefix}1/4"],
+    [class~="@{the-prefix}2/8"],
+    [class~="@{the-prefix}3/12"]      { width: 25% !important; }
+    [class~="@{the-prefix}3/4"],
+    [class~="@{the-prefix}6/8"],
+    [class~="@{the-prefix}9/12"]      { width: 75% !important; }
+    
+    /**
+     * Fifths.
+     */
+    [class~="@{the-prefix}1/5"],
+    [class~="@{the-prefix}2/10"]      { width: 20% !important; }
+    [class~="@{the-prefix}2/5"],
+    [class~="@{the-prefix}4/10"]      { width: 40% !important; }
+    [class~="@{the-prefix}3/5"],
+    [class~="@{the-prefix}6/10"]      { width: 60% !important; }
+    [class~="@{the-prefix}4/5"],
+    [class~="@{the-prefix}8/10"]      { width: 80% !important; }
+    
+    /**
+     * Sixths.
+     */
+    [class~="@{the-prefix}1/6"],
+    [class~="@{the-prefix}2/12"]      { width: 16.6666666% !important; }
+    [class~="@{the-prefix}5/6"],
+    [class~="@{the-prefix}10/12"]     { width: 83.3333333% !important; }
+    /**
+     * Eighths.
+     */
+    [class~="@{the-prefix}1/8"]       { width: 12.5% !important; }
+    [class~="@{the-prefix}3/8"]       { width: 37.5% !important; }
+    [class~="@{the-prefix}5/8"]       { width: 62.5% !important; }
+    [class~="@{the-prefix}7/8"]       { width: 87.5% !important; }
+    
+    /**
+     * Ninths.
+     */
+    [class~="@{the-prefix}1/9"]       { width: 11.1111111% !important; }
+    [class~="@{the-prefix}2/9"]       { width: 22.2222222% !important; }
+    [class~="@{the-prefix}4/9"]       { width: 44.4444444% !important; }
+    [class~="@{the-prefix}5/9"]       { width: 55.5555555% !important; }
+    [class~="@{the-prefix}7/9"]       { width: 77.7777777% !important; }
+    [class~="@{the-prefix}8/9"]       { width: 88.8888888% !important; }
+    
+    /**
+     * Tenths.
+     */
+    [class~="@{the-prefix}1/10"]      { width: 10% !important; }
+    [class~="@{the-prefix}3/10"]      { width: 30% !important; }
+    [class~="@{the-prefix}7/10"]      { width: 70% !important; }
+    [class~="@{the-prefix}9/10"]      { width: 90% !important; }
+    
+    /**
+     * Twelfths.
+     */
+    [class~="@{the-prefix}1/12"]      { width:  8.3333333% !important; }
+    [class~="@{the-prefix}5/12"]      { width: 41.6666666% !important; }
+    [class~="@{the-prefix}7/12"]      { width: 58.3333333% !important; }
+    [class~="@{the-prefix}11/12"]     { width: 91.6666666% !important; }
 
-	.@{the-prefix}visible {
-		display: block !important;
-
-		&.grid__item {
-			display: inline-block !important;
-		}
-	}
-
-	/**
-	 * Whole
-	 */
-	.@{the-prefix}one-whole {
-	  width: 100%;
-	}
-
-	/**
-	 * Halves
-	 */
-	.@{the-prefix}one-half, .@{the-prefix}two-quarters, .@{the-prefix}three-sixths, .@{the-prefix}four-eighths, .@{the-prefix}five-tenths, .@{the-prefix}six-twelfths {
-	  width: 50%;
-	}
-
-	/**
-	 * Thirds
-	 */
-	.@{the-prefix}one-third, .@{the-prefix}two-sixths, .@{the-prefix}four-twelfths {
-	  width: 33.333%;
-	}
-
-	.@{the-prefix}two-thirds, .@{the-prefix}four-sixths, .@{the-prefix}eight-twelfths {
-	  width: 66.666%;
-	}
-
-	/**
-	 * Quarters
-	 */
-	.@{the-prefix}one-quarter, .@{the-prefix}two-eighths, .@{the-prefix}three-twelfths {
-	  width: 25%;
-	}
-
-	.@{the-prefix}three-quarters, .@{the-prefix}six-eighths, .@{the-prefix}nine-twelfths {
-	  width: 75%;
-	}
-
-	/**
-	 * Fifths
-	 */
-	.@{the-prefix}one-fifth, .@{the-prefix}two-tenths {
-	  width: 20%;
-	}
-
-	.@{the-prefix}two-fifths, .@{the-prefix}four-tenths {
-	  width: 40%;
-	}
-
-	.@{the-prefix}three-fifths, .@{the-prefix}six-tenths {
-	  width: 60%;
-	}
-
-	.@{the-prefix}four-fifths, .@{the-prefix}eight-tenths {
-	  width: 80%;
-	}
-
-	/**
-	 * Sixths
-	 */
-	.@{the-prefix}one-sixth, .@{the-prefix}two-twelfths {
-	  width: 16.666%;
-	}
-
-	.@{the-prefix}five-sixths, .@{the-prefix}ten-twelfths {
-	  width: 83.333%;
-	}
-
-	/**
-	 * Eighths
-	 */
-	.@{the-prefix}one-eighth {
-	  width: 12.5%;
-	}
-
-	.@{the-prefix}three-eighths {
-	  width: 37.5%;
-	}
-
-	.@{the-prefix}five-eighths {
-	  width: 62.5%;
-	}
-
-	.@{the-prefix}seven-eighths {
-	  width: 87.5%;
-	}
-
-	/**
-	 * Tenths
-	 */
-	.@{the-prefix}one-tenth {
-	  width: 10%;
-	}
-
-	.@{the-prefix}three-tenths {
-	  width: 30%;
-	}
-
-	.@{the-prefix}seven-tenths {
-	  width: 70%;
-	}
-
-	.@{the-prefix}nine-tenths {
-	  width: 90%;
-	}
-
-	/**
-	 * Twelfths
-	 */
-	.@{the-prefix}one-twelfth {
-	  width: 8.333%;
-	}
-
-	.@{the-prefix}five-twelfths {
-	  width: 41.666%;
-	}
-
-	.@{the-prefix}seven-twelfths {
-	  width: 58.333%;
-	}
-
-	.@{the-prefix}eleven-twelfths {
-	  width: 91.666%;
-	}
-} // .grid-setup(@prefix: 'null') {
-.grid-setup();
-
-/**
- * If you have set `@responsive` to ‘true’ in `vars.less` then you now have
- * access to these classes. You can define at which breakpoint you’d like an
- * element to be a certain size, e.g.:
- *
- * `<div class="g  w-one-quarter  lap-one-half  palm-one-whole"> ... </div>`
- *
- * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
- * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
- * at ‘mobile’ sizes.
- *
- * Demo: jsfiddle.net/inuitcss/WS4Ge
- *
- */
-
-.responsive-widths() when (@responsive = false) {
 }
 
-.responsive-widths() when (@responsive = true) {
 
-	@media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
-		.grid-setup(lap-);
-	} // @media lap
 
-	@media only screen and (min-width:~"@{lap-start}") { /* lap-and-up */
-		.grid-setup(lap-and-up-);
-	} // @media lap-and-up
 
-	@media only screen and (min-width:~"@{desk-start}") { /* desk */
-		.grid-setup(desk-);
-	} // @media desk
-} //responsive=true mixin
 
-.responsive-widths();
+.setup-widths(@prefix: 'null') when (@use-width-fractions = false) {
+
+	// no access to outer scope
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+    /**
+     * Whole.
+     */
+    .@{the-prefix}one-whole           { width: 100% !important; }
+    
+    /**
+     * Halves.
+     */
+    .@{the-prefix}one-half,
+    .@{the-prefix}two-quarters,
+    .@{the-prefix}three-sixths,
+    .@{the-prefix}four-eighths,
+    .@{the-prefix}five-tenths,
+    .@{the-prefix}six-twelfths        { width: 50% !important; }
+    
+    /**
+     * Thirds.
+     */
+    .@{the-prefix}one-third,
+    .@{the-prefix}two-sixths,
+    .@{the-prefix}three-ninths,
+    .@{the-prefix}four-twelfths       { width: 33.3333333% !important; }
+    .@{the-prefix}two-thirds,
+    .@{the-prefix}four-sixths,
+    .@{the-prefix}six-ninths,
+    .@{the-prefix}eight-twelfths      { width: 66.6666666% !important; }
+    
+    /**
+     * Quarters.
+     */
+    .@{the-prefix}one-quarter,
+    .@{the-prefix}two-eighths,
+    .@{the-prefix}three-twelfths      { width: 25% !important; }
+    .@{the-prefix}three-quarters,
+    .@{the-prefix}six-eighths,
+    .@{the-prefix}nine-twelfths       { width: 75% !important; }
+    
+    /**
+     * Fifths.
+     */
+    .@{the-prefix}one-fifth,
+    .@{the-prefix}two-tenths          { width: 20% !important; }
+    .@{the-prefix}two-fifths,
+    .@{the-prefix}four-tenths         { width: 40% !important; }
+    .@{the-prefix}three-fifths,
+    .@{the-prefix}six-tenths          { width: 60% !important; }
+    .@{the-prefix}four-fifths,
+    .@{the-prefix}eight-tenths        { width: 80% !important; }
+    
+    /**
+     * Sixths.
+     */
+    .@{the-prefix}one-sixth,
+    .@{the-prefix}two-twelfths        { width: 16.6666666% !important; }
+    .@{the-prefix}five-sixths,
+    .@{the-prefix}ten-twelfths        { width: 83.3333333% !important; }
+    
+    /**
+     * Eighths.
+     */
+    .@{the-prefix}one-eighth          { width: 12.5% !important; }
+    .@{the-prefix}three-eighths       { width: 37.5% !important; }
+    .@{the-prefix}five-eighths        { width: 62.5% !important; }
+    .@{the-prefix}seven-eighths       { width: 87.5% !important; }
+    
+    /**
+     * Ninths.
+     */
+    .@{the-prefix}one-ninth           { width: 11.1111111% !important; }
+    .@{the-prefix}two-ninths          { width: 22.2222222% !important; }
+    .@{the-prefix}four-ninths         { width: 44.4444444% !important; }
+    .@{the-prefix}five-ninths         { width: 55.5555555% !important; }
+    .@{the-prefix}seven-ninths        { width: 77.7777777% !important; }
+    .@{the-prefix}eight-ninths        { width: 88.8888888% !important; }
+    
+    /**
+     * Tenths.
+     */
+    .@{the-prefix}one-tenth           { width: 10% !important; }
+    .@{the-prefix}three-tenths        { width: 30% !important; }
+    .@{the-prefix}seven-tenths        { width: 70% !important; }
+    .@{the-prefix}nine-tenths         { width: 90% !important; }
+    
+    /**
+     * Twelfths.
+     */
+    .@{the-prefix}one-twelfth         { width:  8.3333333% !important; }
+    .@{the-prefix}five-twelfths       { width: 41.6666666% !important; }
+    .@{the-prefix}seven-twelfths      { width: 58.3333333% !important; }
+    .@{the-prefix}eleven-twelfths     { width: 91.6666666% !important; }
+
+}
+
+.setup-widths();

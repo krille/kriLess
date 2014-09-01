@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+
+.responsive-widths() when (@responsive = false) {
+}
+
+.responsive-widths() when (@responsive = true) {
+
+	@media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
+		.setup-widths(lap-);
+	}
+
+	@media only screen and (min-width:~"@{lap-start}") { /* lap-and-up */
+		.setup-widths(lap-and-up-);
+	}
+
+	@media only screen and (min-width:~"@{desk-start}") { /* desk */
+		.setup-widths(desk-);
+	}
+
+} //responsive=true mixin
+
+.responsive-widths();
