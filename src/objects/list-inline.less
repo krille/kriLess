@@ -1,0 +1,63 @@
+.set-list-inline() when (@use-list-inline = false) {}
+.set-list-inline() when (@use-list-inline = true) {
+
+
+
+/*------------------------------------*\
+    #LIST-INLINE
+\*------------------------------------*/
+
+/**
+ * The list-inline object simply displays a list of items in one line.
+ */
+
+.list-inline {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        display: inline-block;
+    }
+
+}
+
+
+
+
+/**
+ * Comma delimited list to semantically mark up lists of tags, etc.
+ *
+ * N.B. This component requires that you remove the whitespace between LIs.
+ *      The simplest (and valid) way to achieve this is by omitting the
+ *      closing `</li>` tag.
+ */
+.list-inline--delimited() when (@enable-list-inline--delimited = true) {
+
+    .list-inline--delimited {
+
+        font-size: 0;
+
+        > li {
+            .font-size(@base-font-size, none);
+        }
+
+        > li + li {
+
+            &:before {
+                content: @list-inline-delimit-character;
+            }
+
+        }
+
+    }
+
+}
+
+.list-inline--delimited();
+
+
+
+} // use-list-inline=true mixin
+
+.set-list-inline();

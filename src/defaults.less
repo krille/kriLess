@@ -155,6 +155,49 @@
 
 
 /*------------------------------------*\
+    #LIST-BLOCK
+\*------------------------------------*/
+@list-block-padding:          @base-spacing-unit;
+@list-block-padding--tiny:    round(@list-block-padding / 4);
+@list-block-padding--small:   round(@list-block-padding / 2);
+@list-block-padding--large:   round(@list-block-padding * 2);
+@list-block-padding--huge:    round(@list-block-padding *4);
+
+@enable-list-block--tiny:     false;
+@enable-list-block--small:    false;
+@enable-list-block--large:    false;
+@enable-list-block--huge:     false;
+
+
+
+/*------------------------------------*\
+    #LIST-UI
+\*------------------------------------*/
+@list-ui-padding:         @base-spacing-unit;
+@list-ui-padding--tiny:   round(@list-ui-padding / 4);
+@list-ui-padding--small:  round(@list-ui-padding / 2);
+@list-ui-padding--large:  round(@list-ui-padding * 2);
+@list-ui-padding--huge:   round(@list-ui-padding * 4);
+
+@list-ui-border-width:    1px;
+@list-ui-border-style:    solid;
+@list-ui-border-color:    #ccc;
+
+@enable-list-ui--tiny:    false;
+@enable-list-ui--small:   false;
+@enable-list-ui--large:   false;
+@enable-list-ui--huge:    false;
+
+
+
+/*------------------------------------*\
+    #LIST-INLINE
+\*------------------------------------*/
+@enable-list-inline--delimited:   false;
+@list-inline-delimit-character:   ",\00A0";
+
+
+/*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
 @layout-gutter:           @base-spacing-unit;
@@ -183,16 +226,16 @@
 @use-forms:         false;
 @use-grids:         false;
 @use-layout:        false;
-@use-nav:           false;
 @use-list-bare:     false;
+@use-list-block:    false;
+@use-list-ui:       false;
+@use-list-inline:   false;
 @use-tabs:          false;
 @use-box:           false;
 @use-pagination:    false;
 @use-breadcrumb:    false;
 @use-media:         false;
 @use-flag:          false;
-@use-block-list:    false;
-@use-matrix:        false;
 @use-split:         false;
 @use-buttons:       false;
 @use-icon-font:     false;

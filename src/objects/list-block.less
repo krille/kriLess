@@ -1,0 +1,115 @@
+.set-list-block() when (@use-list-block = false) {}
+.set-list-block() when (@use-list-block = true) {
+
+/*------------------------------------*\
+    #LIST-BLOCK
+\*------------------------------------*/
+
+/**
+ * The list-block object creates blocky list items out of a `ul` or `ol`.
+ */
+
+.list-block {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        &:extend(.list-block__item);
+    }
+
+}
+
+    .list-block__item {
+        padding: @list-block-padding;
+    }
+
+
+
+
+
+/**
+ * Tiny list-blocks.
+ */
+.list-block--tiny() when (@enable-list-block--tiny = true) {
+
+    .list-block--tiny {
+
+        > .list-block__item {
+            padding: @list-block-padding--tiny;
+        }
+
+    }
+
+}
+
+.list-block--tiny();
+
+
+
+
+
+/**
+ * Small list-blocks.
+ */
+.list-block--small() when (@enable-list-block--small = true) {
+
+    .list-block--small {
+
+        > .list-block__item {
+            padding: @list-block-padding--small;
+        }
+
+    }
+
+}
+
+.list-block--small();
+
+
+
+
+
+/**
+ * Large list-blocks.
+ */
+.list-block--large() when (@enable-list-block--large = true) {
+
+    .list-block--large {
+
+        > .list-block__item {
+            padding: @list-block-padding--large;
+        }
+
+    }
+
+}
+
+.list-block--large();
+
+
+
+
+
+/**
+ * Huge list-blocks.
+ */
+.list-block--huge() when (@enable-list-block--huge = true) {
+
+    .list-block--huge {
+
+        > .list-block__item {
+            padding: @list-block-padding--huge;
+        }
+
+    }
+
+}
+
+.list-block--huge();
+
+
+
+} // use-list-block=true mixin
+
+.set-list-block();

@@ -135,6 +135,37 @@
 
 
 /*------------------------------------*\
+    #LIST-BLOCK
+\*------------------------------------*/
+@enable-list-block--tiny:     true;
+@enable-list-block--small:    true;
+@enable-list-block--large:    true;
+
+
+
+/*------------------------------------*\
+    #LIST-UI
+\*------------------------------------*/
+@list-ui-border-width:    1px;
+@list-ui-border-style:    solid;
+@list-ui-border-color:    #ccc;
+
+@enable-list-ui--tiny:    true;
+@enable-list-ui--small:   true;
+@enable-list-ui--large:   true;
+@enable-list-ui--huge:    true;
+
+
+
+/*------------------------------------*\
+    #LIST-INLINE
+\*------------------------------------*/
+@enable-list-inline--delimited:   true;
+@list-inline-delimit-character:   ",\00A0";
+
+
+
+/*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
 @enable-layout--tiny:     true;
@@ -157,16 +188,16 @@
 @use-forms:         true;
 @use-grids:         true;
 @use-layout:        true;
-@use-nav:           true;
 @use-list-bare:     true;
+@use-list-block:    true;
+@use-list-ui:       true;
+@use-list-inline:   true;
 @use-tabs:          true;
 @use-box:           true;
 @use-pagination:    true;
 @use-breadcrumb:    true;
 @use-media:         true;
 @use-flag:          true;
-@use-block-list:    true;
-@use-matrix:        true;
 @use-split:         true;
 @use-buttons:       true;
 @use-icon-font:     true;
