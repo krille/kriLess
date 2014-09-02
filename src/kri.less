@@ -4,59 +4,96 @@
 /**
  * IMPORTS.............Begin importing the sections below
  *
- * MIXINS..............Super-simple Sass stuff
+ * SETTINGS............
+ *
+ * MIXINS..............
+ *
  * NORMALIZE...........normalize.css
- * RESET...............Set some defaults
- * CLEARFIX............
+ * RESET...............
  * SHARED..............Shared declarations
- * HELPER..............A series of helper classes to use arbitrarily
  *
  * PAGE................High-, page-level styling.
- * PARAGRAPHS..........
- * IMAGES..............
- * LISTS...............
- * TABLES..............
- * FORMS...............
+ * PARAGRAPHS..........Make the introductory text slightly larger
+ * HEADINGS............When we define a heading we also define a corresponding class to go with it
+ * IMAGES..............Fluid images for responsive purposes
+ * LISTS...............Remove extra vertical spacing when nesting lists
  *
- * GRIDS...............Fluid, proportional and nestable grids
- * NAV.................A simple abstraction to put a list in horizontal nav mode
- * BLOCK-LIST..........Blocky lists of content
- * MATRIX..............Gridded lists
+ * LAYOUT..............Fluid, proportional and nestable grids
+ * MEDIA...............Place any image- and text-like content side-by-side
+ * FLAG................Like the media object but with vertical aligning
+ * LIST-BARE...........The list-bare object simply removes any indents and bullet points from lists
+ * LIST-BLOCK..........The list-block object creates blocky list items
+ * LIST-UI.............The UI list object creates blocky list items with a keyline separator
+ * LIST-INLINE.........The list-inline object simply displays a list of items in one line
+ * TABLES..............Basic table styles
+ * TABS................A simple abstraction for making equal-width navigation tabs
+ * BOX.................The box object simply boxes off content
  * SPLIT...............A simple split-in-two object
  * BUTTONS.............
- * ICON-FONT...........Icon font from fontello
+ *
+ *
+ * PROJECT SPECIFIC MODULES 
+ *
+ *
+ * CLEARFIX............Micro clearfix
+ * SPACING.............Margin and padding helper classes
+ * SPACING-RESPONSIVE..
+ * WIDTHS..............A series of width helper classes
+ * WIDTHS-RESPONSIVE...
+ * PRINT...............Very crude, reset-like styles
  */
 
 
 
 /*------------------------------------*\
-    $IMPORTS
+    $SETTINGS
 \*------------------------------------*/
 /**
- * Generic utility styles etc.
+ * Global variables, site-wide settings, config switches, etc
  */
-@import "defaults";
-@import "generic/mixins";
+@import "settings";
+
+
+/*------------------------------------*\
+    $TOOLS
+\*------------------------------------*/
+/**
+ * Site-wide mixins and functions
+ */
+@import "tools/mixins";
+
+
+/*------------------------------------*\
+    $GENERIC
+\*------------------------------------*/
+/**
+ * Low-specificity, far-reaching rulesets (e.g. resets)
+ */
 @import "generic/normalize";
 @import "generic/reset";
-@import "generic/clearfix";
 @import "generic/shared";
 
 
 
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
 /**
- * Base styles; unclassed HTML elements etc.
+ * Unclassed HTML elements (e.g. a {}, blockquote {}, address {})
  */
 @import "base/page";
 @import "base/paragraphs";
+@import "base/headings";
 @import "base/images";
 @import "base/lists";
-@import "base/tables";
 
 
 
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
 /**
- * Objects and abstractions
+ * Objects, abstractions, and design patterns (e.g. .media {})
  */
 @import "objects/layout";
 @import "objects/flag";
@@ -65,8 +102,8 @@
 @import "objects/list-block";
 @import "objects/list-ui";
 @import "objects/list-inline";
+@import "objects/tables";
 @import "objects/tabs";
 @import "objects/box";
 @import "objects/split";
 @import "objects/buttons";
-@import "objects/icon-font";

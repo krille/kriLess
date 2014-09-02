@@ -4,4 +4,40 @@
     #ICON-FONT
 \*------------------------------------*/
 
+@font-face {
+  font-family: 'icon-font';
+  src: url('../fonts/icon-font.eot?27806465');
+  src: url('../fonts/icon-font.eot?27806465#iefix') format('embedded-opentype'),
+       url('../fonts/icon-font.woff?27806465') format('woff'),
+       url('../fonts/icon-font.ttf?27806465') format('truetype'),
+       url('../fonts/icon-font.svg?27806465#icon-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  
+  display: inline-block;
+  width: 1em;
+  line-height: 1;
+  
+  font-family: "icon-font";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+
+  text-transform: none;
+  text-decoration: inherit;
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+  speak: none;
+
+}
+
+
+
 .icon-heart-empty:before { content: '\e800'; } /* '' */

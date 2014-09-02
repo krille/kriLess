@@ -1,3 +1,6 @@
+.set-tables() when (@use-tables = false) {}
+.set-tables() when (@use-tables = true) {
+
 /*------------------------------------*\
     #TABLES
 \*------------------------------------*/
@@ -177,3 +180,7 @@
 }
 
 .table--columns();
+
+} // use-tables=true mixin
+
+.set-tables();
