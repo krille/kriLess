@@ -2,44 +2,13 @@
 
 .set-icon-font-module() when (@use-icon-font = false) {}
 .set-icon-font-module() when (@use-icon-font = true) {
-@charset "UTF-8";
 
-/* Needed for animated buttons */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "icon-font";
-  font-weight: normal;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-}
-
-.icon-search:before { content: '\F002'; }
-.icon-info-sign:before { content: '\F05A'; }
-.icon-signin:before { content: '\F090'; }
-.icon-shopping-cart:before { content: "\F07A"; }
-.icon-caret-left:before { content: "\F0D9"; }
-.icon-caret-right:before { content: "\F0DA"; }
-.icon-facebook:before { content: "\F09A"; }
-.icon-twitter:before { content: "\F099"; }
-.icon-google-plus:before { content: "\F0D5"; }
-.icon-youtube:before { content: "\F167"; }
-.icon-lock:before { content: "\F023"; }
+/*------------------------------------*\
+    #ICON-FONT
+\*------------------------------------*/
+.icon-heart-empty:before { content: '\e800'; } /* '' */
 
 
-.no-generatedcontent {
-  .ie7icon(@inner) { *zoom: ~"expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '@{inner}')"; }
-  .icon-search { .ie7icon('&#xf002;'); }
-  .icon-info-sign { .ie7icon('&#xf05a;'); }
-  .icon-signin { .ie7icon('&#xf090;'); }
-  .icon-shopping-cart { .ie7icon('&#xf07a;'); }
-  .icon-caret-left { .ie7icon('&#xF0D9;'); }
-  .icon-caret-right { .ie7icon('&#xF0DA;'); }
-  .icon-facebook { .ie7icon('&#xF09A;'); }
-  .icon-twitter { .ie7icon('&#xF099;'); }
-  .icon-google-plus { .ie7icon('&#xF0D5;'); }
-  .icon-youtube { .ie7icon('&#xF167;'); }
-  .icon-lock { .ie7icon('&#xF023;'); }
-}
 
 } // use-icon-font=true mixin
 

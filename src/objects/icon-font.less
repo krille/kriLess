@@ -1,11 +1,11 @@
 .set-icon-font() when (@use-icon-font = false) {}
 .set-icon-font() when (@use-icon-font = true) {
 
+/*------------------------------------*\
+    #ICON-FONT
+\*------------------------------------*/
 
-
-@charset "UTF-8";
-
- @font-face {
+@font-face {
   font-family: 'icon-font';
   src: url('../fonts/icon-font.eot?27806465');
   src: url('../fonts/icon-font.eot?27806465#iefix') format('embedded-opentype'),
@@ -18,22 +18,25 @@
 
 
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  
+  display: inline-block;
+  width: 1em;
+  line-height: 1;
+  
   font-family: "icon-font";
   font-weight: normal;
   font-style: normal;
+  font-variant: normal;
+
+  text-transform: none;
   text-decoration: inherit;
+  text-align: center;
+
   -webkit-font-smoothing: antialiased;
-  margin-right: .2em;
-}
-
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  text-decoration: inherit;
-  display: inline-block;
   speak: none;
+
 }
 
 
