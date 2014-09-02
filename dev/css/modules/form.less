@@ -1,13 +1,9 @@
 /// <reference path="../project.less" />
 
-.set-forms-module() when (@use-forms = false) {}
-.set-forms-module() when (@use-forms = true) {
-
-
-
 /*------------------------------------*\
-    $FORM
+    #FORM
 \*------------------------------------*/
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -83,9 +79,3 @@ textarea[readonly] {
     background-color: #eaeded;
     color: #cad2d3;
 }
-
-
-
-} // use-forms=true mixin
-
-.set-forms-module();
