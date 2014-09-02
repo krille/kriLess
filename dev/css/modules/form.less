@@ -3,7 +3,6 @@
 /*------------------------------------*\
     #FORM
 \*------------------------------------*/
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -18,14 +17,25 @@ input[type="number"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-select,
-textarea {
+textarea,
+select {
     display: inline-block;
+    padding: round(@base-spacing-unit / 4);
+    width: 100%;
+
     border: 1px solid #ccc;
-    font-size: 0.8em;
     box-sizing: border-box;
+
+    font-size: 0.875em;
+
     transition: 0.1s linear border;
     -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+select {
+    -webkit-appearance: menulist;
 }
 
 input[type="text"]:focus,
@@ -42,7 +52,6 @@ input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-select:focus,
 textarea:focus {
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
@@ -75,7 +84,6 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    cursor: not-allowed;
-    background-color: #eaeded;
-    color: #cad2d3;
+    cursor: default;
+    background-color: #eee;
 }

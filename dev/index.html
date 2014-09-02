@@ -187,14 +187,16 @@
 
 
 
-	<fieldset>
-		<h2>Forms</h2>
-		<ul class="form-fields">
-			<li>
+	<section class="box box--large">
+		
+		<h1>Forms</h1>
+
+		<ul class="layout">
+			<li class="layout__item lap-and-up-1/2 mb">
 				<label for="input-1">Label</label>
 				<input id="input-1" type="text" placeholder="Placeholder" />
 			</li>
-			<li>
+			<li class="layout__item lap-and-up-1/2 mb">
 				<label for="select-1">Label</label>
 				<select id="select-1">
 					<option value="1">Option1</option>
@@ -202,54 +204,48 @@
 					<option value="3">Option3</option>
 				</select>
 			</li>
-			<li>
-				<ul class="multi-list four-cols">
-					<li>
+			<li class="layout__item">
+				<ul class="layout">
+					<li class="layout__item lap-1/2 desk-1/4 mb">
 						<label>Label</label>
 						<input type="text" />
 					</li>
-					<li>
+					<li class="layout__item lap-1/2 desk-1/4 mb">
 						<label>Label</label>
 						<input type="text" disabled value="Disabled" />
 					</li>
-					<li>
+					<li class="layout__item lap-1/2 desk-1/4 mb">
 						<label>Label</label>
 						<input type="text" readonly value="Readonly" />
 					</li>
-					<li>
+					<li class="layout__item lap-1/2 desk-1/4 mb">
 						<label>Label</label>
 						<input type="text" />
 					</li>
 				</ul>
 			</li>
-			<li>
-				<ul class="check-list multi-list four-cols">
-					<li>
+			<li class="layout__item lap-and-up-1/2 mb">
+				<ul class="layout">
+					<li class="layout__item">
 						<label><input type="checkbox" /> asdf</label>
 					</li>
-					<li>
+					<li class="layout__item">
 						<label><input type="checkbox" disabled /> asdf</label>
 					</li>
-					<li>
+					<li class="layout__item">
 						<label><input type="checkbox" /> asdf</label>
 					</li>
-					<li>
+					<li class="layout__item">
 						<label><input type="checkbox" /> asdf</label>
 					</li>
 				</ul>
 			</li>
+			<li class="layout__item">
+				<input type="submit" class="btn btn--pill" value="Submit" />
+			</li>
 		</ul>
 
-		<h3>Check list</h3>
-		<ul class="check-list">
-			<li>
-				<label><input type="checkbox" /> asdf</label>
-			</li>
-			<li>
-				<label><input type="checkbox" /> asdf</label>
-			</li>
-		</ul>
-	</fieldset>
+	</section>
 
 
 
