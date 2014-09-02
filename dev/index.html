@@ -74,6 +74,13 @@
 
 		<h2><code>.list-block</code></h2>
 		<p>The list-block object creates blocky list items out of a `ul` or `ol`.</p>
+		<p>Components: <code>.list-block</code>, <code>.list-block__item</code></p>
+		<p>Spacing: 
+			<code>.list-block--tiny</code>, 
+			<code>.list-block--small</code>,
+			<code>.list-block--large</code>,
+			<code>.list-block--huge</code>
+		</p>
 
 		<ul class="list-block list-block--tiny mb">
 			<li class="list-block__item">List item</li>
@@ -86,6 +93,13 @@
 
 		<h2><code>.list-ui</code></h2>
 		<p>The UI list object creates blocky list items with a keyline separator out of a `ul` or `ol`.</p>
+		<p>Components: <code>.list-ui</code>, <code>.list-ui__item</code></p>
+		<p>Spacing: 
+			<code>.list-ui--tiny</code>, 
+			<code>.list-ui--small</code>,
+			<code>.list-ui--large</code>,
+			<code>.list-ui--huge</code>
+		</p>
 
 		<ul class="list-ui list-ui--tiny mb lap-mb+ desk-mb++">
 			<li class="list-ui__item">List item</li>
@@ -98,6 +112,7 @@
 
 		<h2><code>.list-inline</code></h2>
 		<p>The list-inline object simply displays a list of items in one line.</p>
+		<p>Alt: <code>.list-inline--delimited</code>
 
 		<ul class="list-inline list-inline--delimited">
 			<li>List item</li>
@@ -116,9 +131,9 @@
 
 		<h1>Layout</h1>
 
-		<p>Variants: <code>.layout--rev</code>, <code>.layout--middle</code>, <code>.layout--bottom</code>, <code>.layout--right</code>, <code>.layout--center</code>, <code>.layout--auto</code></p>
+		<p>Alt: <code>.layout--rev</code>, <code>.layout--middle</code>, <code>.layout--bottom</code>, <code>.layout--right</code>, <code>.layout--center</code>, <code>.layout--auto</code></p>
 
-		<p>Padding: <code>.layout--tiny</code>, <code>.layout--small</code>, <code>.layout--large</code>, <code>.layout--huge</code>, <code>.layout--flush</code></p>
+		<p>Spacing: <code>.layout--tiny</code>, <code>.layout--small</code>, <code>.layout--large</code>, <code>.layout--huge</code>, <code>.layout--flush</code></p>
 
 		<div class="layout">
 
@@ -218,13 +233,44 @@
 		</ul>
 	</fieldset>
 
-	<h2>Breadcrumb</h2>
-	<ol class="nav  breadcrumb--path">
-		<li class=breadcrumb__root><a href=#>inuit.css</a></li>
-		<li><a href=#>inuit.css</a></li>
-		<li><a href=#>partials</a></li>
-		<li class=current><a href=#>objects</a></li>
-	</ol>
+
+
+
+
+	<section class="box box--large">
+
+		<h1>Breadcrumb</h1>
+
+		<ol class="list-inline breadcrumb">
+			<li class="breadcrumb__root"><a href="#">kri.less</a></li>
+			<li><a href="#">dev</a></li>
+			<li><a href="#">css</a></li>
+			<li class="current"><a href="#">modules</a></li>
+		</ol>
+
+	</section>
+
+
+
+
+
+	<section class="box box--large">
+
+		<h1>Pagination</h1>
+
+		<ol class="list-inline pagination">
+			<li class="pagination__item pagination__item--first">First</li>
+			<li class="pagination__item pagination__item--prev">Previous</li>
+			<li class="pagination__item"><a href="/page/1">1</a></li>
+			<li class="pagination__item"><a href="/page/2">2</a></li>
+			<li class="pagination__item current"><a href="/page/3">3</a></li>
+			<li class="pagination__item"><a href="/page/4">4</a></li>
+			<li class="pagination__item"><a href="/page/5">5</a></li>
+			<li class="pagination__item pagination__item--next"><a href="/page/next">Next</a></li>
+			<li class="pagination__item pagination__item--last"><a href="/page/last">Last</a></li>
+		</ol>
+
+	</section>
 
 
 
@@ -250,35 +296,6 @@
 
 
 
-	<div class="media">
-		<div class="media__img">
-			<img src="http://placehold.it/100x100" />
-		</div>
-		<div class="media__body">
-			<h3>Media object</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum 	quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
-		</div>
-	</div>
-
-	<ul class="matrix  three-cols">
-		<li class=all-cols>Lorem</li>
-		<li>Ipsum <a href=#>dolor</a></li>
-		<li><a href=# class=matrix__link>Sit</a></li>
-		<li>Amet</li>
-		<li class=all-cols>Consectetuer</li>
-	</ul>
-
-	<ul class=block-list>
-		<li>Foo</li>
-		<li>Bar</li>
-		<li>Baz</li>
-		<li><a href=# class=block-list__link>Foo Bar Baz</a></li>
-	</ul>
-
-
-
-
-
 	<section class="box box--large">
 
 		<h1>Media</h1>
@@ -287,7 +304,7 @@
 
 		<p>Layout: <code>.media--rev</code>, <code>.media--responsive</code></p>
 
-		<p>Padding: <code>.media--tiny</code>, <code>.media--small</code>, <code>.media--large</code>, <code>.media--huge</code></p>
+		<p>Spacing: <code>.media--tiny</code>, <code>.media--small</code>, <code>.media--large</code>, <code>.media--huge</code></p>
 
 		<div class="media media--responsive">
 			<div class="media__img">
@@ -314,7 +331,7 @@
 
 		<p>Aligning: <code>.flag--top</code>, <code>.flag--bottom</code></p>
 
-		<p>Padding: <code>.flag--tiny</code>, <code>.flag--small</code>, <code>.flag--large</code>, <code>.flag--huge</code></p>
+		<p>Spacing: <code>.flag--tiny</code>, <code>.flag--small</code>, <code>.flag--large</code>, <code>.flag--huge</code></p>
 
 		<div class="flag flag--responsive">
 			<div class="flag__img">
@@ -361,7 +378,7 @@
 
 		<p>Base: <code>.table</code>, <code>.table--fixed</code></p>
 		<p>Layout: <code>.table--rows</code>, <code>.table--columns</code>, <code>.table--cells</code></p>
-		<p>Padding: <code>.table--compact</code>, <code>.table--cosy</code>, <code>.table--comfy</code></p>
+		<p>Spacing: <code>.table--compact</code>, <code>.table--cosy</code>, <code>.table--comfy</code></p>
 
 		<table class="table table--cells table--fixed table--compact">
 			<thead>
