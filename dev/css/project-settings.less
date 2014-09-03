@@ -1,9 +1,27 @@
 /*------------------------------------*\
-	#OVERRIDE DEFAULTS HERE
+	#PROJECT SETTINGS AND VARIABLES
 \*------------------------------------*/
 @base-font-size:    16px;
 @base-line-height:  24px;
 @base-font-family:  sans-serif;
+@base-ui-color:     #d6d6d6;
+
+
+
+/*------------------------------------*\
+	#BRAND
+\*------------------------------------*/
+@brand-face:        sans-serif;
+@brand-color:       #7b4091;
+
+
+
+/*------------------------------------*\
+	#COLORS
+\*------------------------------------*/
+@html-color:        #0f0f0f;
+@link-color:        @brand-color;
+@link-color-hover:  darken(@link-color, 10);
 
 
 
@@ -38,30 +56,31 @@
 
 
 /*------------------------------------*\
-	#BRAND
+	#ENABLE/DISABLE FRAMEWORK OBJECTS
 \*------------------------------------*/
-@brand-color:       #7b4091;
-@brand-face:        sans-serif;
+@use-box:             true;
+@use-buttons:         true;
+@use-flag:            true;
+@use-layout:          true;
+@use-list-bare:       true;
+@use-list-block:      true;
+@use-list-inline:     true;
+@use-list-ui:         true;
+@use-media:           true;
+@use-split:           true;
+@use-tables:          true;
+@use-tabs:            true;
+@use-width-fractions: true;
 
 
 
 /*------------------------------------*\
-	#COLORS
+	#FRAMEWORK OBJECT SETTINGS
 \*------------------------------------*/
-@html-color:        #0f0f0f;
-@base-ui-color:     #d6d6d6;
-@link-color:        @brand-color;
-@link-color-hover:  darken(@link-color, 10);
 
-@color-grey:        #979797;
-@color-dark-grey:   #3b3b3b;
-@color-light-grey:  #f9f9f9;
-
-
-
-/*------------------------------------*\
-	#BUTTONS
-\*------------------------------------*/
+/**
+ * Buttons
+ */
 @btn-background:      #4a8ec2;
 @btn-color:           #fff;
 @btn-border-width:    1px;
@@ -76,9 +95,9 @@
 
 
 
-/*------------------------------------*\
-	#BOX
-\*------------------------------------*/
+/**
+ * Box
+ */
 @enable-box--flush:   true;
 @enable-box--tiny:    true;
 @enable-box--small:   true;
@@ -87,9 +106,9 @@
 
 
 
-/*------------------------------------*\
-	#TABLES
-\*------------------------------------*/
+/**
+ * Tables
+ */
 @table-border-width:      1px;
 @table-border-style:      solid;
 @table-border-color:      #ccc;
@@ -104,9 +123,9 @@
 
 
 
-/*------------------------------------*\
-	#FLAG
-\*------------------------------------*/
+/**
+ * Flag
+ */
 @enable-flag--tiny:       true;
 @enable-flag--small:      true;
 @enable-flag--large:      true;
@@ -120,9 +139,9 @@
 
 
 
-/*------------------------------------*\
-	#MEDIA
-\*------------------------------------*/
+/**
+ * Media
+ */
 @enable-media--tiny:          true;
 @enable-media--small:         true;
 @enable-media--large:         true;
@@ -134,18 +153,13 @@
 
 
 
-/*------------------------------------*\
-	#LIST-BLOCK
-\*------------------------------------*/
+/**
+ * Lists
+ */
 @enable-list-block--tiny:     true;
 @enable-list-block--small:    true;
 @enable-list-block--large:    true;
 
-
-
-/*------------------------------------*\
-	#LIST-UI
-\*------------------------------------*/
 @list-ui-border-width:    1px;
 @list-ui-border-style:    solid;
 @list-ui-border-color:    #ccc;
@@ -155,19 +169,14 @@
 @enable-list-ui--large:   true;
 @enable-list-ui--huge:    true;
 
-
-
-/*------------------------------------*\
-	#LIST-INLINE
-\*------------------------------------*/
 @enable-list-inline--delimited:   true;
 @list-inline-delimit-character:   ",\00A0";
 
 
 
-/*------------------------------------*\
-	#LAYOUT
-\*------------------------------------*/
+/**
+ * Layout
+ */
 @enable-layout--tiny:     true;
 @enable-layout--small:    true;
 @enable-layout--large:    true;
@@ -182,9 +191,9 @@
 
 
 
-/*------------------------------------*\
-	#SPACING
-\*------------------------------------*/
+/**
+ * Spacing
+ */
 @enable-margins:                  true;
 @enable-margins--tiny:            true;
 @enable-margins--small:           true;
@@ -209,9 +218,9 @@
 
 
 
-/*------------------------------------*\
-	#RESPONSIVE-SPACING
-\*------------------------------------*/
+/**
+ * Responsive spacing
+ */
 @enable-responsive-margins:                   true;
 @enable-responsive-margins--tiny:             true;
 @enable-responsive-margins--small:            true;
@@ -233,22 +242,3 @@
 @enable-responsive-paddings--huge:            true;
 
 @enable-responsive-paddings--none:            true;
-
-
-
-/*------------------------------------*\
-	#ENABLE OTHER OBJECTS
-\*------------------------------------*/
-@use-box:             true;
-@use-buttons:         true;
-@use-flag:            true;
-@use-layout:          true;
-@use-list-bare:       true;
-@use-list-block:      true;
-@use-list-inline:     true;
-@use-list-ui:         true;
-@use-media:           true;
-@use-split:           true;
-@use-tables:          true;
-@use-tabs:            true;
-@use-width-fractions: true;

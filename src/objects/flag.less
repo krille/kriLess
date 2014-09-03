@@ -1,3 +1,25 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@flag-gutter:             @base-spacing-unit;
+@flag-gutter--tiny:       round(@flag-gutter / 4);
+@flag-gutter--small:      round(@flag-gutter / 2);
+@flag-gutter--large:      round(@flag-gutter * 2);
+@flag-gutter--huge:       round(@flag-gutter * 4);
+
+@enable-flag--tiny:       false;
+@enable-flag--small:      false;
+@enable-flag--large:      false;
+@enable-flag--huge:       false;
+@enable-flag--rev:        false;
+@enable-flag--flush:      false;
+@enable-flag--top:        false;
+@enable-flag--bottom:     false;
+@enable-flag--responsive: false;
+@flag-collapse-at:        720px;
+
+
+
 .set-flag() when (@use-flag = false) {}
 .set-flag() when (@use-flag = true) {
 

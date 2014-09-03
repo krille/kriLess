@@ -1,3 +1,24 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@table-padding--compact:  round(@base-spacing-unit / 4);
+@table-padding--cosy:     round(@base-spacing-unit / 2);
+@table-padding--comfy:    @base-spacing-unit;
+
+@table-border-width:      1px;
+@table-border-style:      solid;
+@table-border-color:      #ccc;
+
+@enable-table--fixed:     false;
+@enable-table--compact:   false;
+@enable-table--cosy:      false;
+@enable-table--comfy:     false;
+@enable-table--cells:     false;
+@enable-table--rows:      false;
+@enable-table--columns:   false;
+
+
+
 .set-tables() when (@use-tables = false) {}
 .set-tables() when (@use-tables = true) {
 

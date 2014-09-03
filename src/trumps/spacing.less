@@ -9,6 +9,33 @@
  * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
  */
 
+@margin:                          @base-spacing-unit;
+@padding:                         @base-spacing-unit;
+
+@enable-margins:                  false;
+@enable-margins--tiny:            false;
+@enable-margins--small:           false;
+@enable-margins--large:           false;
+@enable-margins--huge:            false;
+
+@enable-margins--negative:        false;
+@enable-margins--negative-tiny:   false;
+@enable-margins--negative-small:  false;
+@enable-margins--negative-large:  false;
+@enable-margins--negative-huge:   false;
+
+@enable-margins--none:            false;
+
+@enable-paddings:                 false;
+@enable-paddings--tiny:           false;
+@enable-paddings--small:          false;
+@enable-paddings--large:          false;
+@enable-paddings--huge:           false;
+
+@enable-paddings--none:           false;
+
+
+
 .enable-margins(@prefix: 'null') when (@enable-margins = true) {
 
 	/**

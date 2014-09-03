@@ -1,3 +1,19 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@list-block-padding:          @base-spacing-unit;
+@list-block-padding--tiny:    round(@list-block-padding / 4);
+@list-block-padding--small:   round(@list-block-padding / 2);
+@list-block-padding--large:   round(@list-block-padding * 2);
+@list-block-padding--huge:    round(@list-block-padding *4);
+
+@enable-list-block--tiny:     false;
+@enable-list-block--small:    false;
+@enable-list-block--large:    false;
+@enable-list-block--huge:     false;
+
+
+
 .set-list-block() when (@use-list-block = false) {}
 .set-list-block() when (@use-list-block = true) {
 

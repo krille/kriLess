@@ -1,3 +1,20 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@box-padding:         @base-spacing-unit;
+@box-padding--tiny:   round(@box-padding / 4);
+@box-padding--small:  round(@box-padding / 2);
+@box-padding--large:  round(@box-padding * 2);
+@box-padding--huge:   round(@box-padding * 4);
+
+@enable-box--flush:   false;
+@enable-box--tiny:    false;
+@enable-box--small:   false;
+@enable-box--large:   false;
+@enable-box--huge:    false;
+
+
+
 .set-box() when (@use-box = false) {}
 .set-box() when (@use-box = true) {
 

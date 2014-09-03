@@ -1,3 +1,23 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@list-ui-padding:         @base-spacing-unit;
+@list-ui-padding--tiny:   round(@list-ui-padding / 4);
+@list-ui-padding--small:  round(@list-ui-padding / 2);
+@list-ui-padding--large:  round(@list-ui-padding * 2);
+@list-ui-padding--huge:   round(@list-ui-padding * 4);
+
+@list-ui-border-width:    1px;
+@list-ui-border-style:    solid;
+@list-ui-border-color:    #ccc;
+
+@enable-list-ui--tiny:    false;
+@enable-list-ui--small:   false;
+@enable-list-ui--large:   false;
+@enable-list-ui--huge:    false;
+
+
+
 .set-list-ui() when (@use-list-ui = false) {}
 .set-list-ui() when (@use-list-ui = true) {
 

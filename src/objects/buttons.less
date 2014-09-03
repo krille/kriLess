@@ -1,9 +1,30 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@btn-padding:         round(@base-spacing-unit / 2);
+@btn-padding--small:  round(@btn-padding / 2);
+@btn-padding--large:  round(@btn-padding * 2);
+@btn-background:      #4a8ec2;
+@btn-color:           #fff;
+@btn-border-width:    1px;
+@btn-border-style:    solid;
+@btn-border-color:    @btn-background;
+@btn-radius:          0;
+
+@enable-btn--small:   false;
+@enable-btn--large:   false;
+@enable-btn--full:    false;
+@enable-btn--pill:    false;
+
+
+
 .set-buttons() when (@use-buttons = false) {}
 .set-buttons() when (@use-buttons = true) {
 
 /*------------------------------------*\
 	#BUTTONS
 \*------------------------------------*/
+
 /**
  * 1. Allow us to style box model properties.
  * 2. Line different sized buttons up a little nicer.
