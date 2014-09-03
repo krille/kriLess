@@ -20,463 +20,433 @@
 
 
 
-.set-flag() when (@use-flag = false) {}
-.set-flag() when (@use-flag = true) {
+& when (@use-flag = true) {
 
-/*------------------------------------*\
-	#FLAG
-\*------------------------------------*/
-
-/**
- * The flag object is a design pattern similar to the media object, however it
- * utilises `display: table[-cell];` to give us control over the vertical
- * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
- */
-
-/**
- * 1. Allows us to control vertical alignments
- * 2. Force the object to be the full width of its parent. Combined with [1],
- *    this makes the object behave in a quasi-`display: block;` manner.
- */
-.flag {
-	display: table; /* [1] */
-	width: 100%; /* [2] */
-}
+	/*------------------------------------*\
+		#FLAG
+	\*------------------------------------*/
 
 	/**
-	 * Items within a flag object. There should only ever be one of each.
-	 *
-	 * 1. Default to aligning content to their middles.
+	 * The flag object is a design pattern similar to the media object, however it
+	 * utilises `display: table[-cell];` to give us control over the vertical
+	 * alignments of the text and image. csswizardry.com/2013/05/the-flag-object
 	 */
-	.flag__img,
-	.flag__body {
-		display: table-cell;
-		vertical-align: middle; /* [1] */
-	}
 
 	/**
-	 * Flag images have a space between them and the body of the object.
+	 * 1. Allows us to control vertical alignments
+	 * 2. Force the object to be the full width of its parent. Combined with [1],
+	 *    this makes the object behave in a quasi-`display: block;` manner.
 	 */
-	.flag__img {
-		padding-right: @flag-gutter;
-
-		> img {
-			display: block;
-			max-width: none;
-		}
-
+	.flag {
+		display: table; /* [1] */
+		width: 100%; /* [2] */
 	}
 
-	/**
-	 * The container for the main content of the flag object.
-	 *
-	 * 1. Forces the `.flag__body` to take up all remaining space.
-	 */
-	.flag__body {
-		width: 100%; /* [1] */
-
-		&,
-		> :last-child {
-			margin-bottom: 0;
-		}
-
-	}
-
-
-
-
-
-/**
- * Tiny flags.
- */
-.flag--tiny() when (@enable-flag--tiny = true) {
-
-	.flag--tiny {
-
-		> .flag__img {
-			padding-right: @flag-gutter--tiny;
+		/**
+		 * Items within a flag object. There should only ever be one of each.
+		 *
+		 * 1. Default to aligning content to their middles.
+		 */
+		.flag__img,
+		.flag__body {
+			display: table-cell;
+			vertical-align: middle; /* [1] */
 		}
 
 		/**
-		 * Tiny reversed flags.
+		 * Flag images have a space between them and the body of the object.
 		 */
-		.flag--rev() when (@enable-flag--rev = true) {
+		.flag__img {
+			padding-right: @flag-gutter;
 
-			&.flag--rev {
-
-				> .flag__img {
-					padding-right: 0;
-					padding-left:  @flag-gutter--tiny;
-				}
-
+			> img {
+				display: block;
+				max-width: none;
 			}
-		}
 
-		.flag--rev();
-
-	}
-}
-
-.flag--tiny();
-
-
-
-
-
-/**
- * Small flags.
- */
-.flag--small() when (@enable-flag--small = true) {
-
-	.flag--small {
-
-		> .flag__img {
-			padding-right: @flag-gutter--small;
 		}
 
 		/**
-		 * Small reversed flags.
+		 * The container for the main content of the flag object.
+		 *
+		 * 1. Forces the `.flag__body` to take up all remaining space.
 		 */
-		.flag--rev() when (@enable-flag--rev = true) {
-
-			&.flag--rev {
-
-				> .flag__img {
-					padding-right: 0;
-					padding-left:  @flag-gutter--small;
-				}
-
-			}
-		}
-
-		.flag--rev();
-
-	}
-}
-
-.flag--small();
-
-
-
-
-
-/**
- * Large flags.
- */
-.flag--large() when (@enable-flag--large = true) {
-
-	.flag--large {
-
-		> .flag__img {
-			padding-right: @flag-gutter--large;
-		}
-
-		/**
-		 * Large reversed flags.
-		 */
-		.flag--rev() when (@enable-flag--rev = true) {
-
-			&.flag--rev {
-
-				> .flag__img {
-					padding-right: 0;
-					padding-left:  @flag-gutter--large;
-				}
-
-			}
-		}
-
-		.flag--rev();
-
-	}
-}
-
-.flag--large();
-
-
-
-
-
-/**
- * Huge flags.
- */
-.flag--huge() when (@enable-flag--huge = true) {
-
-	.flag--huge {
-
-		> .flag__img {
-			padding-right: @flag-gutter--huge;
-		}
-
-		/**
-		 * Huge reversed flags.
-		 */
-		.flag--rev() when (@enable-flag--rev = true) {
-
-			&.flag--rev {
-
-				> .flag__img {
-					padding-right: 0;
-					padding-left:  @flag-gutter--huge;
-				}
-
-			}
-		}
-
-		.flag--rev();
-
-	}
-}
-
-.flag--huge();
-
-
-
-
-
-/**
- * Reversed flag objects have their image-content to the right, and text-content
- * to the left.
- *
- * 1. Swap the rendered direction of the object…
- * 2. …and reset it.
- * 3. Reassign margins to the correct sides.
- */
-.flag--rev() when (@enable-flag--rev = true) {
-
-	.flag--rev {
-		direction: rtl; /* [1] */
-
-		> .flag__img,
-		> .flag__body {
-			direction: ltr; /* [2] */
-		}
-
-		> .flag__img {
-			padding-right: 0; /* [3] */
-			padding-left: @flag-gutter; /* [3] */
-		}
-
-	}
-
-}
-
-.flag--rev();
-
-
-
-
-
-/**
- * Flush flag objects have no space between the image- and text-content.
- */
-.flag--flush() when (@enable-flag--flush = true) {
-
-	.flag--flush {
-
-		> .flag__img {
-			padding-right: 0;
-			padding-left:  0;
-		}
-
-	}
-
-}
-
-.flag--flush();
-
-
-
-
-
-/**
- * Vertically top aligned flag objects.
- */
-.flag--top() when (@enable-flag--top = true) {
-
-	.flag--top {
-
-		> .flag__img,
-		> .flag__body {
-			vertical-align: top;
-		}
-
-	}
-
-}
-
-.flag--top();
-
-
-
-
-/**
- * Vertically bottom aligned flag objects.
- */
-.flag--bottom() when (@enable-flag--bottom = true) {
-
-	.flag--bottom {
-
-		> .flag__img,
-		> .flag__body {
-			vertical-align: bottom;
-		}
-
-	}
-
-}
-
-.flag--bottom();
-
-
-
-
-
-/**
- * Responsive flag objects.
- *
- * There is a very pragmatic, simple implementation of a responsive flag
- * object, which simply places the text-content beneath the image-content.
- *
- * We use a `max-width` media query because:
- *
- * a) it is the least verbose method in terms of amount of code required.
- * b) the flag object’s default state is image-next-to-text, so its stacked
- *    state is the exception, rather than the rule.
- */
-.flag--responsive() when (@enable-flag--responsive = true) {
-
-	@media screen and (max-width: @flag-collapse-at) {
-
-		.flag--responsive {
-
-			/**
-			 * Disable reversal of content because there is no concept of
-			 * ‘reversed’ in a stacked layout.
-			 */
-			.flag--rev() when (@enable-flag--rev = true) {
-				direction: ltr;
-			}
-
-			.flag--rev();
+		.flag__body {
+			width: 100%; /* [1] */
 
 			&,
-			> .flag__img,
-			> .flag__body {
-				display: block;
+			> :last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+
+
+
+
+	/**
+	 * Tiny flags.
+	 */
+	& when (@enable-flag--tiny = true) {
+
+		.flag--tiny {
+
+			> .flag__img {
+				padding-right: @flag-gutter--tiny;
 			}
 
 			/**
-			 * Rework the spacings on regular flag objects.
+			 * Tiny reversed flags.
 			 */
+			& when (@enable-flag--rev = true) {
+
+				&.flag--rev {
+
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  @flag-gutter--tiny;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Small flags.
+	 */
+	& when (@enable-flag--small = true) {
+
+		.flag--small {
+
+			> .flag__img {
+				padding-right: @flag-gutter--small;
+			}
+
+			/**
+			 * Small reversed flags.
+			 */
+			& when (@enable-flag--rev = true) {
+
+				&.flag--rev {
+
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  @flag-gutter--small;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Large flags.
+	 */
+	& when (@enable-flag--large = true) {
+
+		.flag--large {
+
+			> .flag__img {
+				padding-right: @flag-gutter--large;
+			}
+
+			/**
+			 * Large reversed flags.
+			 */
+			& when (@enable-flag--rev = true) {
+
+				&.flag--rev {
+
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  @flag-gutter--large;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Huge flags.
+	 */
+	& when (@enable-flag--huge = true) {
+
+		.flag--huge {
+
+			> .flag__img {
+				padding-right: @flag-gutter--huge;
+			}
+
+			/**
+			 * Huge reversed flags.
+			 */
+			& when (@enable-flag--rev = true) {
+
+				&.flag--rev {
+
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  @flag-gutter--huge;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Reversed flag objects have their image-content to the right, and text-content
+	 * to the left.
+	 *
+	 * 1. Swap the rendered direction of the object…
+	 * 2. …and reset it.
+	 * 3. Reassign margins to the correct sides.
+	 */
+	& when (@enable-flag--rev = true) {
+
+		.flag--rev {
+			direction: rtl; /* [1] */
+
+			> .flag__img,
+			> .flag__body {
+				direction: ltr; /* [2] */
+			}
+
+			> .flag__img {
+				padding-right: 0; /* [3] */
+				padding-left: @flag-gutter; /* [3] */
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Flush flag objects have no space between the image- and text-content.
+	 */
+	& when (@enable-flag--flush = true) {
+
+		.flag--flush {
+
 			> .flag__img {
 				padding-right: 0;
 				padding-left:  0;
-				margin-bottom: @flag-gutter;
 			}
-
-			/**
-			 * Tiny responsive flags.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on flags that are also tiny flags in their regular
-			 * state.
-			 */
-			.flag--tiny() when (@enable-flag--tiny = true) {
-
-				&.flag--tiny {
-
-					> .flag__img {
-						padding-right: 0;
-						padding-left:  0;
-						margin-bottom: @flag-gutter--tiny;
-					}
-
-				}
-
-			}
-
-			.flag--tiny();
-
-			/**
-			 * Small responsive flags.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on flags that are also small flags in their regular
-			 * state.
-			 */
-			.flag--small() when (@enable-flag--small = true) {
-
-				&.flag--small {
-
-					> .flag__img {
-						padding-right: 0;
-						padding-left:  0;
-						margin-bottom: @flag-gutter--small;
-					}
-
-				}
-
-			}
-
-			.flag--small();
-
-			/**
-			 * Large responsive flags.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on flags that are also large flags in their regular
-			 * state.
-			 */
-			.flag--large() when (@enable-flag--large = true) {
-
-				&.flag--large {
-
-					> .flag__img {
-						padding-right: 0;
-						padding-left:  0;
-						margin-bottom: @flag-gutter--large;
-					}
-
-				}
-
-			}
-
-			.flag--large();
-
-			/**
-			 * Huge responsive flags.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on flags that are also huge flags in their regular
-			 * state.
-			 */
-			.flag--huge() when (@enable-flag--huge = true) {
-
-				&.flag--huge {
-
-					> .flag__img {
-						padding-right: 0;
-						padding-left:  0;
-						margin-bottom: @flag-gutter--huge;
-					}
-
-				}
-
-			}
-
-			.flag--huge();
 
 		}
 
 	}
 
+
+
+
+
+	/**
+	 * Vertically top aligned flag objects.
+	 */
+	& when (@enable-flag--top = true) {
+
+		.flag--top {
+
+			> .flag__img,
+			> .flag__body {
+				vertical-align: top;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Vertically bottom aligned flag objects.
+	 */
+	& when (@enable-flag--bottom = true) {
+
+		.flag--bottom {
+
+			> .flag__img,
+			> .flag__body {
+				vertical-align: bottom;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Responsive flag objects.
+	 *
+	 * There is a very pragmatic, simple implementation of a responsive flag
+	 * object, which simply places the text-content beneath the image-content.
+	 *
+	 * We use a `max-width` media query because:
+	 *
+	 * a) it is the least verbose method in terms of amount of code required.
+	 * b) the flag object’s default state is image-next-to-text, so its stacked
+	 *    state is the exception, rather than the rule.
+	 */
+	& when (@enable-flag--responsive = true) {
+
+		@media screen and (max-width: @flag-collapse-at) {
+
+			.flag--responsive {
+
+				/**
+				 * Disable reversal of content because there is no concept of
+				 * ‘reversed’ in a stacked layout.
+				 */
+				& when (@enable-flag--rev = true) {
+					direction: ltr;
+				}
+
+				&,
+				> .flag__img,
+				> .flag__body {
+					display: block;
+				}
+
+				/**
+				 * Rework the spacings on regular flag objects.
+				 */
+				> .flag__img {
+					padding-right: 0;
+					padding-left:  0;
+					margin-bottom: @flag-gutter;
+				}
+
+				/**
+				 * Tiny responsive flags.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on flags that are also tiny flags in their regular
+				 * state.
+				 */
+				& when (@enable-flag--tiny = true) {
+
+					&.flag--tiny {
+
+						> .flag__img {
+							padding-right: 0;
+							padding-left:  0;
+							margin-bottom: @flag-gutter--tiny;
+						}
+
+					}
+
+				}
+
+				/**
+				 * Small responsive flags.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on flags that are also small flags in their regular
+				 * state.
+				 */
+				& when (@enable-flag--small = true) {
+
+					&.flag--small {
+
+						> .flag__img {
+							padding-right: 0;
+							padding-left:  0;
+							margin-bottom: @flag-gutter--small;
+						}
+
+					}
+
+				}
+
+				/**
+				 * Large responsive flags.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on flags that are also large flags in their regular
+				 * state.
+				 */
+				& when (@enable-flag--large = true) {
+
+					&.flag--large {
+
+						> .flag__img {
+							padding-right: 0;
+							padding-left:  0;
+							margin-bottom: @flag-gutter--large;
+						}
+
+					}
+
+				}
+
+				/**
+				 * Huge responsive flags.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on flags that are also huge flags in their regular
+				 * state.
+				 */
+				& when (@enable-flag--huge = true) {
+
+					&.flag--huge {
+
+						> .flag__img {
+							padding-right: 0;
+							padding-left:  0;
+							margin-bottom: @flag-gutter--huge;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
 }
-
-.flag--responsive();
-
-
-
-} // use-flag=true mixin
-
-.set-flag();

@@ -18,133 +18,122 @@
 
 
 
-.set-buttons() when (@use-buttons = false) {}
-.set-buttons() when (@use-buttons = true) {
+& when (@use-buttons = true) {
 
-/*------------------------------------*\
-	#BUTTONS
-\*------------------------------------*/
+	/*------------------------------------*\
+		#BUTTONS
+	\*------------------------------------*/
 
-/**
- * 1. Allow us to style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 3. Make buttons inherit font styles (often necessary when styling `input`s as
- *    buttons).
- * 4. Reset/normalize some styles.
- * 5. Force all button-styled elements to appear clickable.
- * 6. Fixes odd inner spacing in IE7.
- * 7. Subtract the border size from the padding value so that buttons do not
- *    grow larger as we add borders.
- */
-.btn {
+	/**
+	 * 1. Allow us to style box model properties.
+	 * 2. Line different sized buttons up a little nicer.
+	 * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+	 *    buttons).
+	 * 4. Reset/normalize some styles.
+	 * 5. Force all button-styled elements to appear clickable.
+	 * 6. Fixes odd inner spacing in IE7.
+	 * 7. Subtract the border size from the padding value so that buttons do not
+	 *    grow larger as we add borders.
+	 */
+	.btn {
 
-	display: inline-block; /* [1] */
-	vertical-align: middle; /* [2] */
-	font: inherit; /* [3] */
-	text-align: center; /* [4] */
-	border: none; /* [4] */
-	margin:  0; /* [4] */
-	cursor: pointer; /* [5] */
-	overflow: visible; /* [6] */
-	padding: @btn-padding - @btn-border-width  round(@btn-padding * 2) - @btn-border-width; /* [7] */
-	background-color: @btn-background;
-	border-radius: @btn-radius;
-	border: @btn-border-width @btn-border-style @btn-border-color;
+		display: inline-block; /* [1] */
+		vertical-align: middle; /* [2] */
+		font: inherit; /* [3] */
+		text-align: center; /* [4] */
+		border: none; /* [4] */
+		margin:  0; /* [4] */
+		cursor: pointer; /* [5] */
+		overflow: visible; /* [6] */
+		padding: @btn-padding - @btn-border-width  round(@btn-padding * 2) - @btn-border-width; /* [7] */
+		background-color: @btn-background;
+		border-radius: @btn-radius;
+		border: @btn-border-width @btn-border-style @btn-border-color;
 
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		text-decoration: none; /* [4] */
-		color: @btn-color;
-		outline: 0;
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none; /* [4] */
+			color: @btn-color;
+			outline: 0;
+		}
+
 	}
 
-}
-
-/**
- * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
- */
-.btn::-moz-focus-inner {
-	border:  0;
-	padding: 0;
-}
-
-
-
-
-
-/**
- * Small buttons.
- */
-.btn--small() when (@enable-btn--small = true) {
-
-	.btn--small {
-		padding: @btn-padding--small - @btn-border-width  round(@btn-padding--small) - @btn-border-width; /* [7] */
+	/**
+	 * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+	 */
+	.btn::-moz-focus-inner {
+		border:  0;
+		padding: 0;
 	}
 
-}
-
-.btn--small();
 
 
 
 
+	/**
+	 * Small buttons.
+	 */
+	& when (@enable-btn--small = true) {
 
-/**
- * Large buttons.
- */
-.btn--large() when (@enable-btn--large = true) {
+		.btn--small {
+			padding: @btn-padding--small - @btn-border-width  round(@btn-padding--small) - @btn-border-width; /* [7] */
+		}
 
-	.btn--large {
-		padding: @btn-padding--large - @btn-border-width  round(@btn-padding--large * 2) - @btn-border-width; /* [7] */
 	}
 
-}
-
-.btn--large();
 
 
 
 
+	/**
+	 * Large buttons.
+	 */
+	& when (@enable-btn--large = true) {
 
-/**
- * Full-width buttons.
- */
-.btn--full() when (@enable-btn--full = true) {
+		.btn--large {
+			padding: @btn-padding--large - @btn-border-width  round(@btn-padding--large * 2) - @btn-border-width; /* [7] */
+		}
 
-	.btn--full {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
 	}
 
-}
-
-.btn--full();
 
 
 
 
+	/**
+	 * Full-width buttons.
+	 */
+	& when (@enable-btn--full = true) {
 
-/**
- * Round-ended buttons.
- *
- * 1. Overly-large value to ensure the radius rounds the whole end of the
- *    button.
- */
-.btn--pill() when (@enable-btn--pill = true) {
+		.btn--full {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
 
-	.btn--pill {
-		border-radius: 100px; /* [1] */
 	}
 
+
+
+
+
+	/**
+	 * Round-ended buttons.
+	 *
+	 * 1. Overly-large value to ensure the radius rounds the whole end of the
+	 *    button.
+	 */
+	& when (@enable-btn--pill = true) {
+
+		.btn--pill {
+			border-radius: 100px; /* [1] */
+		}
+
+	}
+
+
+
 }
-
-.btn--pill();
-
-
-
-} // use-buttons=true mixin
-
-.set-buttons();

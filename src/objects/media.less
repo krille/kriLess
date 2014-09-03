@@ -18,377 +18,345 @@
 
 
 
-.set-media-module() when (@use-media = false) {}
-.set-media-module() when (@use-media = true) {
+& when (@use-media = true) {
 
-/*------------------------------------*\
-	#MEDIA
-\*------------------------------------*/
+	/*------------------------------------*\
+		#MEDIA
+	\*------------------------------------*/
 
-/**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- */
+	/**
+	 * Place any image- and text-like content side-by-side, as per:
+	 * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+	 */
 
-.media {
-	&:extend(.cf all);
-	display: block;
-}
-
-	.media__img {
-		float: left;
-		margin-right: @media-gutter;
-
-		> img {
-			display: block;
-		}
-
-	}
-
-	.media__body {
-		overflow: hidden;
+	.media {
+		&:extend(.cf all);
 		display: block;
-
-		&,
-		> :last-child {
-			margin-bottom: 0;
-		}
-
 	}
 
+		.media__img {
+			float: left;
+			margin-right: @media-gutter;
 
-
-
-
-/**
- * Tiny media objects.
- */
-.media--tiny() when (@enable-media--tiny = true) {
-
-	.media--tiny {
-
-		> .media__img {
-			margin-right: @media-gutter--tiny;
-		}
-
-		/**
-		 * Tiny reversed media objects.
-		 */
-		.media--rev() when (@enable-media--rev = true) {
-
-			&.media--rev {
-
-				> .media__img {
-					margin-right: 0;
-					margin-left:  @media-gutter--tiny;
-				}
-
+			> img {
+				display: block;
 			}
 
 		}
 
-		.media--rev();
+		.media__body {
+			overflow: hidden;
+			display: block;
 
-	}
-
-}
-
-.media--tiny();
-
-
-
-
-
-/**
- * Small media objects.
- */
-.media--small() when (@enable-media--small = true) {
-
-	.media--small {
-
-		> .media__img {
-			margin-right: @media-gutter--small;
-		}
-
-		/**
-		 * Small reversed media objects.
-		 */
-		.media--rev() when (@enable-media--rev = true) {
-
-			&.media--rev {
-
-				> .media__img {
-					margin-right: 0;
-					margin-left:  @media-gutter--small;
-				}
-
+			&,
+			> :last-child {
+				margin-bottom: 0;
 			}
 
 		}
 
-		.media--rev();
-
-	}
-
-}
-
-.media--small();
 
 
 
 
+	/**
+	 * Tiny media objects.
+	 */
+	& when (@enable-media--tiny = true) {
 
-/**
- * Large media objects.
- */
-.media--large() when (@enable-media--large = true) {
+		.media--tiny {
 
-	.media--large {
-
-		> .media__img {
-			margin-right: @media-gutter--large;
-		}
-
-		/**
-		 * Large reversed media objects.
-		 */
-		.media--rev() when (@enable-media--rev = true) {
-
-			&.media--rev {
-
-				> .media__img {
-					margin-right: 0;
-					margin-left:  @media-gutter--large;
-				}
-
+			> .media__img {
+				margin-right: @media-gutter--tiny;
 			}
-
-		}
-
-		.media--rev();
-
-	}
-
-}
-
-.media--large();
-
-
-
-
-/**
- * Huge media objects.
- */
-.media--huge() when (@enable-media--huge = true) {
-
-	.media--huge {
-
-		> .media__img {
-			margin-right: @media-gutter--huge;
-		}
-
-		/**
-		 * Huge reversed media objects.
-		 */
-		.media--rev() when (@enable-media--rev = true) {
-
-			&.media--rev {
-
-				> .media__img {
-					margin-right: 0;
-					margin-left:  @media-gutter--huge;
-				}
-
-			}
-
-		}
-
-		.media--rev();
-
-	}
-
-}
-
-.media--huge();
-
-
-
-
-
-/**
- * Reversed image location (right instead of left). Extends `.media`.
- */
-.media--rev() when (@enable-media--rev = true) {
-
-	.media--rev {
-
-		> .media__img {
-			float: right;
-			margin-right: 0;
-			margin-left: @media-gutter;
-		}
-
-	}
-
-}
-
-.media--rev();
-
-
-
-
-
-/**
- * Flush media objects have no space between the image- and text-content.
- */
-.media--flush() when (@enable-media--flush = true) {
-
-	.media--flush {
-
-		> .media__img {
-			margin-right: 0;
-			margin-left:  0;
-		}
-
-	}
-
-}
-
-.media--flush();
-
-
-
-
-/**
- * Responsive media objects.
- *
- * There is a very pragmatic, simple implementation of a responsive media
- * object, which simply places the text-content beneath the image-content.
- *
- * We use a `max-width` media query because:
- *
- * a) it is the least verbose method in terms of amount of code required.
- * b) the media object’s default state is image-next-to-text, so its stacked
- *    state is the exception, rather than the rule.
- */
-.media--responsive() when (@enable-media--responsive = true) {
-
-	@media screen and (max-width: @media-collapse-at) {
-
-		.media--responsive {
 
 			/**
-			 * Rework the spacings on regular media objects.
+			 * Tiny reversed media objects.
 			 */
+			& when (@enable-media--rev = true) {
+
+				&.media--rev {
+
+					> .media__img {
+						margin-right: 0;
+						margin-left:  @media-gutter--tiny;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Small media objects.
+	 */
+	& when (@enable-media--small = true) {
+
+		.media--small {
+
 			> .media__img {
-				float: none;
+				margin-right: @media-gutter--small;
+			}
+
+			/**
+			 * Small reversed media objects.
+			 */
+			& when (@enable-media--rev = true) {
+
+				&.media--rev {
+
+					> .media__img {
+						margin-right: 0;
+						margin-left:  @media-gutter--small;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Large media objects.
+	 */
+	& when (@enable-media--large = true) {
+
+		.media--large {
+
+			> .media__img {
+				margin-right: @media-gutter--large;
+			}
+
+			/**
+			 * Large reversed media objects.
+			 */
+			& when (@enable-media--rev = true) {
+
+				&.media--rev {
+
+					> .media__img {
+						margin-right: 0;
+						margin-left:  @media-gutter--large;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+	/**
+	 * Huge media objects.
+	 */
+	& when (@enable-media--huge = true) {
+
+		.media--huge {
+
+			> .media__img {
+				margin-right: @media-gutter--huge;
+			}
+
+			/**
+			 * Huge reversed media objects.
+			 */
+			& when (@enable-media--rev = true) {
+
+				&.media--rev {
+
+					> .media__img {
+						margin-right: 0;
+						margin-left:  @media-gutter--huge;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Reversed image location (right instead of left). Extends `.media`.
+	 */
+	& when (@enable-media--rev = true) {
+
+		.media--rev {
+
+			> .media__img {
+				float: right;
 				margin-right: 0;
-				margin-bottom: @media-gutter;
+				margin-left: @media-gutter;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Flush media objects have no space between the image- and text-content.
+	 */
+	& when (@enable-media--flush = true) {
+
+		.media--flush {
+
+			> .media__img {
+				margin-right: 0;
 				margin-left:  0;
 			}
 
-			/**
-			 * Tiny responsive media objects.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on media objects that are also tiny media objects
-			 * in their regular state.
-			 */
-			.media--tiny() when (@enable-media--tiny = true) {
+		}
 
-				&.media--tiny {
+	}
 
-					> .media__img {
-						margin-right: 0;
-						margin-left:  0;
-						margin-bottom: @media-gutter--tiny;
+
+
+
+
+	/**
+	 * Responsive media objects.
+	 *
+	 * There is a very pragmatic, simple implementation of a responsive media
+	 * object, which simply places the text-content beneath the image-content.
+	 *
+	 * We use a `max-width` media query because:
+	 *
+	 * a) it is the least verbose method in terms of amount of code required.
+	 * b) the media object’s default state is image-next-to-text, so its stacked
+	 *    state is the exception, rather than the rule.
+	 */
+	& when (@enable-media--responsive = true) {
+
+		@media screen and (max-width: @media-collapse-at) {
+
+			.media--responsive {
+
+				/**
+				 * Rework the spacings on regular media objects.
+				 */
+				> .media__img {
+					float: none;
+					margin-right: 0;
+					margin-bottom: @media-gutter;
+					margin-left:  0;
+				}
+
+				/**
+				 * Tiny responsive media objects.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on media objects that are also tiny media objects
+				 * in their regular state.
+				 */
+				& when (@enable-media--tiny = true) {
+
+					&.media--tiny {
+
+						> .media__img {
+							margin-right: 0;
+							margin-left:  0;
+							margin-bottom: @media-gutter--tiny;
+						}
+
+					}
+
+				}
+
+				/**
+				 * Small responsive media objects.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on media objects that are also small media objects
+				 * in their regular state.
+				 */
+				& when (@enable-media--small = true) {
+
+					&.media--small {
+
+						> .media__img {
+							margin-right: 0;
+							margin-left:  0;
+							margin-bottom: @media-gutter--small;
+						}
+
+					}
+
+				}
+
+				/**
+				 * Large responsive media objects.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on media objects that are also large media objects
+				 * in their regular state.
+				 */
+				& when (@enable-media--large = true) {
+
+					&.media--large {
+
+						> .media__img {
+							margin-right: 0;
+							margin-left:  0;
+							margin-bottom: @media-gutter--large;
+						}
+
+					}
+
+				}
+
+				/**
+				 * Huge responsive media objects.
+				 *
+				 * Take a little more heavy-handed approach to reworking
+				 * spacings on media objects that are also huge media objects
+				 * in their regular state.
+				 */
+				& when (@enable-media--huge = true) {
+
+					&.media--huge {
+
+						> .media__img {
+							margin-right: 0;
+							margin-left:  0;
+							margin-bottom: @media-gutter--huge;
+						}
+
 					}
 
 				}
 
 			}
-
-			.media--tiny();
-
-			/**
-			 * Small responsive media objects.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on media objects that are also small media objects
-			 * in their regular state.
-			 */
-			.media--small() when (@enable-media--small = true) {
-
-				&.media--small {
-
-					> .media__img {
-						margin-right: 0;
-						margin-left:  0;
-						margin-bottom: @media-gutter--small;
-					}
-
-				}
-
-			}
-
-			.media--small();
-
-			/**
-			 * Large responsive media objects.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on media objects that are also large media objects
-			 * in their regular state.
-			 */
-			.media--large() when (@enable-media--large = true) {
-
-				&.media--large {
-
-					> .media__img {
-						margin-right: 0;
-						margin-left:  0;
-						margin-bottom: @media-gutter--large;
-					}
-
-				}
-
-			}
-
-			.media--large();
-
-			/**
-			 * Huge responsive media objects.
-			 *
-			 * Take a little more heavy-handed approach to reworking
-			 * spacings on media objects that are also huge media objects
-			 * in their regular state.
-			 */
-			.media--huge() when (@enable-media--huge = true) {
-
-				&.media--huge {
-
-					> .media__img {
-						margin-right: 0;
-						margin-left:  0;
-						margin-bottom: @media-gutter--huge;
-					}
-
-				}
-
-			}
-
-			.media--huge();
 
 		}
 
 	}
 
+
+
 }
-
-.media--responsive();
-
-
-
-} // use-media=true mixin
-
-.set-media-module();

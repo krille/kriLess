@@ -19,189 +19,174 @@
 
 
 
-.set-tables() when (@use-tables = false) {}
-.set-tables() when (@use-tables = true) {
+& when (@use-tables = true) {
 
-/*------------------------------------*\
-	#TABLES
-\*------------------------------------*/
+	/*------------------------------------*\
+		#TABLES
+	\*------------------------------------*/
 
-.table {
-	width: 100%;
-}
-
-
-
-
-
-/**
- * Force tables into having equal-width columns.
- */
-.table--fixed() when (@enable-table--fixed = true) {
-
-	.table--fixed {
-		table-layout: fixed;
+	.table {
+		width: 100%;
 	}
 
-}
-
-.table--fixed();
 
 
 
 
+	/**
+	 * Force tables into having equal-width columns.
+	 */
+	& when (@enable-table--fixed = true) {
 
-/**
- * Tables with very tightly packed cells.
- */
-.table--compact() when (@enable-table--compact = true) {
-
-	.table--compact {
-
-		th,
-		td {
-			padding: @table-padding--compact;
+		.table--fixed {
+			table-layout: fixed;
 		}
 
 	}
 
+
+
+
+
+	/**
+	 * Tables with very tightly packed cells.
+	 */
+	& when (@enable-table--compact = true) {
+
+		.table--compact {
+
+			th,
+			td {
+				padding: @table-padding--compact;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Lightly packed cells.
+	 */
+	& when (@enable-table--cosy = true) {
+
+		.table--cosy {
+
+			th,
+			td {
+				padding: @table-padding--cosy;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Tables with very widely padded cells.
+	 */
+	& when (@enable-table--comfy = true) {
+
+		.table--comfy {
+
+			th,
+			td {
+				padding: @table-padding--comfy;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Add borders around a `table`.
+	 */
+	& when (@enable-table--cells = true) {
+
+		.table--cells {
+
+			th,
+			td {
+				border: @table-border-width @table-border-style @table-border-color;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Add borders only to `table`’s rows.
+	 */
+	& when (@enable-table--rows = true) {
+
+		.table--rows {
+		
+			&,
+			th,
+			td {
+				border: 0 @table-border-style @table-border-color;
+			}
+		
+		}
+		
+		.table--rows {
+			border-top-width: @table-border-width;
+		
+			th,
+			td {
+				border-bottom-width: @table-border-width;
+			}
+
+		}
+
+	}
+
+
+
+
+
+	/**
+	 * Add borders only to `table`’s columns.
+	 */
+	& when (@enable-table--columns = true) {
+
+		.table--columns {
+
+			&,
+			th,
+			td {
+				border: 0 @table-border-style @table-border-color;
+			}
+
+		}
+
+		.table--columns {
+
+			border-left-width: @table-border-width;
+		
+			th,
+			td {
+				border-right-width: @table-border-width;
+			}
+
+		}
+
+	}
+
+
+
 }
-
-.table--compact();
-
-
-
-
-
-/**
- * Lightly packed cells.
- */
-.table--cosy() when (@enable-table--cosy = true) {
-
-	.table--cosy {
-
-		th,
-		td {
-			padding: @table-padding--cosy;
-		}
-
-	}
-
-}
-
-.table--cosy();
-
-
-
-
-
-/**
- * Tables with very widely padded cells.
- */
-.table--comfy() when (@enable-table--comfy = true) {
-
-	.table--comfy {
-
-		th,
-		td {
-			padding: @table-padding--comfy;
-		}
-
-	}
-
-}
-
-.table--comfy();
-
-
-
-
-
-/**
- * Add borders around a `table`.
- */
-.table--cells() when (@enable-table--cells = true) {
-
-	.table--cells {
-
-		th,
-		td {
-			border: @table-border-width @table-border-style @table-border-color;
-		}
-
-	}
-
-}
-
-.table--cells();
-
-
-
-
-
-/**
- * Add borders only to `table`’s rows.
- */
-.table--rows() when (@enable-table--rows = true) {
-
-	.table--rows {
-	
-		&,
-		th,
-		td {
-			border: 0 @table-border-style @table-border-color;
-		}
-	
-	}
-	
-	.table--rows {
-		border-top-width: @table-border-width;
-	
-		th,
-		td {
-			border-bottom-width: @table-border-width;
-		}
-
-	}
-
-}
-
-.table--rows();
-
-
-
-
-
-/**
- * Add borders only to `table`’s columns.
- */
-.table--columns() when (@enable-table--columns = true) {
-
-	.table--columns {
-
-		&,
-		th,
-		td {
-			border: 0 @table-border-style @table-border-color;
-		}
-
-	}
-
-	.table--columns {
-
-		border-left-width: @table-border-width;
-	
-		th,
-		td {
-			border-right-width: @table-border-width;
-		}
-
-	}
-
-}
-
-.table--columns();
-
-} // use-tables=true mixin
-
-.set-tables();

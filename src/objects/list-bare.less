@@ -1,20 +1,17 @@
-.set-list-bare() when (@use-list-bare = false) {}
-.set-list-bare() when (@use-list-bare = true) {
+& when (@use-list-bare = true) {
 
-/*------------------------------------*\
-	#LIST-BARE
-\*------------------------------------*/
+	/*------------------------------------*\
+		#LIST-BARE
+	\*------------------------------------*/
 
-/**
- * The list-bare object simply removes any indents and bullet points from lists.
- */
+	/**
+	 * The list-bare object simply removes any indents and bullet points from lists.
+	 */
 
-.list-bare {
-	margin:  0;
-	padding: 0;
-	list-style: none;
+	.list-bare {
+		margin:  0;
+		padding: 0;
+		list-style: none;
+	}
+
 }
-
-} // use-list-bare=true mixin
-
-.set-list-bare();

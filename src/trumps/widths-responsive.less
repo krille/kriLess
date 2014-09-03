@@ -2,10 +2,7 @@
 	#WIDTHS-RESPONSIVE
 \*------------------------------------*/
 
-.responsive-widths() when (@responsive = false) {
-}
-
-.responsive-widths() when (@responsive = true) {
+& when (@responsive = true) {
 
 	@media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
 		.setup-widths(lap-);
@@ -19,6 +16,4 @@
 		.setup-widths(desk-);
 	}
 
-} //responsive=true mixin
-
-.responsive-widths();
+}
