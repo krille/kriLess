@@ -15,11 +15,38 @@
 /*------------------------------------*\
 	$RESPONSIVE
 \*------------------------------------*/
-@lap-start:         600px;
-@desk-start:        850px;
-@lap-end:           849px; /* @desk-start - 1px; */
 @responsive:        true;
 @responsive-spacing:false;
+
+@breakpoints:
+	"lap-"           "screen and (min-width: 600px) and (max-width: 849px)",
+	"lap-and-up-"    "screen and (min-width: 600px)",
+	"desk-"          "screen and (min-width: 850px)";
+
+
+/*
+LEGACY MQ STUFF
+@lap-start:         600px;
+@desk-start:        850px;
+@lap-end:           849px;
+
+@breakpoints:
+	"palm-"          "screen and (max-width: 719px)",
+	"lap-"           "screen and (min-width: 720px) and (max-width: 1023px)",
+	"lap-and-up-"    "screen and (min-width: 720px)",
+	"portable-"      "screen and (max-width: 1023px)",
+	"desk-"          "screen and (min-width: 1024px)";
+
+@media only screen and (min-width: @lap-start) and (max-width: @lap-end) {
+	.setup-widths(lap-) !important;
+}
+@media only screen and (min-width: @lap-start) {
+	.setup-widths(lap-and-up-) !important;
+}
+@media only screen and (min-width: @desk-start) {
+	.setup-widths(desk-) !important;
+}
+*/
 
 
 

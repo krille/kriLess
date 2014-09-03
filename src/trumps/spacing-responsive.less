@@ -35,220 +35,101 @@
 
 & when (@responsive-spacing = true) {
 
-	@media only screen and (min-width: @lap-start) and (max-width: @lap-end) {
-		
-		& when (@enable-responsive-margins = true) {
-			.enable-margins(lap-) !important;
+	// Loop through the list of breakpoints we’ve provided in our settings file.
+	.loop-breakpoints(@breakpoints) {
+
+		.loop(@i) when (@i > 0) {
+			
+			.loop((@i - 1));
+
+			@alias: extract(extract(@breakpoints, @i), 1);
+			@condition: extract(extract(@breakpoints, @i), 2);
+
+			& when (isstring(@alias)) and (isstring(@condition)) {
+
+				@unquotedCondition: e(@condition);
+				@unquotedAlias: e(@alias);
+
+				// Setup spacing
+				@media @unquotedCondition {
+
+					& when (@enable-responsive-margins = true) {
+						.enable-margins(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--tiny = true) {
+						.enable-margins--tiny(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--small = true) {
+						.enable-margins--small(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--large = true) {
+						.enable-margins--large(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--huge = true) {
+						.enable-margins--huge(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--none = true) {
+						.enable-margins--none(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--negative = true) {
+						.enable-margins--negative(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--negative-tiny = true) {
+						.enable-margins--negative-tiny(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--negative-small = true) {
+						.enable-margins--negative-small(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--negative-large = true) {
+						.enable-margins--negative-large(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-margins--negative-huge = true) {
+						.enable-margins--negative-huge(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-paddings = true) {
+						.enable-paddings(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-paddings--tiny = true) {
+						.enable-paddings--tiny(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-paddings--small = true) {
+						.enable-paddings--small(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-paddings--large = true) {
+						.enable-paddings--large(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-paddings--huge = true) {
+						.enable-paddings--huge(@unquotedAlias) !important;
+					}
+
+					& when (@enable-responsive-paddings--none = true) {
+						.enable-paddings--none(@unquotedAlias) !important;
+					}
+				}
+
+			}
+
 		}
 
-		& when (@enable-responsive-margins--tiny = true) {
-			.enable-margins--tiny(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--small = true) {
-			.enable-margins--small(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--large = true) {
-			.enable-margins--large(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--huge = true) {
-			.enable-margins--huge(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--none = true) {
-			.enable-margins--none(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative = true) {
-			.enable-margins--negative(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-tiny = true) {
-			.enable-margins--negative-tiny(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-small = true) {
-			.enable-margins--negative-small(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-large = true) {
-			.enable-margins--negative-large(lap-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-huge = true) {
-			.enable-margins--negative-huge(lap-) !important;
-		}
-
-		& when (@enable-responsive-paddings = true) {
-			.enable-paddings(lap-) !important;
-		}
-
-		& when (@enable-responsive-paddings--tiny = true) {
-			.enable-paddings--tiny(lap-) !important;
-		}
-
-		& when (@enable-responsive-paddings--small = true) {
-			.enable-paddings--small(lap-) !important;
-		}
-
-		& when (@enable-responsive-paddings--large = true) {
-			.enable-paddings--large(lap-) !important;
-		}
-
-		& when (@enable-responsive-paddings--huge = true) {
-			.enable-paddings--huge(lap-) !important;
-		}
-
-		& when (@enable-responsive-paddings--none = true) {
-			.enable-paddings--none(lap-) !important;
-		}
+		.loop(length(@breakpoints));
 
 	}
 
-	@media only screen and (min-width: @lap-start) {
-
-		& when (@enable-responsive-margins = true) {
-			.enable-margins(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--tiny = true) {
-			.enable-margins--tiny(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--small = true) {
-			.enable-margins--small(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--large = true) {
-			.enable-margins--large(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--huge = true) {
-			.enable-margins--huge(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--none = true) {
-			.enable-margins--none(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative = true) {
-			.enable-margins--negative(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-tiny = true) {
-			.enable-margins--negative-tiny(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-small = true) {
-			.enable-margins--negative-small(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-large = true) {
-			.enable-margins--negative-large(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-huge = true) {
-			.enable-margins--negative-huge(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-paddings = true) {
-			.enable-paddings(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-paddings--tiny = true) {
-			.enable-paddings--tiny(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-paddings--small = true) {
-			.enable-paddings--small(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-paddings--large = true) {
-			.enable-paddings--large(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-paddings--huge = true) {
-			.enable-paddings--huge(lap-and-up-) !important;
-		}
-
-		& when (@enable-responsive-paddings--none = true) {
-			.enable-paddings--none(lap-and-up-) !important;
-		}
-
-	}
-
-	@media only screen and (min-width: @desk-start) {
-
-		& when (@enable-responsive-margins = true) {
-			.enable-margins(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--tiny = true) {
-			.enable-margins--tiny(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--small = true) {
-			.enable-margins--small(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--large = true) {
-			.enable-margins--large(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--huge = true) {
-			.enable-margins--huge(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--none = true) {
-			.enable-margins--none(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative = true) {
-			.enable-margins--negative(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-tiny = true) {
-			.enable-margins--negative-tiny(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-small = true) {
-			.enable-margins--negative-small(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-large = true) {
-			.enable-margins--negative-large(desk-) !important;
-		}
-
-		& when (@enable-responsive-margins--negative-huge = true) {
-			.enable-margins--negative-huge(desk-) !important;
-		}
-
-		& when (@enable-responsive-paddings = true) {
-			.enable-paddings(desk-) !important;
-		}
-
-		& when (@enable-responsive-paddings--tiny = true) {
-			.enable-paddings--tiny(desk-) !important;
-		}
-
-		& when (@enable-responsive-paddings--small = true) {
-			.enable-paddings--small(desk-) !important;
-		}
-
-		& when (@enable-responsive-paddings--large = true) {
-			.enable-paddings--large(desk-) !important;
-		}
-
-		& when (@enable-responsive-paddings--huge = true) {
-			.enable-paddings--huge(desk-) !important;
-		}
-
-		& when (@enable-responsive-paddings--none = true) {
-			.enable-paddings--none(desk-) !important;
-		}
-
-	}
+	.loop-breakpoints(@breakpoints);
 
 }

@@ -4,16 +4,34 @@
 
 & when (@responsive = true) {
 
-	@media only screen and (min-width: @lap-start) and (max-width: @lap-end) {
-		.setup-widths(lap-) !important;
+	// Loop through the list of breakpoints we’ve provided in our settings file.
+	.loop-breakpoints(@breakpoints) {
+
+		.loop(@i) when (@i > 0) {
+			
+			.loop((@i - 1));
+
+			@alias: extract(extract(@breakpoints, @i), 1);
+			@condition: extract(extract(@breakpoints, @i), 2);
+
+			& when (isstring(@alias)) and (isstring(@condition)) {
+
+				@unquotedCondition: e(@condition);
+				@unquotedAlias: e(@alias);
+
+				// Setup widths
+				@media @unquotedCondition {
+					.setup-widths(@unquotedAlias) !important;
+				}
+
+			}
+
+		}
+
+		.loop(length(@breakpoints));
+
 	}
 
-	@media only screen and (min-width: @lap-start) {
-		.setup-widths(lap-and-up-) !important;
-	}
-
-	@media only screen and (min-width: @desk-start) {
-		.setup-widths(desk-) !important;
-	}
+	.loop-breakpoints(@breakpoints);
 
 }
