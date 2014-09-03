@@ -35,7 +35,7 @@
 
 & when (@responsive-spacing = true) {
 
-	@media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
+	@media only screen and (min-width: @lap-start) and (max-width: @lap-end) {
 		
 		& when (@enable-responsive-margins = true) {
 			.enable-margins(lap-) !important;
@@ -107,7 +107,7 @@
 
 	}
 
-	@media only screen and (min-width:~"@{lap-start}") { /* lap-and-up */
+	@media only screen and (min-width: @lap-start) {
 
 		& when (@enable-responsive-margins = true) {
 			.enable-margins(lap-and-up-) !important;
@@ -179,7 +179,7 @@
 
 	}
 
-	@media only screen and (min-width:~"@{desk-start}") { /* desk */
+	@media only screen and (min-width: @desk-start) {
 
 		& when (@enable-responsive-margins = true) {
 			.enable-margins(desk-) !important;

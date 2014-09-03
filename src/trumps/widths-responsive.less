@@ -4,15 +4,15 @@
 
 & when (@responsive = true) {
 
-	@media only screen and (min-width:~"@{lap-start}") and (max-width:~"@{lap-end}") { /* lap */
+	@media only screen and (min-width: @lap-start) and (max-width: @lap-end) {
 		.setup-widths(lap-) !important;
 	}
 
-	@media only screen and (min-width:~"@{lap-start}") { /* lap-and-up */
+	@media only screen and (min-width: @lap-start) {
 		.setup-widths(lap-and-up-) !important;
 	}
 
-	@media only screen and (min-width:~"@{desk-start}") { /* desk */
+	@media only screen and (min-width: @desk-start) {
 		.setup-widths(desk-) !important;
 	}
 
