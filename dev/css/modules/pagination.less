@@ -1,38 +1,38 @@
 /// <reference path="../project.less" />
 
 /*------------------------------------*\
-    #PAGINATION
+	#PAGINATION
 \*------------------------------------*/
 
 .pagination {
-    text-align: center;
-    font-size: 0;
+	text-align: center;
+	font-size: 0;
 }
 
 .pagination__item {
 
-    padding: round(@base-spacing-unit / 2);
-    .font-size(@base-font-size, none);
+	padding: round(@base-spacing-unit / 2);
+	.font-size(@base-font-size, none);
 
-    > a {
-        padding: round(@base-spacing-unit / 2);
-        margin: round(-@base-spacing-unit / 2);
-    }
+	> a {
+		padding: round(@base-spacing-unit / 2);
+		margin: round(-@base-spacing-unit / 2);
+	}
 
 }
 
 .pagination__item--prev {
 
-    > a:before {
-        content: "\00AB" "\00A0";
-    }
+	> a:before {
+		content: "\00AB" "\00A0";
+	}
 
 }
 
 .pagination__item--next {
 
-    > a:after {
-        content: "\00A0" "\00BB";
-    }
-    
+	> a:after {
+		content: "\00A0" "\00BB";
+	}
+	
 }

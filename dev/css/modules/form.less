@@ -1,7 +1,7 @@
 /// <reference path="../project.less" />
 
 /*------------------------------------*\
-    #FORM
+	#FORM
 \*------------------------------------*/
 input[type="text"],
 input[type="password"],
@@ -19,23 +19,23 @@ input[type="tel"],
 input[type="color"],
 textarea,
 select {
-    display: inline-block;
-    padding: round(@base-spacing-unit / 4);
-    width: 100%;
+	display: inline-block;
+	padding: round(@base-spacing-unit / 4);
+	width: 100%;
 
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
 
-    font-size: 0.875em;
+	font-size: 0.875em;
 
-    transition: 0.1s linear border;
-    -webkit-font-smoothing: antialiased;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
+	transition: 0.1s linear border;
+	-webkit-font-smoothing: antialiased;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 }
 
 select {
-    -webkit-appearance: menulist;
+	-webkit-appearance: menulist;
 }
 
 input[type="text"]:focus,
@@ -53,16 +53,16 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  outline: 0;
-  outline: thin dotted \9; /* IE6-9 */
-  border-color: #129FEA;
+	outline: 0;
+	outline: thin dotted \9; /* IE6-9 */
+	border-color: #129FEA;
 }
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-    outline: thin dotted #333;
-    outline: 1px auto #129FEA;
+	outline: thin dotted #333;
+	outline: 1px auto #129FEA;
 }
 
 input[type="text"][disabled],
@@ -84,6 +84,6 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    cursor: default;
-    background-color: #eee;
+	cursor: default;
+	background-color: #eee;
 }

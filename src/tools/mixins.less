@@ -1,132 +1,132 @@
 /*------------------------------------*\
-    FONT-SIZE
+	#FONT-SIZE
 \*------------------------------------*/
 /*
 .foo {
-  .font-size(12px);
+	.font-size(12px);
 }
 
 This will yield:
 
 .foo {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 2;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 2;
 }
 
 
 .foo {
-  .font-size(12px, 1.5);
-}
-
-This will yield:
-
-.foo {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.5;
-}
-
-
-.foo {
-  .font-size(12px, none);
+	.font-size(12px, 1.5);
 }
 
 This will yield:
 
 .foo {
-  font-size: 12px;
-  font-size: 0.75rem;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+}
+
+
+.foo {
+	.font-size(12px, none);
+}
+
+This will yield:
+
+.foo {
+	font-size: 12px;
+	font-size: 0.75rem;
 }
 */
 
 .font-size(@font-size) {
-  font-size: @font-size;
-  font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
-  line-height: ceil(unit(@font-size) / unit(@base-line-height)) * (unit(@base-line-height) / unit(@font-size));  
+	font-size: @font-size;
+	font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
+	line-height: ceil(unit(@font-size) / unit(@base-line-height)) * (unit(@base-line-height) / unit(@font-size));  
 }
 
 .font-size(@font-size, @line-height) when (isnumber(@line-height)) {
-  font-size: @font-size;
-  font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
-  line-height: @line-height;  
+	font-size: @font-size;
+	font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
+	line-height: @line-height;  
 }
 
 .font-size(@font-size, @line-height) when (@line-height = none) {
-  font-size: @font-size;
-  font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
+	font-size: @font-size;
+	font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
 }
 
 
 
 /*------------------------------------*\
-    TRUNC
+	#TRUNC
 \*------------------------------------*/
 /**
  * Force overly long spans of text to truncate, e.g.:
  *
-   `@include truncate(100%);`
+	 `@include truncate(100%);`
  *
  * Where `@truncation-boundary` is a united measurement.
  */
 .truncate(@truncation-boundary){
-    max-width: @truncation-boundary;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	max-width: @truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 
 
 /*------------------------------------*\
-    HIDE TEXT
+	#HIDE TEXT
 \*------------------------------------*/
 .hide-text() {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
 }
 
 
 
 /*------------------------------------*\
-    HIDE ELEMENT
+	#HIDE ELEMENT
 \*------------------------------------*/
 /**
  * Hide content off-screen without resorting to `display:none;`, also provide
  * breakpoint specific hidden elements.
  */
 .hide-element() {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
 }
 
 
 
 /*------------------------------------*\
-    PLACEHOLDER TEXT COLOR
+	#PLACEHOLDER TEXT COLOR
 \*------------------------------------*/
 .placeholder(@color: @base-ui-color) {
-  &::-webkit-input-placeholder {
-    color: @color;
-  }
-  &:-moz-placeholder {
-    color: @color;
-    opacity: 1;
-  }
-  &::-moz-placeholder {
-    color: @color;
-    opacity: 1;
-  }
-  &:-ms-input-placeholder {
-    color: @color !important;
-  }
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+	&:-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: @color !important;
+	}
 }

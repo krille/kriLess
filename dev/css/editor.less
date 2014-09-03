@@ -3,24 +3,24 @@
 @import "kri.less/base/tables";
 
 /*------------------------------------*\
-    $EPISERVER 7 PROPERTIES
+	#EPISERVER 7 PROPERTIES
 \*------------------------------------*/
 /*
-    EditMenuTitle: Text;
-    ChangeElementType: true;
-    EditMenuName: Lead Text;
+	EditMenuTitle: Text;
+	ChangeElementType: true;
+	EditMenuName: Lead Text;
 */
 
 
 
 /*------------------------------------*\
-    $GLOBAL.asax bundle
+	#GLOBAL.asax bundle
 \*------------------------------------*/
 /*
-    var editorLessBundle = new Bundle("~/css/editor.css");
-    editorLessBundle.Include("~/css/editor.less");
-    editorLessBundle.Transforms.Add(new LessTransformer());
-    bundles.Add(editorLessBundle);
+	var editorLessBundle = new Bundle("~/css/editor.css");
+	editorLessBundle.Include("~/css/editor.less");
+	editorLessBundle.Transforms.Add(new LessTransformer());
+	bundles.Add(editorLessBundle);
 */
 
 
@@ -30,76 +30,76 @@ dl,dd,ol,ul,
 form,fieldset,legend,
 table,th,td,caption,
 hr{
-    margin:0;
-    padding:0;
+	margin:0;
+	padding:0;
 }
 
 
 ul, ol, dl, blockquote, p, address, table, figure {
-    margin-bottom:@base-spacing-unit*1px;
-    margin-bottom:(@base-spacing-unit/@base-font-size)*1rem;
+	margin-bottom:@base-spacing-unit*1px;
+	margin-bottom:(@base-spacing-unit/@base-font-size)*1rem;
 }
 
 li {
-    > ul,
-    > ol{
-         margin-bottom:0;
-     }
+	> ul,
+	> ol{
+		 margin-bottom:0;
+	 }
 }
 
 
 h1 {
-    .font-size(@h1-size);
+	.font-size(@h1-size);
 }
 h2 {
-    .font-size(@h2-size);
+	.font-size(@h2-size);
 }
 h3 {
-    .font-size(@h3-size);
+	.font-size(@h3-size);
 }
 h4 {
-    .font-size(@h4-size);
+	.font-size(@h4-size);
 }
 h5 {
-    .font-size(@h5-size);
+	.font-size(@h5-size);
 }
 h6 {
-    .font-size(@h6-size);
+	.font-size(@h6-size);
 }
 
 .lead {
-    .font-size(@base-font-size * 1.125);
+	.font-size(@base-font-size * 1.125);
 }
 
 
 
 /*------------------------------------*\
-    $IMAGES
+	#IMAGES
 \*------------------------------------*/
 img{
-    max-width:100%;
+	max-width:100%;
 }
 img[width],
 img[height]{
-    max-width:none;
+	max-width:none;
 }
 
 
 .img--right{
-    float:right;
-    margin-bottom:@base-spacing-unit*1px;
-    margin-left:@base-spacing-unit*1px;
+	float:right;
+	margin-bottom:@base-spacing-unit*1px;
+	margin-left:@base-spacing-unit*1px;
 }
 .img--left{
-    float:left;
-    margin-right:@base-spacing-unit*1px;
-    margin-bottom:@base-spacing-unit*1px;
+	float:left;
+	margin-right:@base-spacing-unit*1px;
+	margin-bottom:@base-spacing-unit*1px;
 }
 
 
 
 /*------------------------------------*\
-    $FLOATS
+	#FLOATS
 \*------------------------------------*/
 .float--right   { float:right!important; }
 .float--left    { float:left !important; }

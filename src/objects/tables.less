@@ -2,11 +2,11 @@
 .set-tables() when (@use-tables = true) {
 
 /*------------------------------------*\
-    #TABLES
+	#TABLES
 \*------------------------------------*/
 
 .table {
-    width: 100%;
+	width: 100%;
 }
 
 
@@ -18,9 +18,9 @@
  */
 .table--fixed() when (@enable-table--fixed = true) {
 
-    .table--fixed {
-        table-layout: fixed;
-    }
+	.table--fixed {
+		table-layout: fixed;
+	}
 
 }
 
@@ -35,14 +35,14 @@
  */
 .table--compact() when (@enable-table--compact = true) {
 
-    .table--compact {
+	.table--compact {
 
-        th,
-        td {
-            padding: @table-padding--compact;
-        }
+		th,
+		td {
+			padding: @table-padding--compact;
+		}
 
-    }
+	}
 
 }
 
@@ -57,14 +57,14 @@
  */
 .table--cosy() when (@enable-table--cosy = true) {
 
-    .table--cosy {
+	.table--cosy {
 
-        th,
-        td {
-            padding: @table-padding--cosy;
-        }
+		th,
+		td {
+			padding: @table-padding--cosy;
+		}
 
-    }
+	}
 
 }
 
@@ -79,14 +79,14 @@
  */
 .table--comfy() when (@enable-table--comfy = true) {
 
-    .table--comfy {
+	.table--comfy {
 
-        th,
-        td {
-            padding: @table-padding--comfy;
-        }
+		th,
+		td {
+			padding: @table-padding--comfy;
+		}
 
-    }
+	}
 
 }
 
@@ -101,14 +101,14 @@
  */
 .table--cells() when (@enable-table--cells = true) {
 
-    .table--cells {
+	.table--cells {
 
-        th,
-        td {
-            border: @table-border-width @table-border-style @table-border-color;
-        }
+		th,
+		td {
+			border: @table-border-width @table-border-style @table-border-color;
+		}
 
-    }
+	}
 
 }
 
@@ -123,25 +123,25 @@
  */
 .table--rows() when (@enable-table--rows = true) {
 
-    .table--rows {
-    
-        &,
-        th,
-        td {
-            border: 0 @table-border-style @table-border-color;
-        }
-    
-    }
-    
-    .table--rows {
-        border-top-width: @table-border-width;
-    
-        th,
-        td {
-            border-bottom-width: @table-border-width;
-        }
+	.table--rows {
+	
+		&,
+		th,
+		td {
+			border: 0 @table-border-style @table-border-color;
+		}
+	
+	}
+	
+	.table--rows {
+		border-top-width: @table-border-width;
+	
+		th,
+		td {
+			border-bottom-width: @table-border-width;
+		}
 
-    }
+	}
 
 }
 
@@ -156,26 +156,26 @@
  */
 .table--columns() when (@enable-table--columns = true) {
 
-    .table--columns {
+	.table--columns {
 
-        &,
-        th,
-        td {
-            border: 0 @table-border-style @table-border-color;
-        }
+		&,
+		th,
+		td {
+			border: 0 @table-border-style @table-border-color;
+		}
 
-    }
+	}
 
-    .table--columns {
+	.table--columns {
 
-        border-left-width: @table-border-width;
-    
-        th,
-        td {
-            border-right-width: @table-border-width;
-        }
+		border-left-width: @table-border-width;
+	
+		th,
+		td {
+			border-right-width: @table-border-width;
+		}
 
-    }
+	}
 
 }
 

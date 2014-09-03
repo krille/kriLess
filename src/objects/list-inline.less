@@ -1,10 +1,8 @@
 .set-list-inline() when (@use-list-inline = false) {}
 .set-list-inline() when (@use-list-inline = true) {
 
-
-
 /*------------------------------------*\
-    #LIST-INLINE
+	#LIST-INLINE
 \*------------------------------------*/
 
 /**
@@ -12,13 +10,13 @@
  */
 
 .list-inline {
-    margin:  0;
-    padding: 0;
-    list-style: none;
+	margin:  0;
+	padding: 0;
+	list-style: none;
 
-    > li {
-        display: inline-block;
-    }
+	> li {
+		display: inline-block;
+	}
 
 }
 
@@ -34,23 +32,23 @@
  */
 .list-inline--delimited() when (@enable-list-inline--delimited = true) {
 
-    .list-inline--delimited {
+	.list-inline--delimited {
 
-        font-size: 0;
+		font-size: 0;
 
-        > li {
-            .font-size(@base-font-size, none);
-        }
+		> li {
+			.font-size(@base-font-size, none);
+		}
 
-        > li + li {
+		> li + li {
 
-            &:before {
-                content: @list-inline-delimit-character;
-            }
+			&:before {
+				content: @list-inline-delimit-character;
+			}
 
-        }
+		}
 
-    }
+	}
 
 }
 

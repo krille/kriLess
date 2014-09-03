@@ -2,7 +2,7 @@
 .set-flag() when (@use-flag = true) {
 
 /*------------------------------------*\
-    #FLAG
+	#FLAG
 \*------------------------------------*/
 
 /**
@@ -17,48 +17,48 @@
  *    this makes the object behave in a quasi-`display: block;` manner.
  */
 .flag {
-    display: table; /* [1] */
-    width: 100%; /* [2] */
+	display: table; /* [1] */
+	width: 100%; /* [2] */
 }
 
-    /**
-     * Items within a flag object. There should only ever be one of each.
-     *
-     * 1. Default to aligning content to their middles.
-     */
-    .flag__img,
-    .flag__body {
-        display: table-cell;
-        vertical-align: middle; /* [1] */
-    }
+	/**
+	 * Items within a flag object. There should only ever be one of each.
+	 *
+	 * 1. Default to aligning content to their middles.
+	 */
+	.flag__img,
+	.flag__body {
+		display: table-cell;
+		vertical-align: middle; /* [1] */
+	}
 
-    /**
-     * Flag images have a space between them and the body of the object.
-     */
-    .flag__img {
-        padding-right: @flag-gutter;
+	/**
+	 * Flag images have a space between them and the body of the object.
+	 */
+	.flag__img {
+		padding-right: @flag-gutter;
 
-        > img {
-            display: block;
-            max-width: none;
-        }
+		> img {
+			display: block;
+			max-width: none;
+		}
 
-    }
+	}
 
-    /**
-     * The container for the main content of the flag object.
-     *
-     * 1. Forces the `.flag__body` to take up all remaining space.
-     */
-    .flag__body {
-        width: 100%; /* [1] */
+	/**
+	 * The container for the main content of the flag object.
+	 *
+	 * 1. Forces the `.flag__body` to take up all remaining space.
+	 */
+	.flag__body {
+		width: 100%; /* [1] */
 
-        &,
-        > :last-child {
-            margin-bottom: 0;
-        }
+		&,
+		> :last-child {
+			margin-bottom: 0;
+		}
 
-    }
+	}
 
 
 
@@ -69,30 +69,30 @@
  */
 .flag--tiny() when (@enable-flag--tiny = true) {
 
-    .flag--tiny {
+	.flag--tiny {
 
-        > .flag__img {
-            padding-right: @flag-gutter--tiny;
-        }
+		> .flag__img {
+			padding-right: @flag-gutter--tiny;
+		}
 
-        /**
-         * Tiny reversed flags.
-         */
-        .flag--rev() when (@enable-flag--rev = true) {
+		/**
+		 * Tiny reversed flags.
+		 */
+		.flag--rev() when (@enable-flag--rev = true) {
 
-            &.flag--rev {
+			&.flag--rev {
 
-                > .flag__img {
-                    padding-right: 0;
-                    padding-left:  @flag-gutter--tiny;
-                }
+				> .flag__img {
+					padding-right: 0;
+					padding-left:  @flag-gutter--tiny;
+				}
 
-            }
-        }
+			}
+		}
 
-        .flag--rev();
+		.flag--rev();
 
-    }
+	}
 }
 
 .flag--tiny();
@@ -106,30 +106,30 @@
  */
 .flag--small() when (@enable-flag--small = true) {
 
-    .flag--small {
+	.flag--small {
 
-        > .flag__img {
-            padding-right: @flag-gutter--small;
-        }
+		> .flag__img {
+			padding-right: @flag-gutter--small;
+		}
 
-        /**
-         * Small reversed flags.
-         */
-        .flag--rev() when (@enable-flag--rev = true) {
+		/**
+		 * Small reversed flags.
+		 */
+		.flag--rev() when (@enable-flag--rev = true) {
 
-            &.flag--rev {
+			&.flag--rev {
 
-                > .flag__img {
-                    padding-right: 0;
-                    padding-left:  @flag-gutter--small;
-                }
+				> .flag__img {
+					padding-right: 0;
+					padding-left:  @flag-gutter--small;
+				}
 
-            }
-        }
+			}
+		}
 
-        .flag--rev();
+		.flag--rev();
 
-    }
+	}
 }
 
 .flag--small();
@@ -143,30 +143,30 @@
  */
 .flag--large() when (@enable-flag--large = true) {
 
-    .flag--large {
+	.flag--large {
 
-        > .flag__img {
-            padding-right: @flag-gutter--large;
-        }
+		> .flag__img {
+			padding-right: @flag-gutter--large;
+		}
 
-        /**
-         * Large reversed flags.
-         */
-        .flag--rev() when (@enable-flag--rev = true) {
+		/**
+		 * Large reversed flags.
+		 */
+		.flag--rev() when (@enable-flag--rev = true) {
 
-            &.flag--rev {
+			&.flag--rev {
 
-                > .flag__img {
-                    padding-right: 0;
-                    padding-left:  @flag-gutter--large;
-                }
+				> .flag__img {
+					padding-right: 0;
+					padding-left:  @flag-gutter--large;
+				}
 
-            }
-        }
+			}
+		}
 
-        .flag--rev();
+		.flag--rev();
 
-    }
+	}
 }
 
 .flag--large();
@@ -180,30 +180,30 @@
  */
 .flag--huge() when (@enable-flag--huge = true) {
 
-    .flag--huge {
+	.flag--huge {
 
-        > .flag__img {
-            padding-right: @flag-gutter--huge;
-        }
+		> .flag__img {
+			padding-right: @flag-gutter--huge;
+		}
 
-        /**
-         * Huge reversed flags.
-         */
-        .flag--rev() when (@enable-flag--rev = true) {
+		/**
+		 * Huge reversed flags.
+		 */
+		.flag--rev() when (@enable-flag--rev = true) {
 
-            &.flag--rev {
+			&.flag--rev {
 
-                > .flag__img {
-                    padding-right: 0;
-                    padding-left:  @flag-gutter--huge;
-                }
+				> .flag__img {
+					padding-right: 0;
+					padding-left:  @flag-gutter--huge;
+				}
 
-            }
-        }
+			}
+		}
 
-        .flag--rev();
+		.flag--rev();
 
-    }
+	}
 }
 
 .flag--huge();
@@ -222,20 +222,20 @@
  */
 .flag--rev() when (@enable-flag--rev = true) {
 
-    .flag--rev {
-        direction: rtl; /* [1] */
+	.flag--rev {
+		direction: rtl; /* [1] */
 
-        > .flag__img,
-        > .flag__body {
-            direction: ltr; /* [2] */
-        }
+		> .flag__img,
+		> .flag__body {
+			direction: ltr; /* [2] */
+		}
 
-        > .flag__img {
-            padding-right: 0; /* [3] */
-            padding-left: @flag-gutter; /* [3] */
-        }
+		> .flag__img {
+			padding-right: 0; /* [3] */
+			padding-left: @flag-gutter; /* [3] */
+		}
 
-    }
+	}
 
 }
 
@@ -250,14 +250,14 @@
  */
 .flag--flush() when (@enable-flag--flush = true) {
 
-    .flag--flush {
+	.flag--flush {
 
-        > .flag__img {
-            padding-right: 0;
-            padding-left:  0;
-        }
+		> .flag__img {
+			padding-right: 0;
+			padding-left:  0;
+		}
 
-    }
+	}
 
 }
 
@@ -272,14 +272,14 @@
  */
 .flag--top() when (@enable-flag--top = true) {
 
-    .flag--top {
+	.flag--top {
 
-        > .flag__img,
-        > .flag__body {
-            vertical-align: top;
-        }
+		> .flag__img,
+		> .flag__body {
+			vertical-align: top;
+		}
 
-    }
+	}
 
 }
 
@@ -293,14 +293,14 @@
  */
 .flag--bottom() when (@enable-flag--bottom = true) {
 
-    .flag--bottom {
+	.flag--bottom {
 
-        > .flag__img,
-        > .flag__body {
-            vertical-align: bottom;
-        }
+		> .flag__img,
+		> .flag__body {
+			vertical-align: bottom;
+		}
 
-    }
+	}
 
 }
 
@@ -324,131 +324,130 @@
  */
 .flag--responsive() when (@enable-flag--responsive = true) {
 
-    @media screen and (max-width: @flag-collapse-at) {
+	@media screen and (max-width: @flag-collapse-at) {
 
-        .flag--responsive {
+		.flag--responsive {
 
-            /**
-             * Disable reversal of content because there is no concept of
-             * ‘reversed’ in a stacked layout.
-             */
-            .flag--rev() when (@enable-flag--rev = true) {
+			/**
+			 * Disable reversal of content because there is no concept of
+			 * ‘reversed’ in a stacked layout.
+			 */
+			.flag--rev() when (@enable-flag--rev = true) {
+				direction: ltr;
+			}
 
-                direction: ltr;
-            }
+			.flag--rev();
 
-            .flag--rev();
+			&,
+			> .flag__img,
+			> .flag__body {
+				display: block;
+			}
 
-            &,
-            > .flag__img,
-            > .flag__body {
-                display: block;
-            }
+			/**
+			 * Rework the spacings on regular flag objects.
+			 */
+			> .flag__img {
+				padding-right: 0;
+				padding-left:  0;
+				margin-bottom: @flag-gutter;
+			}
 
-            /**
-             * Rework the spacings on regular flag objects.
-             */
-            > .flag__img {
-                padding-right: 0;
-                padding-left:  0;
-                margin-bottom: @flag-gutter;
-            }
+			/**
+			 * Tiny responsive flags.
+			 *
+			 * Take a little more heavy-handed approach to reworking
+			 * spacings on flags that are also tiny flags in their regular
+			 * state.
+			 */
+			.flag--tiny() when (@enable-flag--tiny = true) {
 
-            /**
-             * Tiny responsive flags.
-             *
-             * Take a little more heavy-handed approach to reworking
-             * spacings on flags that are also tiny flags in their regular
-             * state.
-             */
-            .flag--tiny() when (@enable-flag--tiny = true) {
+				&.flag--tiny {
 
-                &.flag--tiny {
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  0;
+						margin-bottom: @flag-gutter--tiny;
+					}
 
-                    > .flag__img {
-                        padding-right: 0;
-                        padding-left:  0;
-                        margin-bottom: @flag-gutter--tiny;
-                    }
+				}
 
-                }
+			}
 
-            }
+			.flag--tiny();
 
-            .flag--tiny();
+			/**
+			 * Small responsive flags.
+			 *
+			 * Take a little more heavy-handed approach to reworking
+			 * spacings on flags that are also small flags in their regular
+			 * state.
+			 */
+			.flag--small() when (@enable-flag--small = true) {
 
-            /**
-             * Small responsive flags.
-             *
-             * Take a little more heavy-handed approach to reworking
-             * spacings on flags that are also small flags in their regular
-             * state.
-             */
-            .flag--small() when (@enable-flag--small = true) {
+				&.flag--small {
 
-                &.flag--small {
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  0;
+						margin-bottom: @flag-gutter--small;
+					}
 
-                    > .flag__img {
-                        padding-right: 0;
-                        padding-left:  0;
-                        margin-bottom: @flag-gutter--small;
-                    }
+				}
 
-                }
+			}
 
-            }
+			.flag--small();
 
-            .flag--small();
+			/**
+			 * Large responsive flags.
+			 *
+			 * Take a little more heavy-handed approach to reworking
+			 * spacings on flags that are also large flags in their regular
+			 * state.
+			 */
+			.flag--large() when (@enable-flag--large = true) {
 
-            /**
-             * Large responsive flags.
-             *
-             * Take a little more heavy-handed approach to reworking
-             * spacings on flags that are also large flags in their regular
-             * state.
-             */
-            .flag--large() when (@enable-flag--large = true) {
+				&.flag--large {
 
-                &.flag--large {
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  0;
+						margin-bottom: @flag-gutter--large;
+					}
 
-                    > .flag__img {
-                        padding-right: 0;
-                        padding-left:  0;
-                        margin-bottom: @flag-gutter--large;
-                    }
+				}
 
-                }
+			}
 
-            }
+			.flag--large();
 
-            .flag--large();
+			/**
+			 * Huge responsive flags.
+			 *
+			 * Take a little more heavy-handed approach to reworking
+			 * spacings on flags that are also huge flags in their regular
+			 * state.
+			 */
+			.flag--huge() when (@enable-flag--huge = true) {
 
-            /**
-             * Huge responsive flags.
-             *
-             * Take a little more heavy-handed approach to reworking
-             * spacings on flags that are also huge flags in their regular
-             * state.
-             */
-            .flag--huge() when (@enable-flag--huge = true) {
+				&.flag--huge {
 
-                &.flag--huge {
+					> .flag__img {
+						padding-right: 0;
+						padding-left:  0;
+						margin-bottom: @flag-gutter--huge;
+					}
 
-                    > .flag__img {
-                        padding-right: 0;
-                        padding-left:  0;
-                        margin-bottom: @flag-gutter--huge;
-                    }
+				}
 
-                }
+			}
 
-            }
+			.flag--huge();
 
-            .flag--huge();
+		}
 
-        }
-
-    }
+	}
 
 }
 

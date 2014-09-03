@@ -2,7 +2,7 @@
 .set-tabs() when (@use-tabs = true) {
 
 /*------------------------------------*\
-    #TABS
+	#TABS
 \*------------------------------------*/
 
 /**
@@ -17,22 +17,22 @@
  *    this makes the object behave in a quasi-`display: block;` manner.
  */
 .tabs {
-    margin:  0; /* [1] */
-    padding: 0; /* [1] */
-    list-style: none; /* [1] */
-    display: table; /* [2] */
-    table-layout: fixed; /* [3] */
-    width: 100%; /* [4] */
-    text-align: center;
+	margin:  0; /* [1] */
+	padding: 0; /* [1] */
+	list-style: none; /* [1] */
+	display: table; /* [2] */
+	table-layout: fixed; /* [3] */
+	width: 100%; /* [4] */
+	text-align: center;
 }
 
-    .tabs__item {
-        display: table-cell; /* [2] */
-    }
+	.tabs__item {
+		display: table-cell; /* [2] */
+	}
 
-        .tabs__link {
-            display: block;
-        }
+		.tabs__link {
+			display: block;
+		}
 
 } // use-tabs=true mixin
 

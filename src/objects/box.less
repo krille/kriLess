@@ -2,7 +2,7 @@
 .set-box() when (@use-box = true) {
 
 /*------------------------------------*\
-    #BOX
+	#BOX
 \*------------------------------------*/
 
 /**
@@ -13,13 +13,14 @@
  * 1. So we can apply the `.box` class to naturally-inline elements.
  */
 .box {
-    &:extend(.cf all);
-    display: block; /* [1] */
-    padding: @box-padding;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+	&:extend(.cf all);
+	display: block; /* [1] */
+	padding: @box-padding;
+
+	> :last-child {
+		margin-bottom: 0;
+	}
 
 }
 
@@ -32,9 +33,9 @@
  */
 .box--flush() when (@enable-box--flush = true) {
 
-  .box--flush {
-      padding: 0;
-  }
+	.box--flush {
+		padding: 0;
+	}
 
 }
 
@@ -49,9 +50,9 @@
  */
 .box--tiny() when (@enable-box--tiny = true) {
 
-  .box--tiny {
-      padding: @box-padding--tiny;
-  }
+	.box--tiny {
+		padding: @box-padding--tiny;
+	}
 
 }
 
@@ -66,9 +67,9 @@
  */
 .box--small() when (@enable-box--small = true) {
 
-  .box--small {
-      padding: @box-padding--small;
-  }
+	.box--small {
+		padding: @box-padding--small;
+	}
 
 }
 
@@ -83,9 +84,9 @@
  */
 .box--large() when (@enable-box--large = true) {
 
-  .box--large {
-      padding: @box-padding--large;
-  }
+	.box--large {
+		padding: @box-padding--large;
+	}
 
 }
 
@@ -99,9 +100,9 @@
  */
 .box--huge() when (@enable-box--huge = true) {
 
-  .box--huge {
-      padding: @box-padding--huge;
-  }
+	.box--huge {
+		padding: @box-padding--huge;
+	}
 
 }
 

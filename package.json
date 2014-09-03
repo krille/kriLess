@@ -1,27 +1,27 @@
 {
-  "name": "kriless",
-  "version": "2.0.0",
-  "description": "CSS/LESS framework",
-  "private": true,
-  "author": "Vinter AB",
-  "contributors": [
-    {
-      "name": "Daniel Eriksson",
-      "email": "daniel.eriksson@vintermail.se"
-    },
-    {
-      "name": "Kristofer Westling",
-      "email": "kristofer.westling@vintermail.se"
-    },
-    {
-      "name": "Olov Nilzén",
-      "email": "olov.nilzen@vintermail.se"
-    }
-  ],
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~1.0.0",
-    "grunt-contrib-less": "~0.11.4",
-    "grunt-contrib-watch": "~0.6.1"
-  }
+	"name": "kriless",
+	"version": "2.0.0",
+	"description": "CSS/LESS framework",
+	"private": true,
+	"author": "Vinter AB",
+	"contributors": [
+		{
+			"name": "Daniel Eriksson",
+			"email": "daniel.eriksson@vintermail.se"
+		},
+		{
+			"name": "Kristofer Westling",
+			"email": "kristofer.westling@vintermail.se"
+		},
+		{
+			"name": "Olov Nilzén",
+			"email": "olov.nilzen@vintermail.se"
+		}
+	],
+	"devDependencies": {
+		"grunt": "~0.4.5",
+		"grunt-autoprefixer": "~1.0.0",
+		"grunt-contrib-less": "~0.11.4",
+		"grunt-contrib-watch": "~0.6.1"
+	}
 }
