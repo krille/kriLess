@@ -5,7 +5,7 @@
 & when (@responsive = true) {
 
 	// Loop through the list of breakpoints we’ve provided in our settings file.
-	.loop-breakpoints(@breakpoints) {
+	.loop-breakpoints(@breakpoints, @mixin) {
 
 		.loop(@i) when (@i > 0) {
 			
@@ -21,6 +21,20 @@
 
 				// Setup widths
 				@media @unquotedCondition {
+					
+					/*
+					.generateClasses (@in:"") {
+						@concatenate: "@{in} .repeatedClass";
+						@selector: ~".staticClass @{concatenate} > .finalStaticClass";
+						@{selector}{ height: unit(@n,px) };
+						
+					}
+
+					.generateClasses(@n, @in){};
+
+					.generateClasses(10px);
+					*/
+
 					.setup-widths(@unquotedAlias) !important;
 				}
 
@@ -32,6 +46,6 @@
 
 	}
 
-	.loop-breakpoints(@breakpoints);
+	.loop-breakpoints(@breakpoints, ".setup-widths");
 
 }
