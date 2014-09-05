@@ -1,106 +1,19 @@
-@import "kri.less/defaults";
-@import "kri.less/generic/mixins";
-@import "kri.less/base/tables";
+/// <reference path="project.less" />
+
+/*------------------------------------*\
+	#EDITOR STYLING
+\*------------------------------------*/
+/*
+ * Using a CMS? 
+ * Remember to set up editor styles
+ * Import what you need from kriLess
+ */
 
 /*------------------------------------*\
 	#EPISERVER 7 PROPERTIES
 \*------------------------------------*/
 /*
-	EditMenuTitle: Text;
-	ChangeElementType: true;
-	EditMenuName: Lead Text;
-*/
-
-
-
-/*------------------------------------*\
-	#GLOBAL.asax bundle
-\*------------------------------------*/
-/*
-	var editorLessBundle = new Bundle("~/css/editor.css");
-	editorLessBundle.Include("~/css/editor.less");
-	editorLessBundle.Transforms.Add(new LessTransformer());
-	bundles.Add(editorLessBundle);
-*/
-
-
-h1,h2,h3,h4,h5,h6,
-p,blockquote,pre,
-dl,dd,ol,ul,
-form,fieldset,legend,
-table,th,td,caption,
-hr{
-	margin:0;
-	padding:0;
-}
-
-
-ul, ol, dl, blockquote, p, address, table, figure {
-	margin-bottom:@base-spacing-unit*1px;
-	margin-bottom:(@base-spacing-unit/@base-font-size)*1rem;
-}
-
-li {
-	> ul,
-	> ol{
-		 margin-bottom:0;
-	 }
-}
-
-
-h1 {
-	.font-size(@h1-size);
-}
-h2 {
-	.font-size(@h2-size);
-}
-h3 {
-	.font-size(@h3-size);
-}
-h4 {
-	.font-size(@h4-size);
-}
-h5 {
-	.font-size(@h5-size);
-}
-h6 {
-	.font-size(@h6-size);
-}
-
-.lead {
-	.font-size(@base-font-size * 1.125);
-}
-
-
-
-/*------------------------------------*\
-	#IMAGES
-\*------------------------------------*/
-img{
-	max-width:100%;
-}
-img[width],
-img[height]{
-	max-width:none;
-}
-
-
-.img--right{
-	float:right;
-	margin-bottom:@base-spacing-unit*1px;
-	margin-left:@base-spacing-unit*1px;
-}
-.img--left{
-	float:left;
-	margin-right:@base-spacing-unit*1px;
-	margin-bottom:@base-spacing-unit*1px;
-}
-
-
-
-/*------------------------------------*\
-	#FLOATS
-\*------------------------------------*/
-.float--right   { float:right!important; }
-.float--left    { float:left !important; }
-.float--none    { float:none !important; }
+ * EditMenuTitle: Text;
+ * ChangeElementType: true;
+ * EditMenuName: Lead Text;
+ */
