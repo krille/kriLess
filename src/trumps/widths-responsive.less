@@ -5,7 +5,7 @@
 & when (@responsive = true) {
 
 	// Loop through the list of breakpoints we’ve provided in our settings file.
-	.loop-breakpoints(@breakpoints, @cb) {
+	.loop-breakpoints(@breakpoints) {
 
 		.loop(@i) when (@i > 0) {
 			
@@ -21,13 +21,6 @@
 
 				// Setup widths
 				@media @unquotedCondition {
-					
-					/*
-					@callback: e("@{cb}(@{unquotedAlias}) !important;");
-					a: @callback;
-					*/
-					
-
 					.setup-widths(@unquotedAlias) !important;
 				}
 
@@ -39,6 +32,6 @@
 
 	}
 
-	.loop-breakpoints(@breakpoints, ".setup-widths");
+	.loop-breakpoints(@breakpoints);
 
 }

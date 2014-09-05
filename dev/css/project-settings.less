@@ -28,11 +28,13 @@
 /*------------------------------------*\
 	#RESPONSIVE
 \*------------------------------------*/
-@lap-start:         600px;
-@desk-start:        850px;
-@lap-end:           849px; /* @desk-start - 1px; */
-@responsive:        true;
-@responsive-spacing:true;
+@responsive:         true;
+@responsive-spacing: false;
+
+@breakpoints:
+	"lap-"           "screen and (min-width: 600px) and (max-width: 849px)",
+	"lap-and-up-"    "screen and (min-width: 600px)",
+	"desk-"          "screen and (min-width: 850px)";
 
 
 
