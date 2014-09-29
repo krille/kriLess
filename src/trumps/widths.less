@@ -16,6 +16,11 @@
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
 	/**
+	 * Hidden.
+	 */
+	[class~="@{the-prefix}hidden"]    { display: none; }
+
+	/**
 	 * Whole.
 	 */
 	[class~="@{the-prefix}1/1"]       { width: 100%; }
