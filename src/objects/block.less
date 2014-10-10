@@ -1,0 +1,154 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@block-gutter:            @base-spacing-unit;
+@block-gutter--tiny:      round(@block-gutter / 4);
+@block-gutter--small:     round(@block-gutter / 2);
+@block-gutter--large:     round(@block-gutter * 2);
+@block-gutter--huge:      round(@block-gutter * 4);
+
+@enable-block--flush:     false;
+@enable-block--tiny:      false;
+@enable-block--small:     false;
+@enable-block--large:     false;
+@enable-block--huge:      false;
+@enable-block--center:    false;
+@enable-block--right:     false;
+
+
+
+& when (@use-block = true) {
+
+	/*------------------------------------*\
+		#BLOCK
+	\*------------------------------------*/
+
+	/**
+	 * The block object simply stacks an image on top of some text-like content.
+	 */
+
+	/**
+	 * Stacked image-with-text object. A simple abstraction to cover a very commonly
+	 * occurring design pattern.
+	 */
+	.block {
+		display: block;
+	}
+
+
+		/**
+		 * 1. Eliminate whitespace around images.
+		 */
+		.block__img {
+			vertical-align: middle; /* [1] */
+			margin-bottom: @block-gutter;
+
+			& when (@enable-block--flush = true) {
+
+				/**
+				 * No space between the image and the text content.
+				 */
+
+				.block--flush > & {
+					margin-bottom: 0;
+				}
+
+			}
+
+			& when (@enable-block--tiny = true) {
+
+				/**
+				 * Tiny space between the image and the text content.
+				 */
+
+				.block--tiny > & {
+					margin-bottom: @block-gutter--tiny;
+				}
+
+			}
+
+			& when (@enable-block--small = true) {
+
+				/**
+				 * Small space between the image and the text content.
+				 */
+
+				.block--small > & {
+					margin-bottom: @block-gutter--small
+				}
+
+			}
+
+			& when (@enable-block--large = true) {
+
+				/**
+				 * Large space between the image and the text content.
+				 */
+
+				.block--large > & {
+					margin-bottom: @block-gutter--large;
+				}
+
+			}
+
+			& when (@enable-block--huge = true) {
+
+				/**
+				 * Huge space between the image and the text content.
+				 */
+
+				.block--huge > & {
+					margin-bottom: @block-gutter--huge;
+				}
+
+			}
+
+		}
+
+
+
+
+
+		/**
+		 * Text-content.
+		 */
+		.block__body {
+			display: block;
+		}
+
+
+
+
+
+	& when (@enable-block--right = true) {
+
+		/**
+		 * Right-aligned blocks.
+		 */
+
+		.block--right {
+			text-align: right;
+		}
+
+	}
+
+
+
+
+
+
+	& when (@enable-block--center = true) {
+
+		/**
+		 * Center-aligned blocks.
+		 */
+
+		.block--center {
+			text-align: center;
+		}
+
+	}
+
+
+
+}
