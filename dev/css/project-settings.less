@@ -31,10 +31,14 @@
 @responsive:         true;
 @responsive-spacing: false;
 
+@lap-start:  600px;
+@desk-start: 850px;
+@lap-end:    @desk-start - 1px;
+
 @breakpoints:
-	"lap-"           "screen and (min-width: 600px) and (max-width: 849px)",
-	"lap-and-up-"    "screen and (min-width: 600px)",
-	"desk-"          "screen and (min-width: 850px)";
+	"lap-"           "screen and (min-width: @{lap-start}) and (max-width: @{lap-end})",
+	"lap-and-up-"    "screen and (min-width: @{lap-start})",
+	"desk-"          "screen and (min-width: @{desk-start})";
 
 
 
