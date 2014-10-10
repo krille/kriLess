@@ -149,41 +149,69 @@
 
 		<h1>Layout</h1>
 
-		<p>Alt: <code>.layout--rev</code>, <code>.layout--middle</code>, <code>.layout--bottom</code>, <code>.layout--right</code>, <code>.layout--center</code>, <code>.layout--auto</code></p>
+		<p>The layout system uses <code>box-sizing: border-box;</code> and <code>display: inline-block;</code> to create an extremely powerful flexible alternative to the traditional grid system. Combine the layout items with the widths found in <code>trumps/widths.less</code></p>
 
-		<p>Spacing: <code>.layout--tiny</code>, <code>.layout--small</code>, <code>.layout--large</code>, <code>.layout--huge</code>, <code>.layout--flush</code></p>
+		<p>Alt: 
+			<code>.layout--rev</code>, 
+			<code>.layout--middle</code>, 
+			<code>.layout--bottom</code>, 
+			<code>.layout--right</code>, 
+			<code>.layout--center</code>, 
+			<code>.layout--auto</code>
+		</p>
 
-		<div class="layout">
-
-			<div class="layout__item lap-and-up-hidden">
-				<p>
-					Hidden text lorem ipsum dolor sit amet
-					<code>.lap-and-up-hidden</code>
-				</p>
-			</div>
-
-			<div class="layout__item lap-and-up-1/2">
-				<p><code>.layout__item .lap-and-up-1/2</code> In vitae turpis ut mauris posuere lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet felis eros, sed aliquavehicula id. Donec feugiat neque urna, quis feugiat justo fringilla non. Duis venenatis iaculis risus, sit amet bibendum tellus aliquet vitae.</p>
-			</div>
-
-			<div class="layout__item lap-and-up-1/2">
-				<p><code>.layout__item .lap-and-up-1/2</code> In vitae turpis ut mauris posuere lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet felis eros, sed aliquam odio sodales ut. Sed vestibulum in nunc quis euismod. Quisque sed interdum nulla. Mauris pharetra pharetra eros, et adipiscing quam vehicula id. Donec feugiat neque urna, quis feugiat justo fringilla non. Duis venenatis iaculis risus, sit amet bibendum tellus aliquet vitae.</p>
-			</div>
-
-		</div>
+		<p>Spacing: 
+			<code>.layout--tiny</code>, 
+			<code>.layout--small</code>, 
+			<code>.layout--large</code>, 
+			<code>.layout--huge</code>, 
+			<code>.layout--flush</code>
+		</p>
 
 		<div class="layout">
 
-			<div class="layout__item lap-1/2 desk-1/3">
-				<p><code>.layout__item .lap-1/2 .desk-1/3</code> In vitae turpis ut mauris posuere lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet felis eros, sed aliquam odio sodales ut. Sed vestibulum in nunc quis euismod. Quisque sed interdum nulla. Mauris pharetra pharetra eros.</p>
+			<div class="layout__item 1/2">
+				<div class="box mb">.1/2</div>
 			</div>
 
-			<div class="layout__item lap-1/2 desk-1/3">
-				<p><code>.layout__item .lap-1/2 .desk-1/3</code> In vitae turpis ut mauris posuere lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet felis eros, sed aliquam odio sodales ut. Sed vestibulum in nunc quis euismod. Quisque sed interdum nulla. Mauris pharetra pharetra eros.</p>
+			<div class="layout__item 1/2">
+				<div class="box mb">.1/2</div>
 			</div>
 
-			<div class="layout__item lap-1/2 desk-1/3">
-				<p><code>.layout__item .lap-1/2 .desk-1/3</code> In vitae turpis ut mauris posuere lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet felis eros, sed aliquam odio sodales ut. Sed vestibulum in nunc quis euismod. Quisque sed interdum nulla. Mauris pharetra pharetra eros.</p>
+			<div class="layout__item lap-and-up-1/2">
+				<div class="box mb">.lap-and-up-1/2</div>
+			</div>
+
+			<div class="layout__item lap-and-up-1/2">
+				<div class="box mb">.lap-and-up-1/2</div>
+			</div>
+
+			<div class="layout__item desk-1/3">
+				<div class="box mb">.desk-1/3</div>
+			</div>
+
+			<div class="layout__item desk-1/3">
+				<div class="box mb">.desk-1/3</div>
+			</div>
+
+			<div class="layout__item desk-1/3">
+				<div class="box mb">.desk-1/3</div>
+			</div>
+
+			<div class="layout__item lap-1/2 desk-1/4">
+				<div class="box mb">.lap-1/2 .desk-1/4</div>
+			</div>
+
+			<div class="layout__item lap-1/2 desk-1/4">
+				<div class="box mb">.lap-1/2 .desk-1/4</div>
+			</div>
+
+			<div class="layout__item lap-1/2 desk-1/4">
+				<div class="box mb">.lap-1/2 .desk-1/4</div>
+			</div>
+
+			<div class="layout__item lap-1/2 desk-1/4">
+				<div class="box mb">.lap-1/2 .desk-1/4</div>
 			</div>
 
 		</div>
@@ -260,16 +288,23 @@
 
 	<section class="box box--large">
 
-		<h1>Buttons</h1>
+		<h1>Button</h1>
+
+		<p>The button object is a simple, robust, extensible baseline for building entire suites of buttons onto.</p>
+
+		<p>Components: <code>.btn</code></p>
+
+		<p>Layout: <code>.btn--disabled</code>, <code>.btn--small</code>, <code>.btn--large</code>, <code>.btn--pill</code></p>
+
 		<p>
-			<a class="btn" href="#"><code>.btn</code></a>
-			<a class="btn btn--disabled" href="#"><code>.btn--disabled</code></a>
-			<a class="btn btn--small" href="#"><code>.btn--small</code></a>
-			<a class="btn btn--large" href="#"><code>.btn--large</code></a>
-			<a class="btn btn--pill" href="#"><code>.btn--pill</code></a>
+			<a class="btn" href="#">.btn</a>
+			<a class="btn btn--disabled" href="#">.btn--disabled</a>
+			<a class="btn btn--small" href="#">.btn--small</a>
+			<a class="btn btn--large" href="#">.btn--large</a>
+			<a class="btn btn--pill" href="#">.btn--pill</a>
 		</p>
 		<p>
-			<a class="btn btn--full" href="#"><code>.btn--full</code></a>
+			<a class="btn btn--full" href="#">.btn--full</a>
 		</p>
 
 	</section>
@@ -281,6 +316,8 @@
 	<section class="box box--large">
 
 		<h1>Media</h1>
+
+		<p>The Media object is an implementation of Nicole Sullivan’s media object.</p>
 
 		<p>Components: <code>.media</code>, <code>.media__img</code>, <code>.media__body</code></p>
 
@@ -305,7 +342,9 @@
 
 	<section class="box box--large">
 
-		<h1>Flags</h1>
+		<h1>Flag</h1>
+
+		<p>The flag object is an object similar in appearance to the media object, but which provides slightly more advanced functionality.</p>
 
 		<p>Components: <code>.flag</code>, <code>.flag__img</code>, <code>.flag__body</code></p>
 
@@ -334,7 +373,7 @@
 
 		<h1>Pack</h1>
 
-		<p>Pack object simply causes any number of elements pack up horizontally to automatically fill an equal, fluid width of their parent.</p>
+		<p>Pack object causes any number of elements pack up horizontally to automatically fill an equal, fluid width of their parent.</p>
 
 		<p>Components: <code>.pack</code>, <code>.pack__item</code></p>
 
@@ -360,7 +399,7 @@
 
 		<h1>Block</h1>
 
-		<p>The block object simply stacks an image on top of some text-like content.</p>
+		<p>The block object stacks an image on top of some text-like content.</p>
 
 		<p>Components: <code>.block</code>, <code>.block__img</code>, <code>.block__body</code></p>
 
@@ -383,7 +422,29 @@
 
 	<section class="box box--large">
 
+		<h1>Box</h1>
+
+		<p>The box object simply boxes off content.</p>
+
+		<p>Components: <code>.box</code></p>
+
+		<p>Spacing: <code>.box--flush</code>, <code>.box--tiny</code>, <code>.box--small</code>, <code>.box--large</code>, <code>.box--huge</code></p>
+
+		<div class="box">
+			<p>Boxed off content goes here.</p>
+		</div>
+
+	</section>
+
+
+
+
+
+	<section class="box box--large">
+
 		<h1>Tabs</h1>
+
+		<p>The tabs object is a simple abstraction for force a series of elements (usually a list) into an equal-width, tab-like format.</p>
 
 		<p>Components: <code>.tabs</code>, <code>.tabs__item</code>, <code>.tabs__link</code></p>
 
@@ -409,6 +470,8 @@
 
 		<h1>Icon-font</h1>
 
+		<p>Components: <code>.icon-&lt;name&gt;</code></p>
+
 		<a class="btn btn--pill"><i class="icon-heart-empty"></i> Like</a>
 
 	</section>
@@ -420,6 +483,8 @@
 	<section class="box box--large">
 
 		<h1>Breadcrumb</h1>
+
+		<p>Simple breadcrumb styling.</p>
 
 		<p>Components:
 			<code>.breadcrumb</code>,
@@ -442,6 +507,8 @@
 	<section class="box box--large">
 
 		<h1>Pagination</h1>
+
+		<p>Simple pagination styling.</p>
 
 		<p>Components: 
 			<code>.pagination</code>,
@@ -470,9 +537,11 @@
 
 		<h1>Embed</h1>
 
+		<p>Responsive embedded content. Default ratio is 16:9.</p>
+
 		<p>Components: <code>.embed</code>, <code>.embed__item</code></p>
 
-		<p>Alt: <code>.embed--4/3</code></p>
+		<p>Layout: <code>.embed--4:3</code></p>
 
 		<div class="embed">
 			<iframe class="embed__item" width="560" height="315" src="//www.youtube.com/embed/IkaILVOgGRA" frameborder="0" allowfullscreen></iframe>
@@ -487,6 +556,8 @@
 	<section class="box box--large">
 
 		<h1>Split</h1>
+
+		<p>Simple split item for creating two elements floated away from one another.</p>
 
 		<p>Components: <code>.split</code>, <code>.split__title</code></p>
 
@@ -514,6 +585,8 @@
 	<section class="box box--large">
 
 		<h1>Tables</h1>
+
+		<p>Helpers for common table patterns.</p>
 
 		<p>Base: <code>.table</code>, <code>.table--fixed</code></p>
 		<p>Layout: <code>.table--rows</code>, <code>.table--columns</code>, <code>.table--cells</code></p>
