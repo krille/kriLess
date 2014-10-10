@@ -1,0 +1,177 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+@pack-gutter:         @base-spacing-unit;
+@pack-gutter--tiny:   round(@pack-gutter / 4);
+@pack-gutter--small:  round(@pack-gutter / 2);
+@pack-gutter--large:  round(@pack-gutter * 2);
+@pack-gutter--huge:   round(@pack-gutter * 4);
+
+@enable-pack--auto:   false;
+@enable-pack--tiny:   false;
+@enable-pack--small:  false;
+@enable-pack--large:  false;
+@enable-pack--huge:   false;
+@enable-pack--rev:    false;
+@enable-pack--middle: false;
+@enable-pack--bottom: false;
+
+
+
+& when (@use-pack = true) {
+
+	/*------------------------------------*\
+		#PACK
+	\*------------------------------------*/
+
+	/**
+	 * The pack object simply causes any number of elements pack up horizontally to
+	 * automatically fill an equal, fluid width of their parent.
+	 */
+
+	/**
+	 * 1. Fill all available space.
+	 * 2. Cause children to be automatically equally sized.
+	 */
+	.pack {
+		width: 100%; /* [1] */
+		display: table;
+		table-layout: fixed; /* [2] */
+	}
+
+		/**
+		 * Cause children to adopt table-like structure.
+		 */
+		.pack__item {
+			display: table-cell;
+
+			& when (@enable-pack--middle = true) {
+
+				/**
+				 * All items are aligned to the middles of each other.
+				 */
+
+				.pack--middle > & {
+					vertical-align: middle;
+				}
+
+			}
+
+			& when (@enable-pack--bottom = true) {
+
+				/**
+				 * All items are aligned to the bottoms of each other.
+				 */
+
+				.pack--bottom > & {
+					vertical-align: bottom;
+				}
+
+			}
+
+		}
+
+
+
+
+
+	& when (@enable-pack--auto = true) {
+
+		/**
+		 * Cause children to pack up into available space, but not equally sized.
+		 */
+
+		.pack--auto {
+			table-layout: auto;
+		}
+
+	}
+
+
+
+
+
+	& when (@enable-pack--tiny = true) {
+
+		/**
+		 * Tiny gutters between items.
+		 */
+
+		.pack--tiny {
+			border-spacing: @pack-gutter--tiny;
+		}
+
+	}
+
+
+
+
+
+	& when (@enable-pack--small = true) {
+
+		/**
+		 * Small gutters between items.
+		 */
+
+		.pack--small {
+			border-spacing: @pack-gutter--small;
+		}
+
+	}
+
+
+
+
+
+	& when (@enable-pack--large = true) {
+
+		/**
+		 * Large gutters between items.
+		 */
+
+		.pack--large {
+			border-spacing: @pack-gutter--large;
+		}
+
+	}
+
+
+
+
+
+	& when (@enable-pack--huge = true) {
+
+		/**
+		 * Huge gutters between items.
+		 */
+
+		.pack--huge {
+			border-spacing: @pack-gutter--huge;
+		}
+
+	}
+
+
+
+
+
+	& when (@enable-pack--rev = true) {
+
+		/**
+		 * Reversed order packs.
+		 */
+		
+		.pack--rev {
+			direction: rtl;
+		
+			> .pack__item {
+				direction: ltr;
+			}
+		
+		}
+
+	}
+
+
+
+}
