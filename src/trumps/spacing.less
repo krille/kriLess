@@ -10,7 +10,16 @@
  */
 
 @margin:                          @base-spacing-unit;
+@margin--small:                   round(@margin / 2);
+@margin--tiny:                    round(@margin / 4);
+@margin--large:                   round(@margin * 2);
+@margin--huge:                    round(@margin * 4);
+
 @padding:                         @base-spacing-unit;
+@padding--small:                  round(@padding / 2);
+@padding--tiny:                   round(@padding / 4);
+@padding--large:                  round(@padding * 2);
+@padding--huge:                   round(@padding * 4);
 
 @enable-margins:                  false;
 @enable-margins--tiny:            false;
@@ -72,13 +81,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}m--     { margin:           round(@margin / 4); }
-	.@{the-prefix}mt--    { margin-top:       round(@margin / 4); }
-	.@{the-prefix}mr--    { margin-right:     round(@margin / 4); }
-	.@{the-prefix}mb--    { margin-bottom:    round(@margin / 4); }
-	.@{the-prefix}ml--    { margin-left:      round(@margin / 4); }
-	.@{the-prefix}mh--    { margin-right:     round(@margin / 4); margin-left:     round(@margin / 4); }
-	.@{the-prefix}mv--    { margin-top:       round(@margin / 4); margin-bottom:   round(@margin / 4); }
+	.@{the-prefix}m--     { margin:           @margin--tiny; }
+	.@{the-prefix}mt--    { margin-top:       @margin--tiny; }
+	.@{the-prefix}mr--    { margin-right:     @margin--tiny; }
+	.@{the-prefix}mb--    { margin-bottom:    @margin--tiny; }
+	.@{the-prefix}ml--    { margin-left:      @margin--tiny; }
+	.@{the-prefix}mh--    { margin-right:     @margin--tiny; margin-left:     @margin--tiny; }
+	.@{the-prefix}mv--    { margin-top:       @margin--tiny; margin-bottom:   @margin--tiny; }
 
 }
 
@@ -97,13 +106,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}m-      { margin:           round(@margin / 2); }
-	.@{the-prefix}mt-     { margin-top:       round(@margin / 2); }
-	.@{the-prefix}mr-     { margin-right:     round(@margin / 2); }
-	.@{the-prefix}mb-     { margin-bottom:    round(@margin / 2); }
-	.@{the-prefix}ml-     { margin-left:      round(@margin / 2); }
-	.@{the-prefix}mh-     { margin-right:     round(@margin / 2); margin-left:   round(@margin / 2); }
-	.@{the-prefix}mv-     { margin-top:       round(@margin / 2); margin-bottom: round(@margin / 2); }
+	.@{the-prefix}m-      { margin:           @margin--small; }
+	.@{the-prefix}mt-     { margin-top:       @margin--small; }
+	.@{the-prefix}mr-     { margin-right:     @margin--small; }
+	.@{the-prefix}mb-     { margin-bottom:    @margin--small; }
+	.@{the-prefix}ml-     { margin-left:      @margin--small; }
+	.@{the-prefix}mh-     { margin-right:     @margin--small; margin-left:   @margin--small; }
+	.@{the-prefix}mv-     { margin-top:       @margin--small; margin-bottom: @margin--small; }
 
 }
 
@@ -122,13 +131,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}m\+     { margin:           round(@margin * 2); }
-	.@{the-prefix}mt\+    { margin-top:       round(@margin * 2); }
-	.@{the-prefix}mr\+    { margin-right:     round(@margin * 2); }
-	.@{the-prefix}mb\+    { margin-bottom:    round(@margin * 2); }
-	.@{the-prefix}ml\+    { margin-left:      round(@margin * 2); }
-	.@{the-prefix}mh\+    { margin-right:     round(@margin * 2); margin-left:      round(@margin * 2); }
-	.@{the-prefix}mv\+    { margin-top:       round(@margin * 2); margin-bottom:    round(@margin * 2); }
+	.@{the-prefix}m\+     { margin:           @margin--large; }
+	.@{the-prefix}mt\+    { margin-top:       @margin--large; }
+	.@{the-prefix}mr\+    { margin-right:     @margin--large; }
+	.@{the-prefix}mb\+    { margin-bottom:    @margin--large; }
+	.@{the-prefix}ml\+    { margin-left:      @margin--large; }
+	.@{the-prefix}mh\+    { margin-right:     @margin--large; margin-left:      @margin--large; }
+	.@{the-prefix}mv\+    { margin-top:       @margin--large; margin-bottom:    @margin--large; }
 
 }
 
@@ -147,13 +156,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}m\+\+   { margin:           round(@margin * 4); }
-	.@{the-prefix}mt\+\+  { margin-top:       round(@margin * 4); }
-	.@{the-prefix}mr\+\+  { margin-right:     round(@margin * 4); }
-	.@{the-prefix}mb\+\+  { margin-bottom:    round(@margin * 4); }
-	.@{the-prefix}ml\+\+  { margin-left:      round(@margin * 4); }
-	.@{the-prefix}mh\+\+  { margin-right:     round(@margin * 4); margin-left:   round(@margin * 4); }
-	.@{the-prefix}mv\+\+  { margin-top:       round(@margin * 4); margin-bottom: round(@margin * 4); }
+	.@{the-prefix}m\+\+   { margin:           @margin--huge; }
+	.@{the-prefix}mt\+\+  { margin-top:       @margin--huge; }
+	.@{the-prefix}mr\+\+  { margin-right:     @margin--huge; }
+	.@{the-prefix}mb\+\+  { margin-bottom:    @margin--huge; }
+	.@{the-prefix}ml\+\+  { margin-left:      @margin--huge; }
+	.@{the-prefix}mh\+\+  { margin-right:     @margin--huge; margin-left:   @margin--huge; }
+	.@{the-prefix}mv\+\+  { margin-top:       @margin--huge; margin-bottom: @margin--huge; }
 
 }
 
@@ -222,13 +231,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}-m--    { margin:           round(-@margin / 4); }
-	.@{the-prefix}-mt--   { margin-top:       round(-@margin / 4); }
-	.@{the-prefix}-mr--   { margin-right:     round(-@margin / 4); }
-	.@{the-prefix}-mb--   { margin-bottom:    round(-@margin / 4); }
-	.@{the-prefix}-ml--   { margin-left:      round(-@margin / 4); }
-	.@{the-prefix}-mh--   { margin-right:     round(-@margin / 4); margin-left:     round(-@margin / 4); }
-	.@{the-prefix}-mv--   { margin-top:       round(-@margin / 4); margin-bottom:   round(-@margin / 4); }
+	.@{the-prefix}-m--    { margin:           -@margin--tiny; }
+	.@{the-prefix}-mt--   { margin-top:       -@margin--tiny; }
+	.@{the-prefix}-mr--   { margin-right:     -@margin--tiny; }
+	.@{the-prefix}-mb--   { margin-bottom:    -@margin--tiny; }
+	.@{the-prefix}-ml--   { margin-left:      -@margin--tiny; }
+	.@{the-prefix}-mh--   { margin-right:     -@margin--tiny; margin-left:     -@margin--tiny; }
+	.@{the-prefix}-mv--   { margin-top:       -@margin--tiny; margin-bottom:   -@margin--tiny; }
 
 }
 
@@ -247,13 +256,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}-m-     { margin:           round(-@margin / 2); }
-	.@{the-prefix}-mt-    { margin-top:       round(-@margin / 2); }
-	.@{the-prefix}-mr-    { margin-right:     round(-@margin / 2); }
-	.@{the-prefix}-mb-    { margin-bottom:    round(-@margin / 2); }
-	.@{the-prefix}-ml-    { margin-left:      round(-@margin / 2); }
-	.@{the-prefix}-mh-    { margin-right:     round(-@margin / 2); margin-left:   round(-@margin / 2); }
-	.@{the-prefix}-mv-    { margin-top:       round(-@margin / 2); margin-bottom: round(-@margin / 2); }
+	.@{the-prefix}-m-     { margin:           -@margin--small; }
+	.@{the-prefix}-mt-    { margin-top:       -@margin--small; }
+	.@{the-prefix}-mr-    { margin-right:     -@margin--small; }
+	.@{the-prefix}-mb-    { margin-bottom:    -@margin--small; }
+	.@{the-prefix}-ml-    { margin-left:      -@margin--small; }
+	.@{the-prefix}-mh-    { margin-right:     -@margin--small; margin-left:   -@margin--small; }
+	.@{the-prefix}-mv-    { margin-top:       -@margin--small; margin-bottom: -@margin--small; }
 
 }
 
@@ -272,13 +281,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}-m\+    { margin:           round(-@margin * 2); }
-	.@{the-prefix}-mt\+   { margin-top:       round(-@margin * 2); }
-	.@{the-prefix}-mr\+   { margin-right:     round(-@margin * 2); }
-	.@{the-prefix}-mb\+   { margin-bottom:    round(-@margin * 2); }
-	.@{the-prefix}-ml\+   { margin-left:      round(-@margin * 2); }
-	.@{the-prefix}-mh\+   { margin-right:     round(-@margin * 2); margin-left:      round(-@margin * 2); }
-	.@{the-prefix}-mv\+   { margin-top:       round(-@margin * 2); margin-bottom:    round(-@margin * 2); }
+	.@{the-prefix}-m\+    { margin:           -@margin--large; }
+	.@{the-prefix}-mt\+   { margin-top:       -@margin--large; }
+	.@{the-prefix}-mr\+   { margin-right:     -@margin--large; }
+	.@{the-prefix}-mb\+   { margin-bottom:    -@margin--large; }
+	.@{the-prefix}-ml\+   { margin-left:      -@margin--large; }
+	.@{the-prefix}-mh\+   { margin-right:     -@margin--large; margin-left:      -@margin--large; }
+	.@{the-prefix}-mv\+   { margin-top:       -@margin--large; margin-bottom:    -@margin--large; }
 
 }
 
@@ -297,13 +306,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}-m\+\+  { margin:           round(-@margin * 4); }
-	.@{the-prefix}-mt\+\+ { margin-top:       round(-@margin * 4); }
-	.@{the-prefix}-mr\+\+ { margin-right:     round(-@margin * 4); }
-	.@{the-prefix}-mb\+\+ { margin-bottom:    round(-@margin * 4); }
-	.@{the-prefix}-ml\+\+ { margin-left:      round(-@margin * 4); }
-	.@{the-prefix}-mh\+\+ { margin-right:     round(-@margin * 4); margin-left:   round(-@margin * 4); }
-	.@{the-prefix}-mv\+\+ { margin-top:       round(-@margin * 4); margin-bottom: round(-@margin * 4); }
+	.@{the-prefix}-m\+\+  { margin:           -@margin--huge; }
+	.@{the-prefix}-mt\+\+ { margin-top:       -@margin--huge; }
+	.@{the-prefix}-mr\+\+ { margin-right:     -@margin--huge; }
+	.@{the-prefix}-mb\+\+ { margin-bottom:    -@margin--huge; }
+	.@{the-prefix}-ml\+\+ { margin-left:      -@margin--huge; }
+	.@{the-prefix}-mh\+\+ { margin-right:     -@margin--huge; margin-left:   -@margin--huge; }
+	.@{the-prefix}-mv\+\+ { margin-top:       -@margin--huge; margin-bottom: -@margin--huge; }
 
 }
 
@@ -349,13 +358,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}p--     { padding:           round(@padding / 4); }
-	.@{the-prefix}pt--    { padding-top:       round(@padding / 4); }
-	.@{the-prefix}pr--    { padding-right:     round(@padding / 4); }
-	.@{the-prefix}pb--    { padding-bottom:    round(@padding / 4); }
-	.@{the-prefix}pl--    { padding-left:      round(@padding / 4); }
-	.@{the-prefix}ph--    { padding-right:     round(@padding / 4); padding-left:      round(@padding / 4); }
-	.@{the-prefix}pv--    { padding-top:       round(@padding / 4); padding-bottom:    round(@padding / 4); }
+	.@{the-prefix}p--     { padding:           @padding--tiny; }
+	.@{the-prefix}pt--    { padding-top:       @padding--tiny; }
+	.@{the-prefix}pr--    { padding-right:     @padding--tiny; }
+	.@{the-prefix}pb--    { padding-bottom:    @padding--tiny; }
+	.@{the-prefix}pl--    { padding-left:      @padding--tiny; }
+	.@{the-prefix}ph--    { padding-right:     @padding--tiny; padding-left:      @padding--tiny; }
+	.@{the-prefix}pv--    { padding-top:       @padding--tiny; padding-bottom:    @padding--tiny; }
 
 }
 
@@ -374,13 +383,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}p-      { padding:           round(@padding / 2); }
-	.@{the-prefix}pt-     { padding-top:       round(@padding / 2); }
-	.@{the-prefix}pr-     { padding-right:     round(@padding / 2); }
-	.@{the-prefix}pb-     { padding-bottom:    round(@padding / 2); }
-	.@{the-prefix}pl-     { padding-left:      round(@padding / 2); }
-	.@{the-prefix}ph-     { padding-right:     round(@padding / 2); padding-left:    round(@padding / 2); }
-	.@{the-prefix}pv-     { padding-top:       round(@padding / 2); padding-bottom:  round(@padding / 2); }
+	.@{the-prefix}p-      { padding:           @padding--small; }
+	.@{the-prefix}pt-     { padding-top:       @padding--small; }
+	.@{the-prefix}pr-     { padding-right:     @padding--small; }
+	.@{the-prefix}pb-     { padding-bottom:    @padding--small; }
+	.@{the-prefix}pl-     { padding-left:      @padding--small; }
+	.@{the-prefix}ph-     { padding-right:     @padding--small; padding-left:    @padding--small; }
+	.@{the-prefix}pv-     { padding-top:       @padding--small; padding-bottom:  @padding--small; }
 
 }
 
@@ -399,13 +408,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}p\+     { padding:           round(@padding * 2); }
-	.@{the-prefix}pt\+    { padding-top:       round(@padding * 2); }
-	.@{the-prefix}pr\+    { padding-right:     round(@padding * 2); }
-	.@{the-prefix}pb\+    { padding-bottom:    round(@padding * 2); }
-	.@{the-prefix}pl\+    { padding-left:      round(@padding * 2); }
-	.@{the-prefix}ph\+    { padding-right:     round(@padding * 2); padding-left:   round(@padding * 2); }
-	.@{the-prefix}pv\+    { padding-top:       round(@padding * 2); padding-bottom: round(@padding * 2); }
+	.@{the-prefix}p\+     { padding:           @padding--large; }
+	.@{the-prefix}pt\+    { padding-top:       @padding--large; }
+	.@{the-prefix}pr\+    { padding-right:     @padding--large; }
+	.@{the-prefix}pb\+    { padding-bottom:    @padding--large; }
+	.@{the-prefix}pl\+    { padding-left:      @padding--large; }
+	.@{the-prefix}ph\+    { padding-right:     @padding--large; padding-left:   @padding--large; }
+	.@{the-prefix}pv\+    { padding-top:       @padding--large; padding-bottom: @padding--large; }
 
 }
 
@@ -424,13 +433,13 @@
 	@p: @prefix;
 	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
 
-	.@{the-prefix}p\+\+   { padding:           round(@padding * 4); }
-	.@{the-prefix}pt\+\+  { padding-top:       round(@padding * 4); }
-	.@{the-prefix}pr\+\+  { padding-right:     round(@padding * 4); }
-	.@{the-prefix}pb\+\+  { padding-bottom:    round(@padding * 4); }
-	.@{the-prefix}pl\+\+  { padding-left:      round(@padding * 4); }
-	.@{the-prefix}ph\+\+  { padding-right:     round(@padding * 4); padding-left:    round(@padding * 4); }
-	.@{the-prefix}pv\+\+  { padding-top:       round(@padding * 4); padding-bottom:  round(@padding * 4); }
+	.@{the-prefix}p\+\+   { padding:           @padding--huge; }
+	.@{the-prefix}pt\+\+  { padding-top:       @padding--huge; }
+	.@{the-prefix}pr\+\+  { padding-right:     @padding--huge; }
+	.@{the-prefix}pb\+\+  { padding-bottom:    @padding--huge; }
+	.@{the-prefix}pl\+\+  { padding-left:      @padding--huge; }
+	.@{the-prefix}ph\+\+  { padding-right:     @padding--huge; padding-left:    @padding--huge; }
+	.@{the-prefix}pv\+\+  { padding-top:       @padding--huge; padding-bottom:  @padding--huge; }
 
 }
 
