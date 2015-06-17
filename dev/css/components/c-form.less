@@ -3,6 +3,7 @@
 /*------------------------------------*\
 	#FORM
 \*------------------------------------*/
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -20,10 +21,12 @@ input[type="color"],
 textarea,
 select {
 	display: inline-block;
-	padding: round(@base-spacing-unit / 4);
+	padding: @base-spacing-unit--tiny;
 	width: 100%;
-
-	border: 1px solid #ccc;
+	height: @base-spacing-unit*1.25;
+	
+	background: #fff;
+	border: 1px solid @base-ui-color;
 	box-sizing: border-box;
 
 	font-size: 0.875em;
@@ -32,10 +35,6 @@ select {
 	-webkit-font-smoothing: antialiased;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
-}
-
-select {
-	-webkit-appearance: menulist;
 }
 
 input[type="text"]:focus,
@@ -52,7 +51,8 @@ input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
 	outline: 0;
 	outline: thin dotted \9; /* IE6-9 */
 	border-color: #129FEA;
@@ -86,4 +86,12 @@ select[readonly],
 textarea[readonly] {
 	cursor: default;
 	background-color: #eee;
+}
+
+select {
+	-webkit-appearance: menulist;
+}
+
+textarea {
+	height: @base-spacing-unit--huge
 }
