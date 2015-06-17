@@ -25,7 +25,7 @@
 		#TABLES
 	\*------------------------------------*/
 
-	.table {
+	.o-table {
 		width: 100%;
 	}
 
@@ -38,7 +38,7 @@
 	 */
 	& when (@enable-table--fixed = true) {
 
-		.table--fixed {
+		.o-table--fixed {
 			table-layout: fixed;
 		}
 
@@ -53,7 +53,7 @@
 	 */
 	& when (@enable-table--compact = true) {
 
-		.table--compact {
+		.o-table--compact {
 
 			th,
 			td {
@@ -73,7 +73,7 @@
 	 */
 	& when (@enable-table--cosy = true) {
 
-		.table--cosy {
+		.o-table--cosy {
 
 			th,
 			td {
@@ -93,7 +93,7 @@
 	 */
 	& when (@enable-table--comfy = true) {
 
-		.table--comfy {
+		.o-table--comfy {
 
 			th,
 			td {
@@ -113,7 +113,7 @@
 	 */
 	& when (@enable-table--cells = true) {
 
-		.table--cells {
+		.o-table--cells {
 
 			th,
 			td {
@@ -133,7 +133,7 @@
 	 */
 	& when (@enable-table--rows = true) {
 
-		.table--rows {
+		.o-table--rows {
 		
 			&,
 			th,
@@ -143,7 +143,7 @@
 		
 		}
 		
-		.table--rows {
+		.o-table--rows {
 			border-top-width: @table-border-width;
 		
 			th,
@@ -164,7 +164,7 @@
 	 */
 	& when (@enable-table--columns = true) {
 
-		.table--columns {
+		.o-table--columns {
 
 			&,
 			th,
@@ -174,7 +174,7 @@
 
 		}
 
-		.table--columns {
+		.o-table--columns {
 
 			border-left-width: @table-border-width;
 		

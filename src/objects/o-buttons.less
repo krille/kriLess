@@ -35,7 +35,7 @@
 	 * 7. Subtract the border size from the padding value so that buttons do not
 	 *    grow larger as we add borders.
 	 */
-	.btn {
+	.o-btn {
 
 		display: inline-block; /* [1] */
 		vertical-align: middle; /* [2] */
@@ -64,7 +64,7 @@
 	/**
 	 * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
 	 */
-	.btn::-moz-focus-inner {
+	.o-btn::-moz-focus-inner {
 		border:  0;
 		padding: 0;
 	}
@@ -78,7 +78,7 @@
 	 */
 	& when (@enable-btn--small = true) {
 
-		.btn--small {
+		.o-btn--small {
 			padding: @btn-padding--small - @btn-border-width  round(@btn-padding--small) - @btn-border-width; /* [7] */
 		}
 
@@ -93,7 +93,7 @@
 	 */
 	& when (@enable-btn--large = true) {
 
-		.btn--large {
+		.o-btn--large {
 			padding: @btn-padding--large - @btn-border-width  round(@btn-padding--large * 2) - @btn-border-width; /* [7] */
 		}
 
@@ -108,7 +108,7 @@
 	 */
 	& when (@enable-btn--full = true) {
 
-		.btn--full {
+		.o-btn--full {
 			width: 100%;
 			padding-left: 0;
 			padding-right: 0;
@@ -128,7 +128,7 @@
 	 */
 	& when (@enable-btn--pill = true) {
 
-		.btn--pill {
+		.o-btn--pill {
 			border-radius: 100px; /* [1] */
 		}
 

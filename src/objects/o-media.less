@@ -29,12 +29,12 @@
 	 * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
 	 */
 
-	.media {
+	.o-media {
 		&:extend(.cf all);
 		display: block;
 	}
 
-		.media__img {
+		.o-media__img {
 			float: left;
 			margin-right: @media-gutter;
 
@@ -44,7 +44,7 @@
 
 		}
 
-		.media__body {
+		.o-media__body {
 			overflow: hidden;
 			display: block;
 
@@ -64,9 +64,9 @@
 	 */
 	& when (@enable-media--tiny = true) {
 
-		.media--tiny {
+		.o-media--tiny {
 
-			> .media__img {
+			> .o-media__img {
 				margin-right: @media-gutter--tiny;
 			}
 
@@ -75,9 +75,9 @@
 			 */
 			& when (@enable-media--rev = true) {
 
-				&.media--rev {
+				&.o-media--rev {
 
-					> .media__img {
+					> .o-media__img {
 						margin-right: 0;
 						margin-left:  @media-gutter--tiny;
 					}
@@ -99,9 +99,9 @@
 	 */
 	& when (@enable-media--small = true) {
 
-		.media--small {
+		.o-media--small {
 
-			> .media__img {
+			> .o-media__img {
 				margin-right: @media-gutter--small;
 			}
 
@@ -110,9 +110,9 @@
 			 */
 			& when (@enable-media--rev = true) {
 
-				&.media--rev {
+				&.o-media--rev {
 
-					> .media__img {
+					> .o-media__img {
 						margin-right: 0;
 						margin-left:  @media-gutter--small;
 					}
@@ -134,9 +134,9 @@
 	 */
 	& when (@enable-media--large = true) {
 
-		.media--large {
+		.o-media--large {
 
-			> .media__img {
+			> .o-media__img {
 				margin-right: @media-gutter--large;
 			}
 
@@ -145,9 +145,9 @@
 			 */
 			& when (@enable-media--rev = true) {
 
-				&.media--rev {
+				&.o-media--rev {
 
-					> .media__img {
+					> .o-media__img {
 						margin-right: 0;
 						margin-left:  @media-gutter--large;
 					}
@@ -168,9 +168,9 @@
 	 */
 	& when (@enable-media--huge = true) {
 
-		.media--huge {
+		.o-media--huge {
 
-			> .media__img {
+			> .o-media__img {
 				margin-right: @media-gutter--huge;
 			}
 
@@ -179,9 +179,9 @@
 			 */
 			& when (@enable-media--rev = true) {
 
-				&.media--rev {
+				&.o-media--rev {
 
-					> .media__img {
+					> .o-media__img {
 						margin-right: 0;
 						margin-left:  @media-gutter--huge;
 					}
@@ -203,9 +203,9 @@
 	 */
 	& when (@enable-media--rev = true) {
 
-		.media--rev {
+		.o-media--rev {
 
-			> .media__img {
+			> .o-media__img {
 				float: right;
 				margin-right: 0;
 				margin-left: @media-gutter;
@@ -224,9 +224,9 @@
 	 */
 	& when (@enable-media--flush = true) {
 
-		.media--flush {
+		.o-media--flush {
 
-			> .media__img {
+			> .o-media__img {
 				margin-right: 0;
 				margin-left:  0;
 			}
@@ -255,12 +255,12 @@
 
 		@media screen and (max-width: @media-collapse-at) {
 
-			.media--responsive {
+			.o-media--responsive {
 
 				/**
 				 * Rework the spacings on regular media objects.
 				 */
-				> .media__img {
+				> .o-media__img {
 					float: none;
 					margin-right: 0;
 					margin-bottom: @media-gutter;
@@ -276,9 +276,9 @@
 				 */
 				& when (@enable-media--tiny = true) {
 
-					&.media--tiny {
+					&.o-media--tiny {
 
-						> .media__img {
+						> .o-media__img {
 							margin-right: 0;
 							margin-left:  0;
 							margin-bottom: @media-gutter--tiny;
@@ -297,9 +297,9 @@
 				 */
 				& when (@enable-media--small = true) {
 
-					&.media--small {
+					&.o-media--small {
 
-						> .media__img {
+						> .o-media__img {
 							margin-right: 0;
 							margin-left:  0;
 							margin-bottom: @media-gutter--small;
@@ -318,9 +318,9 @@
 				 */
 				& when (@enable-media--large = true) {
 
-					&.media--large {
+					&.o-media--large {
 
-						> .media__img {
+						> .o-media__img {
 							margin-right: 0;
 							margin-left:  0;
 							margin-bottom: @media-gutter--large;
@@ -339,9 +339,9 @@
 				 */
 				& when (@enable-media--huge = true) {
 
-					&.media--huge {
+					&.o-media--huge {
 
-						> .media__img {
+						> .o-media__img {
 							margin-right: 0;
 							margin-left:  0;
 							margin-bottom: @media-gutter--huge;

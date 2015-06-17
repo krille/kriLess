@@ -28,7 +28,7 @@
 	/**
 	 * 1. So we can apply the `.box` class to naturally-inline elements.
 	 */
-	.box {
+	.o-box {
 
 		&:extend(.cf all);
 		display: block; /* [1] */
@@ -49,7 +49,7 @@
 	 */
 	& when (@enable-box--flush = true) {
 
-		.box--flush {
+		.o-box--flush {
 			padding: 0;
 		}
 
@@ -64,7 +64,7 @@
 	 */
 	& when (@enable-box--tiny = true) {
 
-		.box--tiny {
+		.o-box--tiny {
 			padding: @box-padding--tiny;
 		}
 
@@ -79,7 +79,7 @@
 	 */
 	& when (@enable-box--small = true) {
 
-		.box--small {
+		.o-box--small {
 			padding: @box-padding--small;
 		}
 
@@ -94,7 +94,7 @@
 	 */
 	& when (@enable-box--large = true) {
 
-		.box--large {
+		.o-box--large {
 			padding: @box-padding--large;
 		}
 
@@ -109,7 +109,7 @@
 	 */
 	& when (@enable-box--huge = true) {
 
-		.box--huge {
+		.o-box--huge {
 			padding: @box-padding--huge;
 		}
 

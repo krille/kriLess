@@ -37,7 +37,7 @@
 	 * 2. Force the object to be the full width of its parent. Combined with [1],
 	 *    this makes the object behave in a quasi-`display: block;` manner.
 	 */
-	.flag {
+	.o-flag {
 		display: table; /* [1] */
 		width: 100%; /* [2] */
 	}
@@ -47,8 +47,8 @@
 		 *
 		 * 1. Default to aligning content to their middles.
 		 */
-		.flag__img,
-		.flag__body {
+		.o-flag__img,
+		.o-flag__body {
 			display: table-cell;
 			vertical-align: middle; /* [1] */
 		}
@@ -56,7 +56,7 @@
 		/**
 		 * Flag images have a space between them and the body of the object.
 		 */
-		.flag__img {
+		.o-flag__img {
 			padding-right: @flag-gutter;
 
 			> img {
@@ -71,7 +71,7 @@
 		 *
 		 * 1. Forces the `.flag__body` to take up all remaining space.
 		 */
-		.flag__body {
+		.o-flag__body {
 			width: 100%; /* [1] */
 
 			&,
@@ -90,9 +90,9 @@
 	 */
 	& when (@enable-flag--tiny = true) {
 
-		.flag--tiny {
+		.o-flag--tiny {
 
-			> .flag__img {
+			> .o-flag__img {
 				padding-right: @flag-gutter--tiny;
 			}
 
@@ -101,9 +101,9 @@
 			 */
 			& when (@enable-flag--rev = true) {
 
-				&.flag--rev {
+				&.o-flag--rev {
 
-					> .flag__img {
+					> .o-flag__img {
 						padding-right: 0;
 						padding-left:  @flag-gutter--tiny;
 					}
@@ -125,9 +125,9 @@
 	 */
 	& when (@enable-flag--small = true) {
 
-		.flag--small {
+		.o-flag--small {
 
-			> .flag__img {
+			> .o-flag__img {
 				padding-right: @flag-gutter--small;
 			}
 
@@ -136,9 +136,9 @@
 			 */
 			& when (@enable-flag--rev = true) {
 
-				&.flag--rev {
+				&.o-flag--rev {
 
-					> .flag__img {
+					> .o-flag__img {
 						padding-right: 0;
 						padding-left:  @flag-gutter--small;
 					}
@@ -160,9 +160,9 @@
 	 */
 	& when (@enable-flag--large = true) {
 
-		.flag--large {
+		.o-flag--large {
 
-			> .flag__img {
+			> .o-flag__img {
 				padding-right: @flag-gutter--large;
 			}
 
@@ -171,9 +171,9 @@
 			 */
 			& when (@enable-flag--rev = true) {
 
-				&.flag--rev {
+				&.o-flag--rev {
 
-					> .flag__img {
+					> .o-flag__img {
 						padding-right: 0;
 						padding-left:  @flag-gutter--large;
 					}
@@ -195,9 +195,9 @@
 	 */
 	& when (@enable-flag--huge = true) {
 
-		.flag--huge {
+		.o-flag--huge {
 
-			> .flag__img {
+			> .o-flag__img {
 				padding-right: @flag-gutter--huge;
 			}
 
@@ -206,9 +206,9 @@
 			 */
 			& when (@enable-flag--rev = true) {
 
-				&.flag--rev {
+				&.o-flag--rev {
 
-					> .flag__img {
+					> .o-flag__img {
 						padding-right: 0;
 						padding-left:  @flag-gutter--huge;
 					}
@@ -235,15 +235,15 @@
 	 */
 	& when (@enable-flag--rev = true) {
 
-		.flag--rev {
+		.o-flag--rev {
 			direction: rtl; /* [1] */
 
-			> .flag__img,
-			> .flag__body {
+			> .o-flag__img,
+			> .o-flag__body {
 				direction: ltr; /* [2] */
 			}
 
-			> .flag__img {
+			> .o-flag__img {
 				padding-right: 0; /* [3] */
 				padding-left: @flag-gutter; /* [3] */
 			}
@@ -261,9 +261,9 @@
 	 */
 	& when (@enable-flag--flush = true) {
 
-		.flag--flush {
+		.o-flag--flush {
 
-			> .flag__img {
+			> .o-flag__img {
 				padding-right: 0;
 				padding-left:  0;
 			}
@@ -281,10 +281,10 @@
 	 */
 	& when (@enable-flag--top = true) {
 
-		.flag--top {
+		.o-flag--top {
 
-			> .flag__img,
-			> .flag__body {
+			> .o-flag__img,
+			> .o-flag__body {
 				vertical-align: top;
 			}
 
@@ -301,10 +301,10 @@
 	 */
 	& when (@enable-flag--bottom = true) {
 
-		.flag--bottom {
+		.o-flag--bottom {
 
-			> .flag__img,
-			> .flag__body {
+			> .o-flag__img,
+			> .o-flag__body {
 				vertical-align: bottom;
 			}
 
@@ -332,7 +332,7 @@
 
 		@media screen and (max-width: @flag-collapse-at) {
 
-			.flag--responsive {
+			.o-flag--responsive {
 
 				/**
 				 * Disable reversal of content because there is no concept of
@@ -343,15 +343,15 @@
 				}
 
 				&,
-				> .flag__img,
-				> .flag__body {
+				> .o-flag__img,
+				> .o-flag__body {
 					display: block;
 				}
 
 				/**
 				 * Rework the spacings on regular flag objects.
 				 */
-				> .flag__img {
+				> .o-flag__img {
 					padding-right: 0;
 					padding-left:  0;
 					margin-bottom: @flag-gutter;
@@ -366,9 +366,9 @@
 				 */
 				& when (@enable-flag--tiny = true) {
 
-					&.flag--tiny {
+					&.o-flag--tiny {
 
-						> .flag__img {
+						> .o-flag__img {
 							padding-right: 0;
 							padding-left:  0;
 							margin-bottom: @flag-gutter--tiny;
@@ -387,9 +387,9 @@
 				 */
 				& when (@enable-flag--small = true) {
 
-					&.flag--small {
+					&.o-flag--small {
 
-						> .flag__img {
+						> .o-flag__img {
 							padding-right: 0;
 							padding-left:  0;
 							margin-bottom: @flag-gutter--small;
@@ -408,9 +408,9 @@
 				 */
 				& when (@enable-flag--large = true) {
 
-					&.flag--large {
+					&.o-flag--large {
 
-						> .flag__img {
+						> .o-flag__img {
 							padding-right: 0;
 							padding-left:  0;
 							margin-bottom: @flag-gutter--large;
@@ -429,9 +429,9 @@
 				 */
 				& when (@enable-flag--huge = true) {
 
-					&.flag--huge {
+					&.o-flag--huge {
 
-						> .flag__img {
+						> .o-flag__img {
 							padding-right: 0;
 							padding-left:  0;
 							margin-bottom: @flag-gutter--huge;

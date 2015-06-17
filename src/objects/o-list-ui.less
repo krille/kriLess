@@ -29,19 +29,19 @@
 	 * a `ul` or `ol`.
 	 */
 
-	.list-ui,
-		.list-ui__item {
+	.o-list-ui,
+		.o-list-ui__item {
 			border: 0 @list-ui-border-style @list-ui-border-color;
 		}
 
-	.list-ui {
+	.o-list-ui {
 		margin:  0;
 		padding: 0;
 		list-style: none;
 		border-top-width: @list-ui-border-width;
 	}
 
-		.list-ui__item {
+		.o-list-ui__item {
 			padding: @list-ui-padding;
 			border-bottom-width: @list-ui-border-width;
 		}
@@ -55,9 +55,9 @@
 	 */
 	& when (@enable-list-ui--tiny = true) {
 
-		.list-ui--tiny {
+		.o-list-ui--tiny {
 
-			> .list-ui__item {
+			> .o-list-ui__item {
 				padding: @list-ui-padding--tiny;
 			}
 
@@ -74,9 +74,9 @@
 	 */
 	& when (@enable-list-ui--small = true) {
 
-		.list-ui--small {
+		.o-list-ui--small {
 
-			> .list-ui__item {
+			> .o-list-ui__item {
 				padding: @list-ui-padding--small;
 			}
 
@@ -93,9 +93,9 @@
 	 */
 	& when (@enable-list-ui--large = true) {
 
-		.list-ui--large {
+		.o-list-ui--large {
 
-			> .list-ui__item {
+			> .o-list-ui__item {
 				padding: @list-ui-padding--large;
 			}
 
@@ -112,9 +112,9 @@
 	 */
 	& when (@enable-list-ui--huge = true) {
 
-		.list-ui--huge {
+		.o-list-ui--huge {
 
-			> .list-ui__item {
+			> .o-list-ui__item {
 				padding: @list-ui-padding--huge;
 			}
 

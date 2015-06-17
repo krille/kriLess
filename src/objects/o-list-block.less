@@ -24,13 +24,13 @@
 	 * The list-block object creates blocky list items out of a `ul` or `ol`.
 	 */
 
-	.list-block {
+	.o-list-block {
 		margin:  0;
 		padding: 0;
 		list-style: none;
 	}
 
-		.list-block__item {
+		.o-list-block__item {
 			padding: @list-block-padding;
 		}
 
@@ -43,9 +43,9 @@
 	 */
 	& when (@enable-list-block--tiny = true) {
 
-		.list-block--tiny {
+		.o-list-block--tiny {
 
-			> .list-block__item {
+			> .o-list-block__item {
 				padding: @list-block-padding--tiny;
 			}
 
@@ -62,9 +62,9 @@
 	 */
 	& when (@enable-list-block--small = true) {
 
-		.list-block--small {
+		.o-list-block--small {
 
-			> .list-block__item {
+			> .o-list-block__item {
 				padding: @list-block-padding--small;
 			}
 
@@ -81,9 +81,9 @@
 	 */
 	& when (@enable-list-block--large = true) {
 
-		.list-block--large {
+		.o-list-block--large {
 
-			> .list-block__item {
+			> .o-list-block__item {
 				padding: @list-block-padding--large;
 			}
 
@@ -100,9 +100,9 @@
 	 */
 	& when (@enable-list-block--huge = true) {
 
-		.list-block--huge {
+		.o-list-block--huge {
 
-			> .list-block__item {
+			> .o-list-block__item {
 				padding: @list-block-padding--huge;
 			}
 

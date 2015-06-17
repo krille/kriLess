@@ -1,0 +1,471 @@
+/*------------------------------------*\
+	#SPACING
+\*------------------------------------*/
+
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+
+@margin:                          @base-spacing-unit;
+@margin--small:                   round(@margin / 2);
+@margin--tiny:                    round(@margin / 4);
+@margin--large:                   round(@margin * 2);
+@margin--huge:                    round(@margin * 4);
+
+@padding:                         @base-spacing-unit;
+@padding--small:                  round(@padding / 2);
+@padding--tiny:                   round(@padding / 4);
+@padding--large:                  round(@padding * 2);
+@padding--huge:                   round(@padding * 4);
+
+@enable-margins:                  false;
+@enable-margins--tiny:            false;
+@enable-margins--small:           false;
+@enable-margins--large:           false;
+@enable-margins--huge:            false;
+
+@enable-margins--negative:        false;
+@enable-margins--negative-tiny:   false;
+@enable-margins--negative-small:  false;
+@enable-margins--negative-large:  false;
+@enable-margins--negative-huge:   false;
+
+@enable-margins--none:            false;
+
+@enable-paddings:                 false;
+@enable-paddings--tiny:           false;
+@enable-paddings--small:          false;
+@enable-paddings--large:          false;
+@enable-paddings--huge:           false;
+
+@enable-paddings--none:           false;
+
+
+
+.enable-margins(@prefix: 'null') when (@enable-margins = true) {
+
+	/**
+	 * Margin helper classes.
+	 *
+	 * Add margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}m       { margin:           @margin; }
+	.u-@{the-prefix}mt      { margin-top:       @margin; }
+	.u-@{the-prefix}mr      { margin-right:     @margin; }
+	.u-@{the-prefix}mb      { margin-bottom:    @margin; }
+	.u-@{the-prefix}ml      { margin-left:      @margin; }
+	.u-@{the-prefix}mh      { margin-right:     @margin; margin-left:      @margin; }
+	.u-@{the-prefix}mv      { margin-top:       @margin; margin-bottom:    @margin; }
+
+}
+
+.enable-margins() !important;
+
+
+
+
+
+.enable-margins--tiny(@prefix: 'null') when (@enable-margins--tiny = true) {
+
+	/**
+	 * Add tiny margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}m--     { margin:           @margin--tiny; }
+	.u-@{the-prefix}mt--    { margin-top:       @margin--tiny; }
+	.u-@{the-prefix}mr--    { margin-right:     @margin--tiny; }
+	.u-@{the-prefix}mb--    { margin-bottom:    @margin--tiny; }
+	.u-@{the-prefix}ml--    { margin-left:      @margin--tiny; }
+	.u-@{the-prefix}mh--    { margin-right:     @margin--tiny; margin-left:     @margin--tiny; }
+	.u-@{the-prefix}mv--    { margin-top:       @margin--tiny; margin-bottom:   @margin--tiny; }
+
+}
+
+.enable-margins--tiny() !important;
+
+
+
+
+
+.enable-margins--small(@prefix: 'null') when (@enable-margins--small = true) {
+
+	/**
+	 * Add small margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}m-      { margin:           @margin--small; }
+	.u-@{the-prefix}mt-     { margin-top:       @margin--small; }
+	.u-@{the-prefix}mr-     { margin-right:     @margin--small; }
+	.u-@{the-prefix}mb-     { margin-bottom:    @margin--small; }
+	.u-@{the-prefix}ml-     { margin-left:      @margin--small; }
+	.u-@{the-prefix}mh-     { margin-right:     @margin--small; margin-left:   @margin--small; }
+	.u-@{the-prefix}mv-     { margin-top:       @margin--small; margin-bottom: @margin--small; }
+
+}
+
+.enable-margins--small() !important;
+
+
+
+
+
+.enable-margins--large(@prefix: 'null') when (@enable-margins--large = true) {
+
+	/**
+	 * Add large margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}m\+     { margin:           @margin--large; }
+	.u-@{the-prefix}mt\+    { margin-top:       @margin--large; }
+	.u-@{the-prefix}mr\+    { margin-right:     @margin--large; }
+	.u-@{the-prefix}mb\+    { margin-bottom:    @margin--large; }
+	.u-@{the-prefix}ml\+    { margin-left:      @margin--large; }
+	.u-@{the-prefix}mh\+    { margin-right:     @margin--large; margin-left:      @margin--large; }
+	.u-@{the-prefix}mv\+    { margin-top:       @margin--large; margin-bottom:    @margin--large; }
+
+}
+
+.enable-margins--large() !important;
+
+
+
+
+
+.enable-margins--huge(@prefix: 'null') when (@enable-margins--huge = true) {
+
+	/**
+	 * Add huge margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}m\+\+   { margin:           @margin--huge; }
+	.u-@{the-prefix}mt\+\+  { margin-top:       @margin--huge; }
+	.u-@{the-prefix}mr\+\+  { margin-right:     @margin--huge; }
+	.u-@{the-prefix}mb\+\+  { margin-bottom:    @margin--huge; }
+	.u-@{the-prefix}ml\+\+  { margin-left:      @margin--huge; }
+	.u-@{the-prefix}mh\+\+  { margin-right:     @margin--huge; margin-left:   @margin--huge; }
+	.u-@{the-prefix}mv\+\+  { margin-top:       @margin--huge; margin-bottom: @margin--huge; }
+
+}
+
+.enable-margins--huge() !important;
+
+
+
+
+
+.enable-margins--none(@prefix: 'null') when (@enable-margins--none = true) {
+
+	/**
+	 * Remove margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}m0      { margin:           0; }
+	.u-@{the-prefix}mt0     { margin-top:       0; }
+	.u-@{the-prefix}mr0     { margin-right:     0; }
+	.u-@{the-prefix}mb0     { margin-bottom:    0; }
+	.u-@{the-prefix}ml0     { margin-left:      0; }
+	.u-@{the-prefix}mh0     { margin-right:     0; margin-left:      0; }
+	.u-@{the-prefix}mv0     { margin-top:       0; margin-bottom:    0; }
+
+}
+
+.enable-margins--none() !important;
+
+
+
+
+
+.enable-margins--negative(@prefix: 'null') when (@enable-margins--negative = true) {
+
+	/**
+	 * Negative margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}-m      { margin:           -@margin; }
+	.u-@{the-prefix}-mt     { margin-top:       -@margin; }
+	.u-@{the-prefix}-mr     { margin-right:     -@margin; }
+	.u-@{the-prefix}-mb     { margin-bottom:    -@margin; }
+	.u-@{the-prefix}-ml     { margin-left:      -@margin; }
+	.u-@{the-prefix}-mh     { margin-right:     -@margin; margin-left:      -@margin; }
+	.u-@{the-prefix}-mv     { margin-top:       -@margin; margin-bottom:    -@margin; }
+
+}
+
+.enable-margins--negative() !important;
+
+
+
+
+
+.enable-margins--negative-tiny(@prefix: 'null') when (@enable-margins--negative-tiny = true) {
+
+	/**
+	 * Tiny negative margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}-m--    { margin:           -@margin--tiny; }
+	.u-@{the-prefix}-mt--   { margin-top:       -@margin--tiny; }
+	.u-@{the-prefix}-mr--   { margin-right:     -@margin--tiny; }
+	.u-@{the-prefix}-mb--   { margin-bottom:    -@margin--tiny; }
+	.u-@{the-prefix}-ml--   { margin-left:      -@margin--tiny; }
+	.u-@{the-prefix}-mh--   { margin-right:     -@margin--tiny; margin-left:     -@margin--tiny; }
+	.u-@{the-prefix}-mv--   { margin-top:       -@margin--tiny; margin-bottom:   -@margin--tiny; }
+
+}
+
+.enable-margins--negative-tiny() !important;
+
+
+
+
+
+.enable-margins--negative-small(@prefix: 'null') when (@enable-margins--negative-small = true) {
+
+	/**
+	 * Small negative margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}-m-     { margin:           -@margin--small; }
+	.u-@{the-prefix}-mt-    { margin-top:       -@margin--small; }
+	.u-@{the-prefix}-mr-    { margin-right:     -@margin--small; }
+	.u-@{the-prefix}-mb-    { margin-bottom:    -@margin--small; }
+	.u-@{the-prefix}-ml-    { margin-left:      -@margin--small; }
+	.u-@{the-prefix}-mh-    { margin-right:     -@margin--small; margin-left:   -@margin--small; }
+	.u-@{the-prefix}-mv-    { margin-top:       -@margin--small; margin-bottom: -@margin--small; }
+
+}
+
+.enable-margins--negative-small() !important;
+
+
+
+
+
+.enable-margins--negative-large(@prefix: 'null') when (@enable-margins--negative-large = true) {
+
+	/**
+	 * Large negative margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}-m\+    { margin:           -@margin--large; }
+	.u-@{the-prefix}-mt\+   { margin-top:       -@margin--large; }
+	.u-@{the-prefix}-mr\+   { margin-right:     -@margin--large; }
+	.u-@{the-prefix}-mb\+   { margin-bottom:    -@margin--large; }
+	.u-@{the-prefix}-ml\+   { margin-left:      -@margin--large; }
+	.u-@{the-prefix}-mh\+   { margin-right:     -@margin--large; margin-left:      -@margin--large; }
+	.u-@{the-prefix}-mv\+   { margin-top:       -@margin--large; margin-bottom:    -@margin--large; }
+
+}
+
+.enable-margins--negative-large() !important;
+
+
+
+
+
+.enable-margins--negative-huge(@prefix: 'null') when (@enable-margins--negative-huge = true) {
+
+	/**
+	 * Huge negative margins.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}-m\+\+  { margin:           -@margin--huge; }
+	.u-@{the-prefix}-mt\+\+ { margin-top:       -@margin--huge; }
+	.u-@{the-prefix}-mr\+\+ { margin-right:     -@margin--huge; }
+	.u-@{the-prefix}-mb\+\+ { margin-bottom:    -@margin--huge; }
+	.u-@{the-prefix}-ml\+\+ { margin-left:      -@margin--huge; }
+	.u-@{the-prefix}-mh\+\+ { margin-right:     -@margin--huge; margin-left:   -@margin--huge; }
+	.u-@{the-prefix}-mv\+\+ { margin-top:       -@margin--huge; margin-bottom: -@margin--huge; }
+
+}
+
+.enable-margins--negative-huge() !important;
+
+
+
+
+
+.enable-paddings(@prefix: 'null') when (@enable-paddings = true) {
+
+	/**
+	 * Padding helper classes.
+	 *
+	 * Add paddings.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}p       { padding:          @padding; }
+	.u-@{the-prefix}pt      { padding-top:      @padding; }
+	.u-@{the-prefix}pr      { padding-right:    @padding; }
+	.u-@{the-prefix}pb      { padding-bottom:   @padding; }
+	.u-@{the-prefix}pl      { padding-left:     @padding; }
+	.u-@{the-prefix}ph      { padding-right:    @padding; padding-left:    @padding; }
+	.u-@{the-prefix}pv      { padding-top:      @padding; padding-bottom:  @padding; }
+
+}
+
+.enable-paddings() !important;
+
+
+
+
+
+.enable-paddings--tiny(@prefix: 'null') when (@enable-paddings--tiny = true) {
+
+	/**
+	 * Add tiny paddings.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}p--     { padding:           @padding--tiny; }
+	.u-@{the-prefix}pt--    { padding-top:       @padding--tiny; }
+	.u-@{the-prefix}pr--    { padding-right:     @padding--tiny; }
+	.u-@{the-prefix}pb--    { padding-bottom:    @padding--tiny; }
+	.u-@{the-prefix}pl--    { padding-left:      @padding--tiny; }
+	.u-@{the-prefix}ph--    { padding-right:     @padding--tiny; padding-left:      @padding--tiny; }
+	.u-@{the-prefix}pv--    { padding-top:       @padding--tiny; padding-bottom:    @padding--tiny; }
+
+}
+
+.enable-paddings--tiny() !important;
+
+
+
+
+
+.enable-paddings--small(@prefix: 'null') when (@enable-paddings--small = true) {
+
+	/**
+	 * Add small paddings.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}p-      { padding:           @padding--small; }
+	.u-@{the-prefix}pt-     { padding-top:       @padding--small; }
+	.u-@{the-prefix}pr-     { padding-right:     @padding--small; }
+	.u-@{the-prefix}pb-     { padding-bottom:    @padding--small; }
+	.u-@{the-prefix}pl-     { padding-left:      @padding--small; }
+	.u-@{the-prefix}ph-     { padding-right:     @padding--small; padding-left:    @padding--small; }
+	.u-@{the-prefix}pv-     { padding-top:       @padding--small; padding-bottom:  @padding--small; }
+
+}
+
+.enable-paddings--small() !important;
+
+
+
+
+
+.enable-paddings--large(@prefix: 'null') when (@enable-paddings--large = true) {
+
+	/**
+	 * Add large paddings.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}p\+     { padding:           @padding--large; }
+	.u-@{the-prefix}pt\+    { padding-top:       @padding--large; }
+	.u-@{the-prefix}pr\+    { padding-right:     @padding--large; }
+	.u-@{the-prefix}pb\+    { padding-bottom:    @padding--large; }
+	.u-@{the-prefix}pl\+    { padding-left:      @padding--large; }
+	.u-@{the-prefix}ph\+    { padding-right:     @padding--large; padding-left:   @padding--large; }
+	.u-@{the-prefix}pv\+    { padding-top:       @padding--large; padding-bottom: @padding--large; }
+
+}
+
+.enable-paddings--large() !important;
+
+
+
+
+
+.enable-paddings--huge(@prefix: 'null') when (@enable-paddings--huge = true) {
+
+	/**
+	 * Add huge paddings.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}p\+\+   { padding:           @padding--huge; }
+	.u-@{the-prefix}pt\+\+  { padding-top:       @padding--huge; }
+	.u-@{the-prefix}pr\+\+  { padding-right:     @padding--huge; }
+	.u-@{the-prefix}pb\+\+  { padding-bottom:    @padding--huge; }
+	.u-@{the-prefix}pl\+\+  { padding-left:      @padding--huge; }
+	.u-@{the-prefix}ph\+\+  { padding-right:     @padding--huge; padding-left:    @padding--huge; }
+	.u-@{the-prefix}pv\+\+  { padding-top:       @padding--huge; padding-bottom:  @padding--huge; }
+
+}
+
+.enable-paddings--huge() !important;
+
+
+
+
+
+.enable-paddings--none(@prefix: 'null') when (@enable-paddings--none = true) {
+
+	/**
+	 * Remove paddings.
+	 */
+
+	@p: @prefix;
+	@the-prefix: ~`(this.p.toJS() == "'null'")?'':this.p.toJS()`;
+
+	.u-@{the-prefix}p0      { padding:          0; }
+	.u-@{the-prefix}pt0     { padding-top:      0; }
+	.u-@{the-prefix}pr0     { padding-right:    0; }
+	.u-@{the-prefix}pb0     { padding-bottom:   0; }
+	.u-@{the-prefix}pl0     { padding-left:     0; }
+	.u-@{the-prefix}ph0     { padding-right:    0; padding-left:     0; }
+	.u-@{the-prefix}pv0     { padding-top:      0; padding-bottom:   0; }
+
+}
+
+.enable-paddings--none() !important;

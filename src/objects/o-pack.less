@@ -33,7 +33,7 @@
 	 * 1. Fill all available space.
 	 * 2. Cause children to be automatically equally sized.
 	 */
-	.pack {
+	.o-pack {
 		width: 100%; /* [1] */
 		display: table;
 		table-layout: fixed; /* [2] */
@@ -42,7 +42,7 @@
 		/**
 		 * Cause children to adopt table-like structure.
 		 */
-		.pack__item {
+		.o-pack__item {
 			display: table-cell;
 
 			& when (@enable-pack--middle = true) {
@@ -51,7 +51,7 @@
 				 * All items are aligned to the middles of each other.
 				 */
 
-				.pack--middle > & {
+				.o-pack--middle > & {
 					vertical-align: middle;
 				}
 
@@ -63,7 +63,7 @@
 				 * All items are aligned to the bottoms of each other.
 				 */
 
-				.pack--bottom > & {
+				.o-pack--bottom > & {
 					vertical-align: bottom;
 				}
 
@@ -81,7 +81,7 @@
 		 * Cause children to pack up into available space, but not equally sized.
 		 */
 
-		.pack--auto {
+		.o-pack--auto {
 			table-layout: auto;
 		}
 
@@ -97,7 +97,7 @@
 		 * Tiny gutters between items.
 		 */
 
-		.pack--tiny {
+		.o-pack--tiny {
 			border-spacing: @pack-gutter--tiny;
 		}
 
@@ -113,7 +113,7 @@
 		 * Small gutters between items.
 		 */
 
-		.pack--small {
+		.o-pack--small {
 			border-spacing: @pack-gutter--small;
 		}
 
@@ -129,7 +129,7 @@
 		 * Large gutters between items.
 		 */
 
-		.pack--large {
+		.o-pack--large {
 			border-spacing: @pack-gutter--large;
 		}
 
@@ -145,7 +145,7 @@
 		 * Huge gutters between items.
 		 */
 
-		.pack--huge {
+		.o-pack--huge {
 			border-spacing: @pack-gutter--huge;
 		}
 
@@ -161,10 +161,10 @@
 		 * Reversed order packs.
 		 */
 		
-		.pack--rev {
+		.o-pack--rev {
 			direction: rtl;
 		
-			> .pack__item {
+			> .o-pack__item {
 				direction: ltr;
 			}
 		

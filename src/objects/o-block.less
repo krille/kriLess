@@ -31,7 +31,7 @@
 	 * Stacked image-with-text object. A simple abstraction to cover a very commonly
 	 * occurring design pattern.
 	 */
-	.block {
+	.o-block {
 		display: block;
 	}
 
@@ -39,7 +39,7 @@
 		/**
 		 * 1. Eliminate whitespace around images.
 		 */
-		.block__img {
+		.o-block__img {
 			vertical-align: middle; /* [1] */
 			margin-bottom: @block-gutter;
 
@@ -49,7 +49,7 @@
 				 * No space between the image and the text content.
 				 */
 
-				.block--flush > & {
+				.o-block--flush > & {
 					margin-bottom: 0;
 				}
 
@@ -61,7 +61,7 @@
 				 * Tiny space between the image and the text content.
 				 */
 
-				.block--tiny > & {
+				.o-block--tiny > & {
 					margin-bottom: @block-gutter--tiny;
 				}
 
@@ -73,7 +73,7 @@
 				 * Small space between the image and the text content.
 				 */
 
-				.block--small > & {
+				.o-block--small > & {
 					margin-bottom: @block-gutter--small
 				}
 
@@ -85,7 +85,7 @@
 				 * Large space between the image and the text content.
 				 */
 
-				.block--large > & {
+				.o-block--large > & {
 					margin-bottom: @block-gutter--large;
 				}
 
@@ -97,7 +97,7 @@
 				 * Huge space between the image and the text content.
 				 */
 
-				.block--huge > & {
+				.o-block--huge > & {
 					margin-bottom: @block-gutter--huge;
 				}
 
@@ -112,7 +112,7 @@
 		/**
 		 * Text-content.
 		 */
-		.block__body {
+		.o-block__body {
 			display: block;
 		}
 
@@ -126,7 +126,7 @@
 		 * Right-aligned blocks.
 		 */
 
-		.block--right {
+		.o-block--right {
 			text-align: right;
 		}
 
@@ -143,7 +143,7 @@
 		 * Center-aligned blocks.
 		 */
 
-		.block--center {
+		.o-block--center {
 			text-align: center;
 		}
 
