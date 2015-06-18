@@ -9,683 +9,670 @@
 <body class="o-box">
 
 
-<section>
+	<section>
 
-	<h1 class="mega">Objects</h1>
-	<p class="lead">Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.</p>
-	<p>Prefix: <code>.o-</code></p>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Lists</h1>
-
-		<h2><code>.o-list-bare</code></h2>
-		<p>The list-bare object simply removes any indents and bullet points from lists.</p>
-
-		<ul class="o-list-bare u-mb">
-			<li>List item</li>
-			<li>List item</li>
-			<li>List item</li>
-			<li>List item</li>
-		</ul>
+		<h1 class="u-mega">Objects</h1>
+		<p class="u-lead">Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.</p>
+		<p>Prefix: <code>.o-</code></p>
 
 
+		<article class="o-box o-box--large">
 
-		<h2><code>.o-list-block</code></h2>
-		<p>The list-block object creates blocky list items out of a `ul` or `ol`.</p>
-		<p>Parts: <code>.o-list-block</code>, <code>.o-list-block__item</code></p>
-		<p>Alterations: 
-			<code>.o-list-block--tiny</code>, 
-			<code>.o-list-block--small</code>,
-			<code>.o-list-block--large</code>,
-			<code>.o-list-block--huge</code>
-		</p>
+			<h1>Lists</h1>
 
-		<ul class="o-list-block o-list-block--tiny u-mb">
-			<li class="o-list-block__item">.o-list-block__item</li>
-			<li class="o-list-block__item">.o-list-block__item</li>
-			<li class="o-list-block__item">.o-list-block__item</li>
-			<li class="o-list-block__item">.o-list-block__item</li>
-		</ul>
+			<h2><code>.o-list-bare</code></h2>
+			<p>The list-bare object simply removes any indents and bullet points from lists.</p>
+			<ul class="o-list-bare u-mb">
+				<li>List item</li>
+				<li>List item</li>
+				<li>List item</li>
+				<li>List item</li>
+			</ul>
+
+			<h2><code>.o-list-block</code></h2>
+			<p>The list-block object creates blocky list items out of a `ul` or `ol`.</p>
+			<p>Parts: <code>.o-list-block</code>, <code>.o-list-block__item</code></p>
+			<p>Alterations: 
+				<code>.o-list-block--tiny</code>, 
+				<code>.o-list-block--small</code>,
+				<code>.o-list-block--large</code>,
+				<code>.o-list-block--huge</code>
+			</p>
+			<ul class="o-list-block o-list-block--tiny u-mb">
+				<li class="o-list-block__item">.o-list-block__item</li>
+				<li class="o-list-block__item">.o-list-block__item</li>
+				<li class="o-list-block__item">.o-list-block__item</li>
+				<li class="o-list-block__item">.o-list-block__item</li>
+			</ul>
+
+			<h2><code>.o-list-ui</code></h2>
+			<p>The UI list object creates blocky list items with a keyline separator out of a `ul` or `ol`.</p>
+			<p>Parts: <code>.o-list-ui</code>, <code>.o-list-ui__item</code></p>
+			<p>Alterations: 
+				<code>.o-list-ui--tiny</code>, 
+				<code>.o-list-ui--small</code>,
+				<code>.o-list-ui--large</code>,
+				<code>.o-list-ui--huge</code>
+			</p>
+			<ul class="o-list-ui o-list-ui--tiny u-mb">
+				<li class="o-list-ui__item">.o-list-ui__item</li>
+				<li class="o-list-ui__item">.o-list-ui__item</li>
+				<li class="o-list-ui__item">.o-list-ui__item</li>
+				<li class="o-list-ui__item">.o-list-ui__item</li>
+			</ul>
+
+			<h2><code>.o-list-inline</code></h2>
+			<p>The list-inline object simply displays a list of items in one line.</p>
+			<p>Parts: <code>.o-list-inline</code></p>
+			<p>Alterations: <code>.o-list-inline--delimited</code>
+			<ul class="o-list-inline o-list-inline--delimited">
+				<li>List item</li>
+				<li>List item</li>
+				<li>List item</li>
+				<li>List item</li>
+			</ul>
+
+		</article>
 
 
+		<article class="o-box o-box--large">
 
-		<h2><code>.o-list-ui</code></h2>
-		<p>The UI list object creates blocky list items with a keyline separator out of a `ul` or `ol`.</p>
-		<p>Parts: <code>.o-list-ui</code>, <code>.o-list-ui__item</code></p>
-		<p>Alterations: 
-			<code>.o-list-ui--tiny</code>, 
-			<code>.o-list-ui--small</code>,
-			<code>.o-list-ui--large</code>,
-			<code>.o-list-ui--huge</code>
-		</p>
+			<h1>Layout</h1>
+			<p>The layout system uses <code>box-sizing: border-box;</code> and <code>display: inline-block;</code> to create an extremely powerful flexible alternative to the traditional grid system. Combine the layout items with the widths found in <code>trumps/widths.less</code></p>
+			<p>Parts: <code>.o-layout</code>, <code>.o-layout__item</code></p>
+			<p>Alterations: <code>.o-layout--rev</code>, <code>.o-layout--middle</code>, <code>.o-layout--bottom</code>, <code>.o-layout--right</code>, <code>.o-layout--center</code>, <code>.o-layout--auto</code>, <code>.o-layout--tiny</code>, <code>.o-layout--small</code>, <code>.o-layout--large</code>, <code>.o-layout--huge</code>, <code>.o-layout--flush</code></p>
+			
+			<div class="o-layout">
 
-		<ul class="o-list-ui o-list-ui--tiny u-mb">
-			<li class="o-list-ui__item">.o-list-ui__item</li>
-			<li class="o-list-ui__item">.o-list-ui__item</li>
-			<li class="o-list-ui__item">.o-list-ui__item</li>
-			<li class="o-list-ui__item">.o-list-ui__item</li>
-		</ul>
+				<div class="o-layout__item u-1/2">
+					<div class="o-box u-mb">.u-1/2</div>
+				</div>
 
+				<div class="o-layout__item u-1/2">
+					<div class="o-box u-mb">.u-1/2</div>
+				</div>
 
+				<div class="o-layout__item u-lap-and-up-1/2">
+					<div class="o-box u-mb">.u-lap-and-up-1/2</div>
+				</div>
 
-		<h2><code>.o-list-inline</code></h2>
-		<p>The list-inline object simply displays a list of items in one line.</p>
-		<p>Parts: <code>.o-list-inline</code></p>
-		<p>Alterations: <code>.o-list-inline--delimited</code>
+				<div class="o-layout__item u-lap-and-up-1/2">
+					<div class="o-box u-mb">.u-lap-and-up-1/2</div>
+				</div>
 
-		<ul class="o-list-inline o-list-inline--delimited">
-			<li>List item</li>
-			<li>List item</li>
-			<li>List item</li>
-			<li>List item</li>
-		</ul>
+				<div class="o-layout__item u-desk-1/3">
+					<div class="o-box u-mb">.u-desk-1/3</div>
+				</div>
 
-	</article>
+				<div class="o-layout__item u-desk-1/3">
+					<div class="o-box u-mb">.u-desk-1/3</div>
+				</div>
 
+				<div class="o-layout__item u-desk-1/3">
+					<div class="o-box u-mb">.u-desk-1/3</div>
+				</div>
 
+				<div class="o-layout__item u-lap-1/2 u-desk-1/4">
+					<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+				</div>
 
-	<article class="o-box o-box--large">
+				<div class="o-layout__item u-lap-1/2 u-desk-1/4">
+					<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+				</div>
 
-		<h1>Layout</h1>
+				<div class="o-layout__item u-lap-1/2 u-desk-1/4">
+					<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+				</div>
 
-		<p>The layout system uses <code>box-sizing: border-box;</code> and <code>display: inline-block;</code> to create an extremely powerful flexible alternative to the traditional grid system. Combine the layout items with the widths found in <code>trumps/widths.less</code></p>
-		
-		<p>Parts: <code>.o-layout</code>, <code>.o-layout__item</code></p>
+				<div class="o-layout__item u-lap-1/2 u-desk-1/4">
+					<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+				</div>
 
-		<p>Alterations: <code>.o-layout--rev</code>, <code>.o-layout--middle</code>, <code>.o-layout--bottom</code>, <code>.o-layout--right</code>, <code>.o-layout--center</code>, <code>.o-layout--auto</code>, <code>.o-layout--tiny</code>, <code>.o-layout--small</code>, <code>.o-layout--large</code>, <code>.o-layout--huge</code>, <code>.o-layout--flush</code></p>
-
-		<div class="o-layout">
-
-			<div class="o-layout__item u-1/2">
-				<div class="o-box u-mb">.u-1/2</div>
 			</div>
 
-			<div class="o-layout__item u-1/2">
-				<div class="o-box u-mb">.u-1/2</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Media</h1>
+			<p>The Media object is an implementation of Nicole Sullivan’s media object.</p>
+			<p>Parts: <code>.o-media</code>, <code>.o-media__img</code>, <code>.o-media__body</code></p>
+			<p>Alterations: <code>.o-media--rev</code>, <code>.o-media--responsive</code>, <code>.o-media--tiny</code>, <code>.o-media--small</code>, <code>.o-media--large</code>, <code>.o-media--huge</code></p>
+
+			<div class="o-media o-media--responsive">
+				<div class="o-media__img">
+					<img src="http://placehold.it/150x150" alt="" />
+				</div>
+				<div class="o-media__body">
+					<p>Lorem ipsum dolor sit amet...</p>
+				</div>
 			</div>
 
-			<div class="o-layout__item u-lap-and-up-1/2">
-				<div class="o-box u-mb">.u-lap-and-up-1/2</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Flag</h1>
+			<p>The flag object is an object similar in appearance to the media object, but which provides slightly more advanced functionality.</p>
+			<p>Parts: <code>.o-flag</code>, <code>.o-flag__img</code>, <code>.o-flag__body</code></p>
+			<p>Alterations: <code>.o-flag--rev</code>, <code>.o-flag--responsive</code>, <code>.o-flag--top</code>, <code>.o-flag--bottom</code>, <code>.o-flag--tiny</code>, <code>.o-flag--small</code>, <code>.o-flag--large</code>, <code>.o-flag--huge</code></p>
+
+			<div class="o-flag o-flag--responsive">
+				<div class="o-flag__img">
+					<img src="http://placehold.it/150x150" alt="" />
+				</div>
+				<div class="o-flag__body">
+					<p>Lorem ipsum dolor sit amet...</p>
+				</div>
 			</div>
 
-			<div class="o-layout__item u-lap-and-up-1/2">
-				<div class="o-box u-mb">.u-lap-and-up-1/2</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Pack</h1>
+			<p>Pack object causes any number of elements pack up horizontally to automatically fill an equal, fluid width of their parent.</p>
+			<p>Parts: <code>.o-pack</code>, <code>.o-pack__item</code></p>
+			<p>Alterations: <code>.o-pack--auto</code>, <code>.o-pack--rev</code>, <code>.o-pack--middle</code>, <code>.o-pack--bottom</code>, <code>.o-pack--tiny</code>, <code>.o-pack--small</code>, <code>.o-pack--large</code>, <code>.o-pack--huge</code></p>
+
+			<div class="o-pack">
+				<div class="o-pack__item">Foo</div>
+				<div class="o-pack__item">Bar</div>
+				<div class="o-pack__item">Baz</div>
 			</div>
 
-			<div class="o-layout__item u-desk-1/3">
-				<div class="o-box u-mb">.u-desk-1/3</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Block</h1>
+
+			<p>The block object stacks an image on top of some text-like content.</p>
+
+			<p>Parts: <code>.o-block</code>, <code>.o-block__img</code>, <code>.o-block__body</code></p>
+
+			<p>Alterations: <code>.o-block--center</code>, <code>.o-block--right</code>, <code>.o-block--flush</code>, <code>.o-block--tiny</code>, <code>.o-block--small</code>, <code>.o-block--large</code>, <code>.o-block--huge</code></p>
+
+			<div class="o-block">
+				<img src="http://placehold.it/250x100" alt="" class="o-block__img" />
+				<div class="o-block__body">
+					<p>Text-like content goes here.</p>
+				</div>
 			</div>
 
-			<div class="o-layout__item u-desk-1/3">
-				<div class="o-box u-mb">.u-desk-1/3</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Box</h1>
+
+			<p>The box object simply boxes off content.</p>
+
+			<p>Parts: <code>.o-box</code></p>
+
+			<p>Alterations: <code>.o-box--flush</code>, <code>.o-box--tiny</code>, <code>.o-box--small</code>, <code>.o-box--large</code>, <code>.o-box--huge</code></p>
+
+			<div class="o-box">
+				<p>Boxed off content goes here.</p>
 			</div>
 
-			<div class="o-layout__item u-desk-1/3">
-				<div class="o-box u-mb">.u-desk-1/3</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Tabs</h1>
+
+			<p>The tabs object is a simple abstraction for force a series of elements (usually a list) into an equal-width, tab-like format.</p>
+
+			<p>Parts: <code>.o-tabs</code>, <code>.o-tabs__item</code>, <code>.o-tabs__link</code></p>
+
+			<ul class="o-tabs">
+				<li class="o-tabs__item">
+					<a class="o-tabs__link" href="#">Tab 1</a>
+				</li>
+				<li class="o-tabs__item">
+					<a class="o-tabs__link" href="#">Tab 2</a>
+				</li>
+				<li class="o-tabs__item">
+					<a class="o-tabs__link" href="#">Tab 3</a>
+				</li>
+			</ul>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Split</h1>
+
+			<p>Simple split item for creating two elements floated away from one another.</p>
+
+			<p>Parts: <code>.o-split</code>, <code>.o-split__title</code></p>
+
+			<dl class="o-split">
+				<dt class="o-split__title">Burger and fries</dt>
+				<dd>&pound;5.99</dd>
+				<dt class="o-split__title">Fillet steak</dt>
+				<dd>&pound;19.99</dd>
+				<dt class="o-split__title">Ice cream</dt>
+				<dd>&pound;2.99</dd>
+			</dl>
+
+			<ol class="o-split">
+				<li><b class="o-split__title">1st place</b> Bob</li>
+				<li><b class="o-split__title">2nd place</b> Lilly</li>
+				<li><b class="o-split__title">3rd place</b> Ted</li>
+			</ol>​
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Tables</h1>
+
+			<p>Helpers for common table patterns.</p>
+
+			<p>Parts: <code>.o-table</code></p>
+
+			<p>Alterations: 
+				<code>.o-table--rows</code>, 
+				<code>.o-table--columns</code>, 
+				<code>.o-table--cells</code>, 
+				<code>.o-table--fixed</code>, 
+				<code>.o-table--compact</code>, 
+				<code>.o-table--cosy</code>, 
+				<code>.o-table--comfy</code>
+			</p>
+
+			<table class="o-table o-table--cells o-table--fixed o-table--compact">
+				<thead>
+					<tr>
+						<th>th</th>
+						<th>th</th>
+						<th>th</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>td</td>
+						<td>td</td>
+						<td>td</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Button</h1>
+
+			<p>The button object is a simple, robust, extensible baseline for building entire suites of buttons onto.</p>
+
+			<p>Parts: <code>.o-btn</code></p>
+
+			<p>Alterations: <code>.o-btn--small</code>, <code>.o-btn--large</code>, <code>.o-btn--pill</code>, <code>.o-btn--full</code></p>
+
+			<p>
+				<a class="o-btn" href="#">.o-btn</a>
+				<a class="o-btn o-btn--small" href="#">.o-btn--small</a>
+				<a class="o-btn o-btn--large" href="#">.o-btn--large</a>
+				<a class="o-btn o-btn--pill" href="#">.o-btn--pill</a>
+			</p>
+			<p>
+				<a class="o-btn o-btn--full" href="#">.o-btn--full</a>
+			</p>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Embed</h1>
+
+			<p>Responsive embedded content. Default ratio is 16:9.</p>
+
+			<p>Parts: <code>.o-embed</code>, <code>.o-embed__item</code></p>
+
+			<p>Alterations: <code>.o-embed--4:3</code></p>
+
+			<div class="o-embed">
+				<iframe class="o-embed__item" width="560" height="315" src="//www.youtube.com/embed/IkaILVOgGRA" frameborder="0" allowfullscreen></iframe>
 			</div>
 
-			<div class="o-layout__item u-lap-1/2 u-desk-1/4">
-				<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Icon-font</h1>
+
+			<p>Parts: <code>.o-icon-&lt;name&gt;</code></p>
+
+			<a class="o-btn o-btn--pill"><i class="o-icon-heart-empty"></i> Like</a>
+
+		</article>
+
+
+	</section>
+
+
+	<section>
+
+		<h1 class="u-mega">Components</h1>
+		<p class="u-lead">Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.</p>
+		<p>Prefix: <code>.c-</code></p>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Breadcrumb</h1>
+
+			<p>Simple breadcrumb styling.</p>
+
+			<p>Parts:
+				<code>.c-breadcrumb</code>,
+				<code>.c-breadcrumb__root</code>
+			</p>
+
+			<ol class="o-list-inline c-breadcrumb">
+				<li class="c-breadcrumb__root"><a href="#">kri.less</a></li>
+				<li><a href="#">dev</a></li>
+				<li><a href="#">css</a></li>
+				<li><a href="#">modules</a></li>
+			</ol>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Pagination</h1>
+
+			<p>Simple pagination styling.</p>
+
+			<p>Parts: 
+				<code>.c-pagination</code>,
+				<code>.c-pagination__item</code>,
+				<code>.c-pagination__item--prev</code>,
+				<code>.c-pagination__item--next</code>
+			</p>
+
+			<ol class="o-list-inline c-pagination">
+				<li class="c-pagination__item c-pagination__item--prev"><a href="/page/prev">Previous</a></li>
+				<li class="c-pagination__item"><a href="/page/1">1</a></li>
+				<li class="c-pagination__item"><a href="/page/2">2</a></li>
+				<li class="c-pagination__item"><a href="/page/3">3</a></li>
+				<li class="c-pagination__item"><a href="/page/4">4</a></li>
+				<li class="c-pagination__item"><a href="/page/5">5</a></li>
+				<li class="c-pagination__item c-pagination__item--next"><a href="/page/next">Next</a></li>
+			</ol>
+
+		</article>
+
+
+	</section>
+
+
+	<section>
+
+		<h1 class="u-mega">Utility classes</h1>
+		<p class="u-lead">Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI.</p>
+		<p>Prefix: <code>.u-</code></p>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Spacing</h1>
+
+			<p>Margin and padding helper classes. Use these to tweak layout on a micro level.</p>
+			<p>
+				<code>.u-(m|p)(t|r|b|l|h|v)(-|+|0) {} = margin/padding<br /> 
+				top/right/bottom/left/horizontal/vertical less/more/none</code>
+			</p>
+
+			<p>Works with mq-prefixes e.g. <code>.u-lap-mb+</code>, <code>.u-desk-mb++</code>
+
+			<pre class="o-box"><code>&lt;div class="u-p u-pv+ u-mb u-lap-and-up-mb+"&gt;&lt;/div&gt;</code></pre>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Widths</h1>
+
+			<p>Width helper classes. Use these to tweak layout on a micro level.</p>
+			<p>
+				<code>.u-(one-half|1/2) {} = width: 50%</code>
+			</p>
+
+			<p>Works with mq-prefixes e.g. <code>.u-lap-and-up-1/2</code>, <code>.u-desk-1/3</code>
+
+			<pre class="o-box"><code>&lt;div class="o-layout__item u-desk-1/2"&gt;&lt;/div&gt;</code></pre>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Typography</h1>
+
+			<p>Headings: <code>.u-alpha</code>, <code>.u-beta</code>, <code>.u-gamma</code>, <code>.u-delta</code>, <code>.u-epsilon</code>, <code>.u-zeta</code></p>
+
+			<p>Large type: <code>.u-giga</code>, <code>.u-mega</code>, <code>.u-kilo</code></p>
+
+			<p>Small type: <code>.u-milli</code>, <code>.u-micro</code></p>
+
+			<p>Lead text: <code>.u-lead</code></p>
+
+			<h1>Heading 1 <code>.u-alpha</code></h1>
+
+			<p class="u-lead"><code>.u-lead</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, assumenda, repudiandae, temporibus, ex aspernatur quos ipsum praesentium voluptate beatae maxime iure tempore nihil maiores alias id quia quae. Odit, officia.</p>
+
+			<h2>Heading 2 <code>.u-beta</code></h2>
+
+			<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
+
+			<h3>Heading 3 <code>.u-gamma</code></h3>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
+
+			<h4>Heading 4 <code>.u-delta</code></h4>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
+
+			<h5>Heading 5 <code>.u-epsilon</code></h5>
+
+			<p class="u-milli"><code>.u-milli</code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
+
+			<h6>Heading 6 <code>.u-zeta</code></h6>
+
+			<p class="u-micro"><code>.u-micro</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
+
+		</article>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>Other utility classes</h1>
+
+			<p>All available utility-classes</p>
+
+			<table class="o-table o-table--cells o-table--cosy">
+				<thead>
+					<tr>
+						<th>class</th>
+						<th>effect</th>
+						<th>mq-prefixes<sup>*</sup></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>.u-hidden</code></td>
+						<td><code>display: none;</code></td>
+						<td><code>yes</code></td>
+					</tr>				
+					<tr>
+						<td><code>.u-img--left</code></td>
+						<td>
+							<code>float: left;</code><br />
+							<code>margin-right: @base-spacing-unit;</code><br />
+							<code>margin-bottom: @base-spacing-unit;</code>
+						</td>
+						<td>
+							<code>no</code>
+						</td>
+					</tr>
+					<tr>
+						<td><code>.u-img--right</code></td>
+						<td>
+							<code>float: right;</code><br />
+							<code>margin-left: @base-spacing-unit;</code><br />
+							<code>margin-bottom: @base-spacing-unit;</code>
+						</td>
+						<td>
+							<code>no</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p><sup>*</sup>works with mq-prefixes e.g. <code>.u-lap-and-up-hidden</code></p>
+		</article>
+
+
+	</section>
+
+
+	<section>
+
+		<h1 class="u-mega">Mixins</h1>
+		<p class="u-lead">A number of default mixins that the framework, and developers working with it, can make use of.</p>
+
+
+		<article class="o-box o-box--large">
+
+			<h1>.font-size(<code>@font-size</code>, <code>@line-height</code>)</h1>
+
+			<h3 class="u-delta u-mb--">Params:</h3>
+			<p>
+				<code>{int} @font-size</code> - can be any <strong>integer</strong> or a pixel unit e.g. <code>16px</code>,<br /> 
+				<code>{int} [@line-height]</code> - <em>(optional)</em> can be any <strong>integer</strong> or a <strong>keyword</strong> e.g. <code>inherit</code>, or <code>normal</code>
+			</p>
+
+			<h3 class="u-delta u-mb--">Description:</h3>
+			<p>
+				Sets the <code>font-size</code> property with both <code>px</code> and <code>rem</code> units.<br />
+				Optionally with a specified <code>line-height</code> or no line-height at all.
+			</p>
+			<p>If no line-height is specified the mixin will calculate an appropriate one for you.</p>
+
+			<div class="o-box example u-mb">
+				<h4>Example 1: Fully formed type style (sizing and vertical rhythm) from a single value</h4>
+				<pre class="o-box">
+	.foo { 
+		.font-size(12px); 
+	}</pre>
+				<p>This will yield:</p>
+				<pre class="o-box">
+	.foo {
+		font-size: 12px;
+		font-size: 0.75rem;
+		line-height: 2;
+	}</pre>
 			</div>
 
-			<div class="o-layout__item u-lap-1/2 u-desk-1/4">
-				<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+			<div class="o-box example u-mb">
+				<h4>Example 2: Font-size with a specific line-height</h4>
+				<pre class="o-box">
+	.foo { 
+		.font-size(12px, 1.5);
+	}</pre>
+				<p>This will yield:</p>
+				<pre class="o-box">
+	.foo {
+		font-size: 12px;
+		font-size: 0.75rem;
+		line-height: 1.5;
+	}</pre>
 			</div>
 
-			<div class="o-layout__item u-lap-1/2 u-desk-1/4">
-				<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
+			<div class="o-box example">
+				<h4>Example 3: Font-size with no line-height at all</h4>
+				<pre class="o-box">
+	.foo { 
+		.font-size(12px, none); 
+	}</pre>
+				<p>This will yield:</p>
+				<pre class="o-box">
+	.foo {
+		font-size: 12px;
+		font-size: 0.75rem;
+	}</pre>
 			</div>
 
-			<div class="o-layout__item u-lap-1/2 u-desk-1/4">
-				<div class="o-box u-mb">.u-lap-1/2 .u-desk-1/4</div>
-			</div>
+		</article>
 
-		</div>
 
-	</article>
+		<article class="o-box o-box--large">
 
+			<h1>.truncate(<code>@truncation-boundary</code>)</h1>
 
+			<h3 class="u-delta u-mb--">Params:</h3>
+			<p>
+				<code>{united measurement} @truncation-boundary</code> - can be any <strong>united measurement</strong> e.g. <code>100%</code>
+			</p>
 
-	<article class="o-box o-box--large">
+			<h3 class="u-delta u-mb--">Description:</h3>
+			<p>Force overly long spans of text to truncate</p>
 
-		<h1>Media</h1>
+		</article>
 
-		<p>The Media object is an implementation of Nicole Sullivan’s media object.</p>
 
-		<p>Parts: <code>.o-media</code>, <code>.o-media__img</code>, <code>.o-media__body</code></p>
+		<article class="o-box o-box--large">
 
-		<p>Alterations: <code>.o-media--rev</code>, <code>.o-media--responsive</code>, <code>.o-media--tiny</code>, <code>.o-media--small</code>, <code>.o-media--large</code>, <code>.o-media--huge</code></p>
+			<h1>.hide-text()</h1>
 
-		<div class="o-media o-media--responsive">
-			<div class="o-media__img">
-				<img src="http://placehold.it/150x150" alt="" />
-			</div>
-			<div class="o-media__body">
-				<p>Lorem ipsum dolor sit amet...</p>
-			</div>
-		</div>
+			<h3 class="u-delta u-mb--">Description:</h3>
+			<p>Hide text from screen</p>
 
-	</article>
+		</article>
 
 
+		<article class="o-box o-box--large">
 
-	<article class="o-box o-box--large">
+			<h1>.hide-element()</h1>
 
-		<h1>Flag</h1>
+			<h3 class="u-delta u-mb--">Description:</h3>
+			<p>Hide content off-screen without resorting to <code>display: none;</code></p>
 
-		<p>The flag object is an object similar in appearance to the media object, but which provides slightly more advanced functionality.</p>
+		</article>
 
-		<p>Parts: <code>.o-flag</code>, <code>.o-flag__img</code>, <code>.o-flag__body</code></p>
 
-		<p>Alterations: <code>.o-flag--rev</code>, <code>.o-flag--responsive</code>, <code>.o-flag--top</code>, <code>.o-flag--bottom</code>, <code>.o-flag--tiny</code>, <code>.o-flag--small</code>, <code>.o-flag--large</code>, <code>.o-flag--huge</code></p>
+		<article class="o-box o-box--large">
 
-		<div class="o-flag o-flag--responsive">
-			<div class="o-flag__img">
-				<img src="http://placehold.it/150x150" alt="" />
-			</div>
-			<div class="o-flag__body">
-				<p>Lorem ipsum dolor sit amet...</p>
-			</div>
-		</div>
+			<h1>.placeholder-text(<code>@color: @base-ui-color</code>)</h1>
 
-	</article>
+			<h3 class="u-delta u-mb--">Params:</h3>
+			<p>
+				<code>{color} [@color=@base-ui-color]</code> - can be any valid <strong>css-color</strong> e.g. <code>#F00</code>
+			</p>
 
+			<h3 class="u-delta u-mb--">Description:</h3>
+			<p>Set placeholder text color across multiple browsers</p>
 
+		</article>
 
-	<article class="o-box o-box--large">
 
-		<h1>Pack</h1>
-
-		<p>Pack object causes any number of elements pack up horizontally to automatically fill an equal, fluid width of their parent.</p>
-
-		<p>Parts: <code>.o-pack</code>, <code>.o-pack__item</code></p>
-
-		<p>Alterations: <code>.o-pack--auto</code>, <code>.o-pack--rev</code>, <code>.o-pack--middle</code>, <code>.o-pack--bottom</code>, <code>.o-pack--tiny</code>, <code>.o-pack--small</code>, <code>.o-pack--large</code>, <code>.o-pack--huge</code></p>
-
-		<div class="o-pack">
-			<div class="o-pack__item">Foo</div>
-			<div class="o-pack__item">Bar</div>
-			<div class="o-pack__item">Baz</div>
-		</div>
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Block</h1>
-
-		<p>The block object stacks an image on top of some text-like content.</p>
-
-		<p>Parts: <code>.o-block</code>, <code>.o-block__img</code>, <code>.o-block__body</code></p>
-
-		<p>Alterations: <code>.o-block--center</code>, <code>.o-block--right</code>, <code>.o-block--flush</code>, <code>.o-block--tiny</code>, <code>.o-block--small</code>, <code>.o-block--large</code>, <code>.o-block--huge</code></p>
-
-		<div class="o-block">
-			<img src="http://placehold.it/250x100" alt="" class="o-block__img" />
-			<div class="o-block__body">
-				<p>Text-like content goes here.</p>
-			</div>
-		</div>
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Box</h1>
-
-		<p>The box object simply boxes off content.</p>
-
-		<p>Parts: <code>.o-box</code></p>
-
-		<p>Alterations: <code>.o-box--flush</code>, <code>.o-box--tiny</code>, <code>.o-box--small</code>, <code>.o-box--large</code>, <code>.o-box--huge</code></p>
-
-		<div class="o-box">
-			<p>Boxed off content goes here.</p>
-		</div>
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Tabs</h1>
-
-		<p>The tabs object is a simple abstraction for force a series of elements (usually a list) into an equal-width, tab-like format.</p>
-
-		<p>Parts: <code>.o-tabs</code>, <code>.o-tabs__item</code>, <code>.o-tabs__link</code></p>
-
-		<ul class="o-tabs">
-			<li class="o-tabs__item">
-				<a class="o-tabs__link" href="#">Tab 1</a>
-			</li>
-			<li class="o-tabs__item">
-				<a class="o-tabs__link" href="#">Tab 2</a>
-			</li>
-			<li class="o-tabs__item">
-				<a class="o-tabs__link" href="#">Tab 3</a>
-			</li>
-		</ul>
-
-	</article>
-	
-	
-	
-	<article class="o-box o-box--large">
-
-		<h1>Split</h1>
-
-		<p>Simple split item for creating two elements floated away from one another.</p>
-
-		<p>Parts: <code>.o-split</code>, <code>.o-split__title</code></p>
-
-		<dl class="o-split">
-			<dt class="o-split__title">Burger and fries</dt>
-			<dd>&pound;5.99</dd>
-			<dt class="o-split__title">Fillet steak</dt>
-			<dd>&pound;19.99</dd>
-			<dt class="o-split__title">Ice cream</dt>
-			<dd>&pound;2.99</dd>
-		</dl>
-
-		<ol class="o-split">
-			<li><b class="o-split__title">1st place</b> Bob</li>
-			<li><b class="o-split__title">2nd place</b> Lilly</li>
-			<li><b class="o-split__title">3rd place</b> Ted</li>
-		</ol>​
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Tables</h1>
-
-		<p>Helpers for common table patterns.</p>
-
-		<p>Parts: <code>.o-table</code></p>
-
-		<p>Alterations: 
-			<code>.o-table--rows</code>, 
-			<code>.o-table--columns</code>, 
-			<code>.o-table--cells</code>, 
-			<code>.o-table--fixed</code>, 
-			<code>.o-table--compact</code>, 
-			<code>.o-table--cosy</code>, 
-			<code>.o-table--comfy</code>
-		</p>
-
-		<table class="o-table o-table--cells o-table--fixed o-table--compact">
-			<thead>
-				<tr>
-					<th>th</th>
-					<th>th</th>
-					<th>th</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>td</td>
-					<td>td</td>
-					<td>td</td>
-				</tr>
-			</tbody>
-		</table>
-
-	</article>
-	
-	
-	
-	<article class="o-box o-box--large">
-
-		<h1>Button</h1>
-
-		<p>The button object is a simple, robust, extensible baseline for building entire suites of buttons onto.</p>
-
-		<p>Parts: <code>.o-btn</code></p>
-
-		<p>Alterations: <code>.o-btn--small</code>, <code>.o-btn--large</code>, <code>.o-btn--pill</code>, <code>.o-btn--full</code></p>
-
-		<p>
-			<a class="o-btn" href="#">.o-btn</a>
-			<a class="o-btn o-btn--small" href="#">.o-btn--small</a>
-			<a class="o-btn o-btn--large" href="#">.o-btn--large</a>
-			<a class="o-btn o-btn--pill" href="#">.o-btn--pill</a>
-		</p>
-		<p>
-			<a class="o-btn o-btn--full" href="#">.o-btn--full</a>
-		</p>
-
-	</article>
-	
-	
-	
-</section>
-
-
-
-
-
-<section>
-
-	<h1 class="mega">Components</h1>
-	<p class="lead">Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.</p>
-	<p>Prefix: <code>.c-</code></p>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Breadcrumb</h1>
-
-		<p>Simple breadcrumb styling.</p>
-
-		<p>Parts:
-			<code>.c-breadcrumb</code>,
-			<code>.c-breadcrumb__root</code>
-		</p>
-
-		<ol class="o-list-inline c-breadcrumb">
-			<li class="c-breadcrumb__root"><a href="#">kri.less</a></li>
-			<li><a href="#">dev</a></li>
-			<li><a href="#">css</a></li>
-			<li><a href="#">modules</a></li>
-		</ol>
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Pagination</h1>
-
-		<p>Simple pagination styling.</p>
-
-		<p>Parts: 
-			<code>.c-pagination</code>,
-			<code>.c-pagination__item</code>,
-			<code>.c-pagination__item--prev</code>,
-			<code>.c-pagination__item--next</code>
-		</p>
-
-		<ol class="o-list-inline c-pagination">
-			<li class="c-pagination__item c-pagination__item--prev"><a href="/page/prev">Previous</a></li>
-			<li class="c-pagination__item"><a href="/page/1">1</a></li>
-			<li class="c-pagination__item"><a href="/page/2">2</a></li>
-			<li class="c-pagination__item"><a href="/page/3">3</a></li>
-			<li class="c-pagination__item"><a href="/page/4">4</a></li>
-			<li class="c-pagination__item"><a href="/page/5">5</a></li>
-			<li class="c-pagination__item c-pagination__item--next"><a href="/page/next">Next</a></li>
-		</ol>
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Embed</h1>
-
-		<p>Responsive embedded content. Default ratio is 16:9.</p>
-
-		<p>Parts: <code>.c-embed</code>, <code>.c-embed__item</code></p>
-
-		<p>Alterations: <code>.c-embed--4:3</code></p>
-
-		<div class="c-embed">
-			<iframe class="c-embed__item" width="560" height="315" src="//www.youtube.com/embed/IkaILVOgGRA" frameborder="0" allowfullscreen></iframe>
-		</div>
-
-	</article>
-	
-	
-
-	<article class="o-box o-box--large">
-
-		<h1>Icon-font</h1>
-
-		<p>Parts: <code>.c-icon-&lt;name&gt;</code></p>
-
-		<a class="o-btn o-btn--pill"><i class="c-icon-heart-empty"></i> Like</a>
-
-	</article>
-	
-	
-	
-</section>
-
-
-
-
-
-<section>
-
-	<h1 class="mega">Utility classes</h1>
-	<p class="lead">Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI.</p>
-	<p>Prefix: <code>.u-</code></p>
-	
-	
-	
-	<article class="o-box o-box--large">
-		
-		<h1>Spacing</h1>
-
-		<p>Margin and padding helper classes. Use these to tweak layout on a micro level.</p>
-		<p>
-			<code>.u-(m|p)(t|r|b|l|h|v)(-|+|0) {} = margin/padding<br /> 
-			top/right/bottom/left/horizontal/vertical less/more/none</code>
-		</p>
-
-		<p>Even works with mq-prefixes e.g. <code>.u-lap-mb+</code>, <code>.u-desk-mb++</code>
-		
-		<pre class="o-box"><code>&lt;div class="u-p u-pv+ u-mb u-lap-and-up-mb+"&gt;&lt;/div&gt;</code></pre>
-
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-		
-		<h1>Widths</h1>
-		
-		<p>Width helper classes. Use these to tweak layout on a micro level.</p>
-		<p>
-			<code>.u-(one-half|1/2) {} = width: 50%</code>
-		</p>
-
-		<p>Even works with mq-prefixes e.g. <code>.u-lap-and-up-1/2</code>, <code>.u-desk-1/3</code>
-		
-		<pre class="o-box"><code>&lt;div class="o-layout__item u-desk-1/2"&gt;&lt;/div&gt;</code></pre>
-
-	</article>
-	
-	
-	
-</section>
-
-
-
-
-
-<section>
-
-	<h1 class="mega">Mixins</h1>
-	<p class="lead">A number of default mixins that the framework, and developers working with it, can make use of.</p>
-
-
-	<article class="o-box o-box--large">
-		
-		<h1>.font-size(<code>@font-size</code>, <code>@line-height</code>)</h1>
-				
-		<h3 class="delta u-mb--">Params:</h3>
-		<p>
-			<code>{int} @font-size</code> - can be any <strong>integer</strong> or a pixel unit e.g. <code>16px</code>,<br /> 
-			<code>{int} [@line-height]</code> - <em>(optional)</em> can be any <strong>integer</strong> or a <strong>keyword</strong> e.g. <code>inherit</code>, or <code>normal</code>
-		</p>
-
-		<h3 class="delta u-mb--">Description:</h3>
-		<p>
-			Sets the <code>font-size</code> property with both <code>px</code> and <code>rem</code> units.<br />
-			Optionally with a specified <code>line-height</code> or no line-height at all.
-		</p>
-		<p>If no line-height is specified the mixin will calculate an appropriate one for you.</p>
-		
-		<div class="o-box example u-mb">
-			<h4>Example 1: Fully formed type style (sizing and vertical rhythm) from a single value</h4>
-			<pre class="o-box">
-.foo { 
-	.font-size(12px); 
-}</pre>
-			<p>This will yield:</p>
-			<pre class="o-box">
-.foo {
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 2;
-}</pre>
-		</div>
-		
-		<div class="o-box example u-mb">
-			<h4>Example 2: Font-size with a specific line-height</h4>
-			<pre class="o-box">
-.foo { 
-	.font-size(12px, 1.5);
-}</pre>
-			<p>This will yield:</p>
-			<pre class="o-box">
-.foo {
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1.5;
-}</pre>
-		</div>
-		
-		<div class="o-box example">
-			<h4>Example 3: Font-size with no line-height at all</h4>
-			<pre class="o-box">
-.foo { 
-	.font-size(12px, none); 
-}</pre>
-			<p>This will yield:</p>
-			<pre class="o-box">
-.foo {
-	font-size: 12px;
-	font-size: 0.75rem;
-}</pre>
-		</div>
-		
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-		
-		<h1>.truncate(<code>@truncation-boundary</code>)</h1>
-				
-		<h3 class="delta u-mb--">Params:</h3>
-		<p>
-			<code>{united measurement} @truncation-boundary</code> - can be any <strong>united measurement</strong> e.g. <code>100%</code>
-		</p>
-
-		<h3 class="delta u-mb--">Description:</h3>
-		<p>Force overly long spans of text to truncate</p>
-		
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-		
-		<h1>.hide-text()</h1>
-		
-		<h3 class="delta u-mb--">Description:</h3>
-		<p>Hide text from screen</p>
-		
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-		
-		<h1>.hide-element()</h1>
-
-		<h3 class="delta u-mb--">Description:</h3>
-		<p>Hide content off-screen without resorting to <code>display: none;</code></p>
-		
-	</article>
-
-
-
-	<article class="o-box o-box--large">
-		
-		<h1>.placeholder-text(<code>@color: @base-ui-color</code>)</h1>
-				
-		<h3 class="delta u-mb--">Params:</h3>
-		<p>
-			<code>{color} [@color=@base-ui-color]</code> - can be any valid <strong>css-color</strong> e.g. <code>#F00</code>
-		</p>
-
-		<h3 class="delta u-mb--">Description:</h3>
-		<p>Set placeholder text color across multiple browsers</p>
-		
-	</article>
-
-
-
-</section>
-
-
-
-
-	<article class="o-box o-box--large">
-
-		<h1>Typography</h1>
-
-		<p>Headings: <code>.alpha</code>, <code>.beta</code>, <code>.gamma</code>, <code>.delta</code>, <code>.epsilon</code>, <code>.zeta</code></p>
-
-		<p>Large type: <code>.giga</code>, <code>.mega</code>, <code>.kilo</code></p>
-
-		<p>Small type: <code>.milli</code>, <code>.micro</code></p>
-
-		<p>Lead text: <code>.lead</code></p>
-
-		<h1>Heading 1 <code>.alpha</code></h1>
-
-		<p class="lead"><code>.lead</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, assumenda, repudiandae, temporibus, ex aspernatur quos ipsum praesentium voluptate beatae maxime iure tempore nihil maiores alias id quia quae. Odit, officia.</p>
-
-		<h2>Heading 2 <code>.beta</code></h2>
-
-		<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
-
-		<h3>Heading 3 <code>.gamma</code></h3>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
-
-		<h4>Heading 4 <code>.delta</code></h4>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
-
-		<h5>Heading 5 <code>.epsilon</code></h5>
-
-		<p class="milli"><code>.milli</code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
-
-		<h6>Heading 6 <code>.zeta</code></h6>
-
-		<p class="micro"><code>.micro</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, architecto debitis doloremque earum ut possimus iste et in adipisci ipsum quisquam totam quia porro numquam explicabo quae fuga at alias.</p>
-
-	</article>
-
-
-
+	</section>
 
 
 </body>

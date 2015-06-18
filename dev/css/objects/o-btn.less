@@ -25,7 +25,7 @@
  * 7. Subtract the border size from the padding value so that buttons do not
  *    grow larger as we add borders.
  */
-.c-btn {
+.o-btn {
 
 	display: inline-block; /* [1] */
 	vertical-align: middle; /* [2] */
@@ -54,7 +54,7 @@
 /**
  * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
  */
-.c-btn::-moz-focus-inner {
+.o-btn::-moz-focus-inner {
 	border:  0;
 	padding: 0;
 }
@@ -64,7 +64,7 @@
 /**
  * Small buttons.
  */
-.c-btn--small {
+.o-btn--small {
 	padding: @btn-padding--small - @btn-border-width  round(@btn-padding--small) - @btn-border-width; /* [7] */
 }
 
@@ -73,7 +73,7 @@
 /**
  * Large buttons.
  */
-.c-btn--large {
+.o-btn--large {
 	padding: @btn-padding--large - @btn-border-width  round(@btn-padding--large * 2) - @btn-border-width; /* [7] */
 }
 
@@ -82,7 +82,7 @@
 /**
  * Full-width buttons.
  */
-.c-btn--full {
+.o-btn--full {
 	width: 100%;
 	padding-left: 0;
 	padding-right: 0;
@@ -96,7 +96,7 @@
  * 1. Overly-large value to ensure the radius rounds the whole end of the
  *    button.
  */
-.c-btn--pill {
+.o-btn--pill {
 	border-radius: 100px; /* [1] */
 }
 
@@ -105,11 +105,11 @@
 /**
  * Disabled buttons.
  */
-.c-btn[disabled],
-.c-btn--disabled,
-.c-btn--disabled:hover,
-.c-btn--disabled:active,
-.c-btn--disabled:focus {
+.o-btn[disabled],
+.o-btn--disabled,
+.o-btn--disabled:hover,
+.o-btn--disabled:active,
+.o-btn--disabled:focus {
 	opacity: 0.40;
 	cursor: not-allowed;
 	box-shadow: none;
@@ -120,6 +120,6 @@
 /**
  * Hidden buttons.
  */
-.c-btn--hidden {
+.o-btn--hidden {
 	display: none;
 }

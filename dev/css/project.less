@@ -21,14 +21,35 @@
 
 
 /*------------------------------------*\
-	#PROJECT SPECIFIC MODULES
+	#OBJECTS
+\*------------------------------------*/
+/**
+ * May be used in any number of unrelated contexts to the one you can currently see it in.
+ * Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places.
+ */
+@import "objects/o-btn";
+@import "objects/o-icon-font";
+@import "objects/o-embed";
+
+
+/*------------------------------------*\
+	#COMPONENTS
 \*------------------------------------*/
 /**
  * Discrete, complete chunks of UI (e.g. .carousel {})
  */
 @import "components/c-breadcrumb";
 @import "components/c-pagination";
-@import "components/c-btn";
 @import "components/c-form";
-@import "components/c-icon-font";
-@import "components/c-embed";
+
+
+
+/*------------------------------------*\
+	#UTILITY-CLASSES
+\*------------------------------------*/
+/**
+ * Has a very specific role (often providing only one declaration) and should not be bound onto or changed. 
+ * It can be reused and is not tied to any specific piece of UI.
+ */
+@import "utilities/u-images";
+@import "utilities/u-text";
