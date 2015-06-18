@@ -58,6 +58,9 @@ pre {
 	white-space: pre;
 	word-wrap: normal;
 	overflow: auto;
+	
+	color: #fff;
+	.font-size(14px);
 
 	> code {
 		background: none;
@@ -84,4 +87,14 @@ article {
 .o-layout__item > .o-box {
 	background: @brand-color;
 	color: #fff;
+}
+
+.o-layout__item > pre.o-box {
+	background: #333;
+	color: #fff;
+}
+
+.example {
+	background-color: darken(#fafafa, 1);
+	border: 1px solid #f0f0f0;
 }

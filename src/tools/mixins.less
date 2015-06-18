@@ -41,20 +41,18 @@ This will yield:
 */
 
 .font-size(@font-size) {
-	font-size: @font-size;
+	font-size: unit(@font-size, px);
 	font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
-	line-height: ceil(unit(@font-size) / unit(@base-line-height)) * (unit(@base-line-height) / unit(@font-size));  
+	line-height: ceil(unit(@font-size) / unit(@base-line-height)) * (unit(@base-line-height) / unit(@font-size));
 }
 
-.font-size(@font-size, @line-height) when (isnumber(@line-height)) {
-	font-size: @font-size;
+.font-size(@font-size, @line-height) when (isnumber(@line-height)), (iskeyword(@line-height)) {
+	font-size: unit(@font-size, px);
 	font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
-	line-height: @line-height;  
-}
-
-.font-size(@font-size, @line-height) when (@line-height = none) {
-	font-size: @font-size;
-	font-size: (unit(@font-size) / unit(@base-font-size)) * 1rem;
+	
+	& when not (@line-height = none) {
+		line-height: @line-height;  
+	}
 }
 
 
@@ -95,8 +93,7 @@ This will yield:
 	#HIDE ELEMENT
 \*------------------------------------*/
 /**
- * Hide content off-screen without resorting to `display:none;`, also provide
- * breakpoint specific hidden elements.
+ * Hide content off-screen without resorting to `display:none;`
  */
 .hide-element() {
 	border: 0 !important;
@@ -114,7 +111,7 @@ This will yield:
 /*------------------------------------*\
 	#PLACEHOLDER TEXT COLOR
 \*------------------------------------*/
-.placeholder(@color: @base-ui-color) {
+.placeholder-text(@color: @base-ui-color) {
 	&::-webkit-input-placeholder {
 		color: @color;
 	}

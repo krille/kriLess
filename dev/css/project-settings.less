@@ -7,7 +7,7 @@
 
 @base-text-color:       #333;
 @base-background-color: #fff;
-@base-ui-color:     #d6d6d6;
+@base-ui-color:         #d6d6d6;
 
 @base-spacing-unit: @base-line-height;
 @base-spacing-unit--tiny: round(@base-spacing-unit / 4);
@@ -29,7 +29,7 @@
 	#COLORS
 \*------------------------------------*/
 @link-color:        @brand-color;
-@link-color-hover:  darken(@link-color, 10);
+@link-color-hover:  lighten(@link-color, 10);
 
 
 
@@ -38,6 +38,8 @@
 \*------------------------------------*/
 @responsive:         true;
 @responsive-spacing: false;
+@flag-collapse-at:   720px;
+@media-collapse-at:  720px;
 
 @lap-start:  600px;
 @desk-start: 850px;
@@ -72,48 +74,44 @@
 /*------------------------------------*\
 	#ENABLE/DISABLE FRAMEWORK OBJECTS
 \*------------------------------------*/
+@use-layout:          true;
+@use-flag:            true;
+@use-media:           true;
+@use-list-bare:       true;
+@use-list-block:      true;
+@use-list-ui:         true;
+@use-list-inline:     true;
+@use-tables:          true;
+@use-tabs:            true;
 @use-box:             true;
 @use-pack:            true;
 @use-block:           true;
-@use-buttons:         true;
-@use-flag:            true;
-@use-layout:          true;
-@use-list-bare:       true;
-@use-list-block:      true;
-@use-list-inline:     true;
-@use-list-ui:         true;
-@use-media:           true;
 @use-split:           true;
-@use-tables:          true;
-@use-tabs:            true;
 @use-width-fractions: true;
 
 
 
 /*------------------------------------*\
-	#FRAMEWORK OBJECT SETTINGS
+	#CONFIGURE OBJECTS
 \*------------------------------------*/
 
 /**
- * Buttons
- */
-@btn-background:      #4a8ec2;
-@btn-color:           #fff;
-@btn-border-width:    1px;
-@btn-border-style:    solid;
-@btn-border-color:    darken(@btn-background, 10);
-@btn-radius:          0;
-
-@enable-btn--small:   true;
-@enable-btn--large:   true;
-@enable-btn--full:    true;
-@enable-btn--pill:    true;
+* All object/utility variables available in kri.less.
+* Everything is off by default.
+* #TODO: Remove vars below if you don't need them
+*/
 
 
 
 /**
  * Box
  */
+@box-padding:         @base-spacing-unit;
+@box-padding--tiny:   round(@box-padding / 4);
+@box-padding--small:  round(@box-padding / 2);
+@box-padding--large:  round(@box-padding * 2);
+@box-padding--huge:   round(@box-padding * 4);
+
 @enable-box--flush:   true;
 @enable-box--tiny:    true;
 @enable-box--small:   true;
@@ -125,6 +123,12 @@
 /**
  * Pack
  */
+@pack-gutter:         @base-spacing-unit;
+@pack-gutter--tiny:   round(@pack-gutter / 4);
+@pack-gutter--small:  round(@pack-gutter / 2);
+@pack-gutter--large:  round(@pack-gutter * 2);
+@pack-gutter--huge:   round(@pack-gutter * 4);
+
 @enable-pack--auto:   true;
 @enable-pack--tiny:   true;
 @enable-pack--small:  true;
@@ -139,6 +143,12 @@
 /**
  * Block
  */
+@block-gutter:            @base-spacing-unit;
+@block-gutter--tiny:      round(@block-gutter / 4);
+@block-gutter--small:     round(@block-gutter / 2);
+@block-gutter--large:     round(@block-gutter * 2);
+@block-gutter--huge:      round(@block-gutter * 4);
+
 @enable-block--flush:     true;
 @enable-block--tiny:      true;
 @enable-block--small:     true;
@@ -152,6 +162,10 @@
 /**
  * Tables
  */
+@table-padding--compact:  round(@base-spacing-unit / 4);
+@table-padding--cosy:     round(@base-spacing-unit / 2);
+@table-padding--comfy:    @base-spacing-unit;
+
 @table-border-width:      1px;
 @table-border-style:      solid;
 @table-border-color:      #ccc;
@@ -169,6 +183,12 @@
 /**
  * Flag
  */
+@flag-gutter:             @base-spacing-unit;
+@flag-gutter--tiny:       round(@flag-gutter / 4);
+@flag-gutter--small:      round(@flag-gutter / 2);
+@flag-gutter--large:      round(@flag-gutter * 2);
+@flag-gutter--huge:       round(@flag-gutter * 4);
+
 @enable-flag--tiny:       true;
 @enable-flag--small:      true;
 @enable-flag--large:      true;
@@ -178,13 +198,18 @@
 @enable-flag--top:        true;
 @enable-flag--bottom:     true;
 @enable-flag--responsive: true;
-@flag-collapse-at:        720px;
 
 
 
 /**
  * Media
  */
+@media-gutter:                @base-spacing-unit;
+@media-gutter--tiny:          round(@media-gutter / 4);
+@media-gutter--small:         round(@media-gutter / 2);
+@media-gutter--large:         round(@media-gutter * 2);
+@media-gutter--huge:          round(@media-gutter * 4);
+
 @enable-media--tiny:          true;
 @enable-media--small:         true;
 @enable-media--large:         true;
@@ -192,16 +217,41 @@
 @enable-media--rev:           true;
 @enable-media--flush:         true;
 @enable-media--responsive:    true;
-@media-collapse-at:           720px;
 
 
 
 /**
- * Lists
+ * List-block
  */
+@list-block-padding:          @base-spacing-unit;
+@list-block-padding--tiny:    round(@list-block-padding / 4);
+@list-block-padding--small:   round(@list-block-padding / 2);
+@list-block-padding--large:   round(@list-block-padding * 2);
+@list-block-padding--huge:    round(@list-block-padding *4);
+
 @enable-list-block--tiny:     true;
 @enable-list-block--small:    true;
 @enable-list-block--large:    true;
+@enable-list-block--huge:     true;
+
+
+
+/**
+ * List-inline
+ */
+@enable-list-inline--delimited:   false;
+@list-inline-delimit-character:   ",\00A0";
+
+
+
+/**
+ * List-ui
+ */
+@list-ui-padding:         @base-spacing-unit;
+@list-ui-padding--tiny:   round(@list-ui-padding / 4);
+@list-ui-padding--small:  round(@list-ui-padding / 2);
+@list-ui-padding--large:  round(@list-ui-padding * 2);
+@list-ui-padding--huge:   round(@list-ui-padding * 4);
 
 @list-ui-border-width:    1px;
 @list-ui-border-style:    solid;
@@ -212,14 +262,17 @@
 @enable-list-ui--large:   true;
 @enable-list-ui--huge:    true;
 
-@enable-list-inline--delimited:   true;
-@list-inline-delimit-character:   ",\00A0";
-
 
 
 /**
  * Layout
  */
+@layout-gutter:           @base-spacing-unit;
+@layout-gutter--tiny:     round(@layout-gutter / 4);
+@layout-gutter--small:    round(@layout-gutter / 2);
+@layout-gutter--large:    round(@layout-gutter * 2);
+@layout-gutter--huge:     round(@layout-gutter * 4);
+
 @enable-layout--tiny:     true;
 @enable-layout--small:    true;
 @enable-layout--large:    true;
@@ -237,6 +290,18 @@
 /**
  * Spacing
  */
+@margin:                          @base-spacing-unit;
+@margin--small:                   round(@margin / 2);
+@margin--tiny:                    round(@margin / 4);
+@margin--large:                   round(@margin * 2);
+@margin--huge:                    round(@margin * 4);
+
+@padding:                         @base-spacing-unit;
+@padding--small:                  round(@padding / 2);
+@padding--tiny:                   round(@padding / 4);
+@padding--large:                  round(@padding * 2);
+@padding--huge:                   round(@padding * 4);
+
 @enable-margins:                  true;
 @enable-margins--tiny:            true;
 @enable-margins--small:           true;
